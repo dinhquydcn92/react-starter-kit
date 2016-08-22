@@ -38,7 +38,9 @@ class Home extends Component {
   constructor(props, context) {
     super(props, context);
 
-    context.setTitle(this.props.content.title);
+    if (context.setTitle) {
+      context.setTitle(this.props.content.title);
+    }
   }
 
   render() {
