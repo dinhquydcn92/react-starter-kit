@@ -35,7 +35,9 @@ export default {
       throw new Error('Failed to load the news feed.');
     }
 
-    return <Home news={data.news}/>;
+    const title = 'Administration Building Tool';
+
+    return <Home title={title} news={data.news}/>;
   },
 
 };

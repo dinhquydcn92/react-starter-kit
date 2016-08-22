@@ -5,7 +5,9 @@ import s from './Content.css';
 class Content extends Component {
 
   static propTypes = {
-    elements: PropTypes.element.isRequired
+    pageTitle: PropTypes.string.isRequired,
+    pageSubTitle: PropTypes.string,
+    elements: PropTypes.element.isRequired,
   };
 
   render() {
@@ -15,8 +17,8 @@ class Content extends Component {
         <section className="content-header">
 
           <h1>
-            Page Header
-            <small>Optional description</small>
+            {this.props.pageTitle}
+            <small>{this.props.pageSubTitle}</small>
           </h1>
 
           <ol className="breadcrumb">

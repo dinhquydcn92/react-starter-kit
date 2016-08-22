@@ -11,11 +11,10 @@ import React, {Component, PropTypes} from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.css';
 
-const title = 'Administration Building Tool';
-
 class Home extends Component {
 
   static propTypes = {
+    title: PropTypes.string.isRequired,
     news: PropTypes.arrayOf(PropTypes.shape({
       title: PropTypes.string.isRequired,
       link: PropTypes.string.isRequired,
@@ -30,7 +29,7 @@ class Home extends Component {
   constructor(props, context) {
     super(props, context);
 
-    context.setTitle(title);
+    context.setTitle(this.props.title);
   }
 
   render() {
