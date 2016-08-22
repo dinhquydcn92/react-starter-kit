@@ -14,10 +14,15 @@ import s from './Home.css';
 class Home extends Component {
 
   static propTypes = {
+    // Wrap all props to one parent props
     content: PropTypes.shape({
+      // Document title
       title: PropTypes.string.isRequired,
+      // Page title
       pageTitle: PropTypes.string.isRequired,
+      // Page subtitle
       pageSubTitle: PropTypes.string,
+      // News object
       news: PropTypes.arrayOf(PropTypes.shape({
         title: PropTypes.string.isRequired,
         link: PropTypes.string.isRequired,

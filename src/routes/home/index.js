@@ -35,7 +35,6 @@ export default {
       throw new Error('Failed to load the news feed.');
     }
 
-    // <Home /> component props
     const content = {
       title: 'Administration Building Tool',
       pageTitle: 'React.js News',

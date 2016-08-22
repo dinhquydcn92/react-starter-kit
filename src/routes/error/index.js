@@ -16,9 +16,17 @@ export default {
   path: '/error',
 
   action({render, context, error}) {
+
+    let content = {
+      title: 'Error',
+      pageTitle: 'Error',
+      pageSubTitle: '',
+      error: error
+    };
+
     return render(
       <App context={context} error={error}>
-        <ErrorPage error={error}/>
+        <ErrorPage content={content}/>
       </App>,
       error.status || 500
     );
