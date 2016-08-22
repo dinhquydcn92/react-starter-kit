@@ -7,7 +7,7 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import React, { PropTypes } from 'react';
+import React, {PropTypes} from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Login.css';
 
@@ -117,6 +117,6 @@ function Login(props, context) {
   );
 }
 
-Login.contextTypes = { setTitle: PropTypes.func.isRequired };
+Login.contextTypes = {setTitle: PropTypes.func.isRequired};
 
 export default withStyles(s)(Login);

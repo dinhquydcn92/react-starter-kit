@@ -8,7 +8,7 @@
  */
 
 import fs from 'fs';
-import { join } from 'path';
+import {join} from 'path';
 import Promise from 'bluebird';
 import fm from 'front-matter';
 import MarkdownIt from 'markdown-it';
@@ -39,17 +39,17 @@ const parseContent = (path, fileContent, extension) => {
     default:
       return null;
   }
-  return Object.assign({ path, content: htmlContent }, fmContent.attributes);
+  return Object.assign({path, content: htmlContent}, fmContent.attributes);
 };
 
-const readFile = Promise.promisify(fs.readFile);
+const readFile   = Promise.promisify(fs.readFile);
 const fileExists = filename => new Promise(resolve => {
   fs.exists(filename, resolve);
 });
 
 async function resolveExtension(path, extension) {
   let fileNameBase = join(CONTENT_DIR, `${path === '/' ? '/index' : path}`);
-  let ext = extension;
+  let ext          = extension;
   if (!ext.startsWith('.')) {
     ext = `.${extension}`;
   }
@@ -58,14 +58,14 @@ async function resolveExtension(path, extension) {
 
   if (!(await fileExists(fileName))) {
     fileNameBase = join(CONTENT_DIR, `${path}/index`);
-    fileName = fileNameBase + ext;
+    fileName     = fileNameBase + ext;
   }
 
   if (!(await fileExists(fileName))) {
-    return { success: false };
+    return {success: false};
   }
 
-  return { success: true, fileName };
+  return {success: true, fileName};
 }
 
 async function resolveFileName(path) {
@@ -74,25 +74,25 @@ async function resolveFileName(path) {
   for (const extension of extensions) {
     const maybeFileName = await resolveExtension(path, extension);
     if (maybeFileName.success) {
-      return { success: true, fileName: maybeFileName.fileName, extension };
+      return {success: true, fileName: maybeFileName.fileName, extension};
     }
   }
 
-  return { success: false, fileName: null, extension: null };
+  return {success: false, fileName: null, extension: null};
 }
 
 const content = {
   type: ContentType,
   args: {
-    path: { type: new NonNull(StringType) },
+    path: {type: new NonNull(StringType)},
   },
-  async resolve({ request }, { path }) {
-    const { success, fileName, extension } = await resolveFileName(path);
+  async resolve({request}, {path}) {
+    const {success, fileName, extension} = await resolveFileName(path);
     if (!success) {
       return null;
     }
 
-    const source = await readFile(fileName, { encoding: 'utf8' });
+    const source = await readFile(fileName, {encoding: 'utf8'});
     return parseContent(path, source, extension);
   },
 };

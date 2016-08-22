@@ -7,15 +7,15 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import { GraphQLList as List } from 'graphql';
+import {GraphQLList as List} from 'graphql';
 import fetch from '../../core/fetch';
 import NewsItemType from '../types/NewsItemType';
 
 // React.js News Feed (RSS)
 const url = 'http://ajax.googleapis.com/ajax/services/feed/load' +
-            '?v=1.0&num=10&q=https://reactjsnews.com/feed.xml';
+  '?v=1.0&num=10&q=https://reactjsnews.com/feed.xml';
 
-let items = [];
+let items         = [];
 let lastFetchTask;
 let lastFetchTime = new Date(1970, 0, 1);
 

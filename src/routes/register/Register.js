@@ -7,7 +7,7 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import React, { PropTypes } from 'react';
+import React, {PropTypes} from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Register.css';
 
@@ -25,6 +25,6 @@ function Register(props, context) {
   );
 }
 
-Register.contextTypes = { setTitle: PropTypes.func.isRequired };
+Register.contextTypes = {setTitle: PropTypes.func.isRequired};
 
 export default withStyles(s)(Register);

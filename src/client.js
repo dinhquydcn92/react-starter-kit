@@ -13,7 +13,7 @@ import FastClick from 'fastclick';
 import UniversalRouter from 'universal-router';
 import routes from './routes';
 import history from './core/history';
-import { readState, saveState } from 'history/lib/DOMStateStorage';
+import {readState, saveState} from 'history/lib/DOMStateStorage';
 import {
   addEventListener,
   removeEventListener,
@@ -88,7 +88,7 @@ function render(container, state, component) {
 }
 
 function run() {
-  const container = document.getElementById('app');
+  const container     = document.getElementById('app');
   let currentLocation = history.getCurrentLocation();
 
   // Make taps on links and buttons work fast on mobiles
@@ -122,7 +122,7 @@ function run() {
   // https://developers.google.com/web/updates/2015/09/history-api-scroll-restoration
   let originalScrollRestoration;
   if (window.history && 'scrollRestoration' in window.history) {
-    originalScrollRestoration = window.history.scrollRestoration;
+    originalScrollRestoration        = window.history.scrollRestoration;
     window.history.scrollRestoration = 'manual';
   }
 
@@ -132,7 +132,7 @@ function run() {
     removeHistoryListener();
     if (originalScrollRestoration) {
       window.history.scrollRestoration = originalScrollRestoration;
-      originalScrollRestoration = undefined;
+      originalScrollRestoration        = undefined;
     }
   });
 }

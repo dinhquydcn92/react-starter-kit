@@ -7,7 +7,7 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import React, { Component, PropTypes } from 'react';
+import React, {Component, PropTypes} from 'react';
 import history from '../../core/history';
 
 function isLeftClickEvent(event) {
@@ -55,8 +55,8 @@ class Link extends Component { // eslint-disable-line react/prefer-stateless-fun
   };
 
   render() {
-    const { to, ...props } = this.props; // eslint-disable-line no-use-before-define
-    return <a href={history.createHref(to)} {...props} onClick={this.handleClick} />;
+    const {to, ...props} = this.props; // eslint-disable-line no-use-before-define
+    return <a href={history.createHref(to)} {...props} onClick={this.handleClick}/>;
   }
 
 }
