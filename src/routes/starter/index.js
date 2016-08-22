@@ -15,7 +15,14 @@ export default {
   path: '/starter',
 
   action() {
-    return <Starter />;
+
+    let content = {
+      title: 'Administration Building Tool',
+      pageTitle: 'Starter Page',
+      pageSubTitle: 'Optional description',
+    };
+
+    return <Starter content={content}/>;
   },
 
 };
