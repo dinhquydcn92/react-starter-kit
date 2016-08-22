@@ -14,31 +14,34 @@ import s from './Home.css';
 class Home extends Component {
 
   static propTypes = {
-    title: PropTypes.string.isRequired,
-    news: PropTypes.arrayOf(PropTypes.shape({
+    content: PropTypes.shape({
       title: PropTypes.string.isRequired,
-      link: PropTypes.string.isRequired,
-      contentSnippet: PropTypes.string,
-    })).isRequired,
+      pageTitle: PropTypes.string.isRequired,
+      pageSubTitle: PropTypes.string,
+      news: PropTypes.arrayOf(PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        link: PropTypes.string.isRequired,
+        contentSnippet: PropTypes.string,
+      })).isRequired,
+    }).isRequired,
   };
 
   static contextTypes = {
-    setTitle: PropTypes.func.isRequired
+    setTitle: PropTypes.func.isRequired,
   };
 
   constructor(props, context) {
     super(props, context);
 
-    context.setTitle(this.props.title);
+    context.setTitle(this.props.content.title);
   }
 
   render() {
     return (
       <div className={s.root}>
         <div className={s.container}>
-          <h1 className={s.title}>React.js News</h1>
           <ul className={s.news}>
-            {this.props.news.map((item, index) => (
+            {this.props.content.news.map((item, index) => (
               <li key={index} className={s.newsItem}>
                 <a href={item.link} className={s.newsTitle}>{item.title}</a>
                 <span

@@ -5,9 +5,7 @@ import s from './Content.css';
 class Content extends Component {
 
   static propTypes = {
-    pageTitle: PropTypes.string.isRequired,
-    pageSubTitle: PropTypes.string,
-    elements: PropTypes.element.isRequired,
+    children: PropTypes.element.isRequired,
   };
 
   render() {
@@ -17,8 +15,8 @@ class Content extends Component {
         <section className="content-header">
 
           <h1>
-            {this.props.pageTitle}
-            <small>{this.props.pageSubTitle}</small>
+            {this.props.children.props.content.pageTitle}
+            <small>{this.props.children.props.content.pageSubTitle}</small>
           </h1>
 
           <ol className="breadcrumb">
@@ -31,7 +29,7 @@ class Content extends Component {
 
         {/*<!-- Main content -->*/}
         <section className="content">
-          {this.props.elements}
+          {this.props.children}
         </section>
         {/*<!-- /.content -->*/}
       </div>
