@@ -86,7 +86,14 @@ app.get('*', async(req, res, next) => {
   try {
     let css        = new Set();
     let statusCode = 200;
-    const data     = {title: '', description: '', style: '', script: assets.main.js, children: ''};
+    const data     = {
+      title: '',
+      description: '',
+      style: '',
+      classes: 'skin-blue sidebar-mini',
+      script: assets.main.js,
+      children: ''
+    };
 
     await UniversalRouter.resolve(routes, {
       path: req.path,
@@ -132,7 +139,7 @@ app.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
       description={err.message}
       style={errorPageStyle._getCss()} // eslint-disable-line no-underscore-dangle
     >
-    {ReactDOM.renderToString(<ErrorPage error={err}/>)}
+    {ReactDOM.renderToString(<ErrorPage content={{error: err}}/>)}
     </Html>
   );
   res.status(statusCode);

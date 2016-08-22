@@ -45,6 +45,7 @@ const context = {
       .getElementsByTagName('head')[0]
       .appendChild(meta);
   },
+  setBodyClass: value => (document.body.className = value),
 };
 
 // Restore the scroll position if it was saved into the state
