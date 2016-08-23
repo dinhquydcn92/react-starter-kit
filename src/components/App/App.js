@@ -57,24 +57,29 @@ class App extends Component {
     this.removeCss();
   }
 
+  // Render without components
   renderFullWidthPage() {
     return (
       this.props.children
     );
   }
 
-  render() {
+  // Render main components with inner content
+  renderInnerPage() {
+    return (
+      <div className="wrapper">
+        <Header />
+        <AsideLeft />
+        <Content>{this.props.children}</Content>
+        <AsideRight />
+        <Footer />
+      </div>
+    );
+  }
 
+  render() {
     if (this.props.children.props.isFullWidth !== true) {
-      return (
-        <div className="wrapper">
-          <Header />
-          <AsideLeft />
-          <Content>{this.props.children}</Content>
-          <AsideRight />
-          <Footer />
-        </div>
-      );
+      return this.renderInnerPage();
     }
 
     return this.renderFullWidthPage();
