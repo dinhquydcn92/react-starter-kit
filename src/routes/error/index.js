@@ -25,7 +25,7 @@ export default {
     };
 
     return render(
-      <App context={context} error={error}>
+      <App context={context} isFullWidth={true}>
         <ErrorPage content={content}/>
       </App>,
       error.status || 500

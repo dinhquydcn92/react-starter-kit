@@ -14,7 +14,7 @@ export default {
 
   path: '/login',
 
-  action() {
+  action({render, context, error}) {
 
     let content = {
       title: 'Administration Building Tool',
@@ -22,7 +22,11 @@ export default {
       pageSubTitle: '',
     };
 
-    return <Login content={content} />;
+    return render(
+      <App context={context} isFullWidth={true}>
+        <Login content={content}/>
+      </App>
+    );
   },
 
 };

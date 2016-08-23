@@ -28,8 +28,8 @@ class App extends Component {
     }),
     // Child component
     children: PropTypes.element.isRequired,
-    // Error object from error page
-    error: PropTypes.object,
+    // Define full width page
+    isFullWidth: PropTypes.bool,
   };
 
   static childContextTypes = {
@@ -59,8 +59,19 @@ class App extends Component {
     this.removeCss();
   }
 
+  renderFullWidthPage() {
+    return (
+      this.props.children
+    );
+  }
+
   render() {
-    return !this.props.error ? (
+
+    if (this.props.isFullWidth) {
+      return this.renderFullWidthPage();
+    }
+
+    return (
       <div>
         <Header />
         <AsideLeft />
@@ -68,7 +79,7 @@ class App extends Component {
         <AsideRight />
         <Footer />
       </div>
-    ) : this.props.children;
+    );
   }
 
 }
