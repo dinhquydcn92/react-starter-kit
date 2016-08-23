@@ -10,8 +10,8 @@
 import React, {Component, PropTypes} from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Login.css';
-import 'AdminLTE/plugins/iCheck/square/blue.css';
-import 'AdminLTE/plugin/iCheck/iCheck.min.js';
+import 'admin-lte/plugins/iCheck/square/blue.css';
+import 'admin-lte/plugin/iCheck/iCheck.min.js';
 
 class Login extends Component {
 
