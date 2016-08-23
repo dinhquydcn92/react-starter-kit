@@ -18,10 +18,6 @@ class ErrorPage extends Component {
     content: PropTypes.shape({
       // Document title
       title: PropTypes.string.isRequired,
-      // Page title
-      pageTitle: PropTypes.string.isRequired,
-      // Page subtitle
-      pageSubTitle: PropTypes.string,
       // Error object
       error: PropTypes.object.isRequired
     }).isRequired,

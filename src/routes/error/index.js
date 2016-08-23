@@ -19,8 +19,6 @@ export default {
 
     let content = {
       title: 'Error',
-      pageTitle: 'Error',
-      pageSubTitle: '',
       error: error
     };
 
