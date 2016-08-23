@@ -19,7 +19,7 @@ function Html({title, description, style, classes, script, children}) {
       <style id="css" dangerouslySetInnerHTML={{__html: style}}/>
     </head>
     <body className={classes}>
-    <div id="app" className="wrapper" dangerouslySetInnerHTML={{__html: children}}/>
+    <div id="app" dangerouslySetInnerHTML={{__html: children}}/>
     <script src="AdminLTE/plugins/jQuery/jquery-2.2.3.min.js"></script>
     <script src="AdminLTE/bootstrap/js/bootstrap.min.js"></script>
     <script src="AdminLTE/dist/js/app.min.js"></script>

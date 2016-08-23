@@ -67,12 +67,12 @@ class App extends Component {
 
   render() {
 
-    if (this.props.isFullWidth) {
+    if (this.props.isFullWidth === true) {
       return this.renderFullWidthPage();
     }
 
     return (
-      <div>
+      <div className="wrapper">
         <Header />
         <AsideLeft />
         <Content>{this.props.children}</Content>

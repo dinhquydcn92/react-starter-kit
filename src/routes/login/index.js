@@ -22,6 +22,8 @@ export default {
       pageSubTitle: '',
     };
 
+    console.log(context);
+
     return render(
       <App context={context} isFullWidth={true}>
         <Login content={content}/>
