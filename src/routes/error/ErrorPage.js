@@ -24,7 +24,9 @@ class ErrorPage extends Component {
       pageSubTitle: PropTypes.string,
       // Error object
       error: PropTypes.object.isRequired
-    }).isRequired
+    }).isRequired,
+    // Define page layout
+    isFullWidth: PropTypes.bool,
   };
 
   static contextTypes = {

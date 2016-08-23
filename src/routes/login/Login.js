@@ -14,7 +14,7 @@ import s from './Login.css';
 class Login extends Component {
 
   static propTypes = {
-    // Wrap all props to one parent props
+    // Wrap all content props to one parent props
     content: PropTypes.shape({
       // Document title
       title: PropTypes.string.isRequired,
@@ -23,12 +23,13 @@ class Login extends Component {
       // Page subtitle
       pageSubTitle: PropTypes.string,
     }).isRequired,
+    // Define page layout
+    isFullWidth: PropTypes.bool,
   };
 
   static contextTypes = {
     setTitle: PropTypes.func.isRequired,
     setBodyClasses: PropTypes.func.isRequired,
-    isFullWidth: true,
   };
 
   constructor(props, context) {

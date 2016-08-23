@@ -23,7 +23,7 @@ export default {
     };
 
     return (
-      <Login content={content}/>
+      <Login content={content} isFullWidth={true}/>
     );
   },
 
