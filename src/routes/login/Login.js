@@ -17,11 +17,7 @@ class Login extends Component {
     // Wrap all content props to one parent props
     content: PropTypes.shape({
       // Document title
-      title: PropTypes.string.isRequired,
-      // Page title
-      pageTitle: PropTypes.string.isRequired,
-      // Page subtitle
-      pageSubTitle: PropTypes.string,
+      title: PropTypes.string.isRequired
     }).isRequired,
     // Define page layout
     isFullWidth: PropTypes.bool,

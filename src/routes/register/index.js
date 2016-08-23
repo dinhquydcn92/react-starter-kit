@@ -15,7 +15,14 @@ export default {
   path: '/register',
 
   action() {
-    return <Register />;
+
+    let content = {
+      title: 'Register',
+    };
+
+    return (
+      <Register content={content} isFullWidth={true}/>
+    );
   },
 
 };

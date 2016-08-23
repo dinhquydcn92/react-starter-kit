@@ -18,8 +18,6 @@ export default {
 
     let content = {
       title: 'Login',
-      pageTitle: 'Login',
-      pageSubTitle: '',
     };
 
     return (
