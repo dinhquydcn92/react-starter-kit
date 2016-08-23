@@ -67,19 +67,19 @@ class App extends Component {
 
   render() {
 
-    if (this.props.isFullWidth === true) {
-      return this.renderFullWidthPage();
+    if (this.props.isFullWidth !== true) {
+      return (
+        <div className="wrapper">
+          <Header />
+          <AsideLeft />
+          <Content>{this.props.children}</Content>
+          <AsideRight />
+          <Footer />
+        </div>
+      );
     }
 
-    return (
-      <div className="wrapper">
-        <Header />
-        <AsideLeft />
-        <Content>{this.props.children}</Content>
-        <AsideRight />
-        <Footer />
-      </div>
-    );
+    return this.renderFullWidthPage();
   }
 
 }

@@ -17,7 +17,7 @@ import login from './login';
 import register from './register';
 import error from './error';
 
-// AdminLTE
+// AdminLTE starter page
 import starter from './starter';
 
 export default {
@@ -40,6 +40,7 @@ export default {
 
   async action({next, render, context}) {
     const component = await next();
+    console.log(component);
     if (component === undefined) return component;
     return render(
       <App context={context}>{component}</App>
