@@ -152,8 +152,8 @@ function Header() {
             <ul className="treeview-menu">
               <li><a href="pages/examples/invoice.html"><i className="fa fa-circle-o" /> Invoice</a></li>
               <li><a href="pages/examples/profile.html"><i className="fa fa-circle-o" /> Profile</a></li>
-              <li><a href="pages/examples/login.html"><i className="fa fa-circle-o" /> Login</a></li>
-              <li><a href="pages/examples/register.html"><i className="fa fa-circle-o" /> Register</a></li>
+              <li><a href="/login"><i className="fa fa-circle-o" /> Login</a></li>
+              <li><a href="/register"><i className="fa fa-circle-o" /> Register</a></li>
               <li><a href="pages/examples/lockscreen.html"><i className="fa fa-circle-o" /> Lockscreen</a></li>
               <li><a href="pages/examples/404.html"><i className="fa fa-circle-o" /> 404 Error</a></li>
               <li><a href="pages/examples/500.html"><i className="fa fa-circle-o" /> 500 Error</a></li>
