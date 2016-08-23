@@ -11,7 +11,7 @@ import React, {Component, PropTypes} from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Login.css';
 import 'admin-lte/plugins/iCheck/square/blue.css';
-import 'admin-lte/plugin/iCheck/iCheck.min.js';
+import 'admin-lte/plugins/iCheck/icheck.min.js';
 
 class Login extends Component {
 
