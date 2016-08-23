@@ -14,7 +14,7 @@ export default {
 
   path: '/login',
 
-  action({render, context, error}) {
+  action() {
 
     let content = {
       title: 'Login',
@@ -22,10 +22,8 @@ export default {
       pageSubTitle: '',
     };
 
-    return render(
-      <App context={context} isFullWidth={true}>
-        <Login content={content}/>
-      </App>
+    return (
+      <Login content={content}/>
     );
   },
 

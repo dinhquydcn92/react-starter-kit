@@ -25,11 +25,10 @@ class App extends Component {
       setTitle: PropTypes.func,
       setMeta: PropTypes.func,
       setBodyClasses: PropTypes.func,
+      isFullWidth: PropTypes.bool,
     }),
     // Child component
     children: PropTypes.element.isRequired,
-    // Define full width page
-    isFullWidth: PropTypes.bool,
   };
 
   static childContextTypes = {
@@ -37,6 +36,7 @@ class App extends Component {
     setTitle: PropTypes.func.isRequired,
     setMeta: PropTypes.func.isRequired,
     setBodyClasses: PropTypes.func.isRequired,
+    isFullWidth: PropTypes.bool.isRequired,
   };
 
   getChildContext() {
@@ -46,7 +46,8 @@ class App extends Component {
       insertCss: context.insertCss || emptyFunction,
       setTitle: context.setTitle || emptyFunction,
       setMeta: context.setMeta || emptyFunction,
-      setBodyClasses: context.setBodyClasses || emptyFunction
+      setBodyClasses: context.setBodyClasses || emptyFunction,
+      isFullWidth: context.isFullWidth || false
     };
   }
 
@@ -67,7 +68,7 @@ class App extends Component {
 
   render() {
 
-    if (this.props.isFullWidth !== true) {
+    if (this.props.context.isFullWidth !== true) {
       return (
         <div className="wrapper">
           <Header />

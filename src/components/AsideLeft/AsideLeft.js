@@ -37,8 +37,8 @@ function Header() {
         <ul className="sidebar-menu">
           <li className="header">HEADER</li>
           {/*<!-- Optionally, you can add icons to the links -->*/}
-          <li className="active"><a href="#"><i className="fa fa-link"></i> <span>Link</span></a></li>
-          <li><a href="#"><i className="fa fa-link"></i> <span>Another Link</span></a></li>
+          <li className="active"><a href="/login"><i className="fa fa-link"></i> <span>Login</span></a></li>
+          <li><a href="/error"><i className="fa fa-link"></i> <span>Error</span></a></li>
           <li className="treeview">
             <a href="#"><i className="fa fa-link"></i> <span>Multilevel</span>
               <span className="pull-right-container">

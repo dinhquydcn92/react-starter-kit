@@ -28,6 +28,7 @@ class Login extends Component {
   static contextTypes = {
     setTitle: PropTypes.func.isRequired,
     setBodyClasses: PropTypes.func.isRequired,
+    isFullWidth: true,
   };
 
   constructor(props, context) {
