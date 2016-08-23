@@ -15,7 +15,14 @@ export default {
   path: '/login',
 
   action() {
-    return <Login />;
+
+    let content = {
+      title: 'Administration Building Tool',
+      pageTitle: 'Login',
+      pageSubTitle: '',
+    };
+
+    return <Login content={content} />;
   },
 
 };

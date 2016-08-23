@@ -35,7 +35,7 @@ export default {
       throw new Error('Failed to load the news feed.');
     }
 
-    const content = {
+    let content = {
       title: 'Administration Building Tool',
       pageTitle: 'React.js News',
       pageSubTitle: '',
