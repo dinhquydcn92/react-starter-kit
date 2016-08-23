@@ -17,7 +17,7 @@ export default {
   action({render, context, error}) {
 
     let content = {
-      title: 'Administration Building Tool',
+      title: 'Login',
       pageTitle: 'Login',
       pageSubTitle: '',
     };
