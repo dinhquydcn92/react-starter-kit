@@ -20,7 +20,7 @@ describe('App', () => {
   it('renders children correctly', () => {
     const wrapper = shallow(
       <App context={{
-        insertCss: () => {
+        setMeta: () => {
         }
       }}>
         <div className="child"/>

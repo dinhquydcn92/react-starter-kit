@@ -7,7 +7,7 @@ class Html extends Component {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     styles: PropTypes.array.isRequired,
-    scripts: PropTypes.array.isRequired,
+    scripts: PropTypes.array,
     children: PropTypes.string,
   };
 
