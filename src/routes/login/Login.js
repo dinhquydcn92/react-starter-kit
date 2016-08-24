@@ -43,7 +43,6 @@ class Login extends Component {
   }
 
   componentWillMount() {
-    console.log(this.context.enqueueStyles);
     if (this.context.enqueueStyles) {
       this.context.enqueueStyles([
         '/AdminLTE/plugins/iCheck/square/blue.css'

@@ -89,9 +89,20 @@ app.get('*', async(req, res, next) => {
     const data     = {
       title: '',
       description: '',
-      style: '',
+      styles: [
+        '/AdminLTE/bootstrap/css/bootstrap.min.css',
+        '/assets/plugins/font-awesome/css/font-awesome.min.css',
+        '/assets/plugins/ionicons/dist/css/ionicons.min.css',
+        '/AdminLTE/dist/css/AdminLTE.min.css',
+        '/AdminLTE/dist/css/skins/skin-blue.min.css',
+      ],
       classes: 'skin-blue sidebar-mini',
-      script: assets.main.js,
+      scripts: [
+        '/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js',
+        '/AdminLTE/bootstrap/js/bootstrap.min.js',
+        '/AdminLTE/dist/js/app.min.js',
+        assets.main.js
+      ],
       children: ''
     };
 
@@ -105,12 +116,13 @@ app.get('*', async(req, res, next) => {
         setTitle: value => (data.title = value),
         setMeta: (key, value) => (data[key] = value),
         setBodyClasses: value => (data.classes = value),
+        enqueueStyles: styles => (data.styles = data.styles.concat(styles)),
+        enqueueScripts: scripts => (data.scripts = data.scripts.concat(scripts))
       },
       render(component, status = 200) {
         css           = new Set();
         statusCode    = status;
         data.children = ReactDOM.renderToString(component);
-        data.style    = [...css].join('');
         return true;
       },
     });
