@@ -10,8 +10,6 @@
 import React, {Component, PropTypes} from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Login.css';
-import 'admin-lte/plugins/iCheck/square/blue.css';
-import 'admin-lte/plugins/iCheck/icheck.min.js';
 
 class Login extends Component {
 
@@ -28,6 +26,8 @@ class Login extends Component {
   static contextTypes = {
     setTitle: PropTypes.func.isRequired,
     setBodyClasses: PropTypes.func.isRequired,
+    enqueueStyles: PropTypes.func.isRequired,
+    enqueueScripts: PropTypes.func.isRequired,
   };
 
   constructor(props, context) {
@@ -39,6 +39,21 @@ class Login extends Component {
 
     if (context.setBodyClasses) {
       context.setBodyClasses('hold-transition login-page');
+    }
+  }
+
+  componentWillMount() {
+    console.log(this.context.enqueueStyles);
+    if (this.context.enqueueStyles) {
+      this.context.enqueueStyles([
+        '/AdminLTE/plugins/iCheck/square/blue.css'
+      ]);
+    }
+
+    if (this.context.enqueueScripts) {
+      this.context.enqueueScripts([
+        '/AdminLTE/plugins/iCheck/icheck.min.js'
+      ]);
     }
   }
 
@@ -78,11 +93,9 @@ class Login extends Component {
           <div className="social-auth-links text-center">
             <p>- OR -</p>
             <a href="#" className="btn btn-block btn-social btn-facebook btn-flat"><i className="fa fa-facebook"/> Sign
-              in using
-              Facebook</a>
+              in using Facebook</a>
             <a href="#" className="btn btn-block btn-social btn-google btn-flat"><i className="fa fa-google-plus"/> Sign
-              in using
-              Google+</a>
+              in using Google+</a>
           </div>
           {/* /.social-auth-links */}
           <a href="#">I forgot my password</a><br />

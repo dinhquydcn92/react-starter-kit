@@ -46,6 +46,26 @@ const context = {
       .appendChild(meta);
   },
   setBodyClasses: value => (document.body.className = value),
+  enqueueStyles: args => {
+    let setOfStyles = [].concat(args);
+
+    setOfStyles.map(url => {
+      let link  = document.createElement('link');
+      link.rel  = 'stylesheet';
+      link.href = url;
+      document.head.appendChild(link);
+    })
+  },
+  enqueueScripts: args => {
+    let setOfScripts = [].concat(args);
+
+    setOfScripts.map(url => {
+      let script   = document.createElement("script");
+      script.src   = url;
+      script.async = true;
+      document.body.appendChild(script);
+    });
+  },
 };
 
 // Restore the scroll position if it was saved into the state

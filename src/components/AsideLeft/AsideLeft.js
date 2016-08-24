@@ -1,5 +1,6 @@
 import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import Link from '../Link';
 import s from './AsideLeft.css';
 
 function Header() {
@@ -154,8 +155,8 @@ function Header() {
             <ul className="treeview-menu">
               <li><a href="pages/examples/invoice.html"><i className="fa fa-circle-o"/> Invoice</a></li>
               <li><a href="pages/examples/profile.html"><i className="fa fa-circle-o"/> Profile</a></li>
-              <li><a href="/login"><i className="fa fa-circle-o"/> Login</a></li>
-              <li><a href="/register"><i className="fa fa-circle-o"/> Register</a></li>
+              <li><Link to="/login"><i className="fa fa-circle-o"/> Login</Link></li>
+              <li><Link to="/register"><i className="fa fa-circle-o"/> Register</Link></li>
               <li><a href="pages/examples/lockscreen.html"><i className="fa fa-circle-o"/> Lockscreen</a></li>
               <li><a href="pages/examples/404.html"><i className="fa fa-circle-o"/> 404 Error</a></li>
               <li><a href="pages/examples/500.html"><i className="fa fa-circle-o"/> 500 Error</a></li>

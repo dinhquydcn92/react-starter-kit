@@ -25,6 +25,8 @@ class App extends Component {
       setTitle: PropTypes.func,
       setMeta: PropTypes.func,
       setBodyClasses: PropTypes.func,
+      enqueueStyles: PropTypes.func,
+      enqueueScripts: PropTypes.func,
     }),
     // Child component
     children: PropTypes.element.isRequired,
@@ -35,6 +37,8 @@ class App extends Component {
     setTitle: PropTypes.func.isRequired,
     setMeta: PropTypes.func.isRequired,
     setBodyClasses: PropTypes.func.isRequired,
+    enqueueStyles: PropTypes.func.isRequired,
+    enqueueScripts: PropTypes.func.isRequired,
   };
 
   getChildContext() {
@@ -45,6 +49,8 @@ class App extends Component {
       setTitle: context.setTitle || emptyFunction,
       setMeta: context.setMeta || emptyFunction,
       setBodyClasses: context.setBodyClasses || emptyFunction,
+      enqueueStyles: context.enqueueStyles || emptyFunction,
+      enqueueScripts: context.enqueueScripts || emptyFunction,
     };
   }
 
