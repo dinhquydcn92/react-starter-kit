@@ -18,8 +18,8 @@ import jwt from 'jsonwebtoken';
 import React from 'react';
 import ReactDOM from 'react-dom/server';
 import Html from './components/Html';
-import App from './components/App';
-import ErrorPage from './routes/error/ErrorPage';
+import {ErrorPage} from './routes/error/ErrorPage';
+import errorPageStyle from './routes/error/ErrorPage.css';
 import UniversalRouter from 'universal-router';
 import PrettyError from 'pretty-error';
 import passport from './core/passport';
@@ -141,8 +141,9 @@ app.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
     <Html
       title="Internal Server Error"
       description={err.message}
+      style={errorPageStyle._getCss()} // eslint-disable-line no-underscore-dangle
     >
-    <ErrorPage content={{error: err}} isFullWidth={true}/>
+    {ReactDOM.renderToString(<ErrorPage content={{error: err}}/>)}
     </Html>
   );
   res.status(statusCode);
