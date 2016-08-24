@@ -18,8 +18,8 @@ import jwt from 'jsonwebtoken';
 import React from 'react';
 import ReactDOM from 'react-dom/server';
 import Html from './components/Html';
-import {ErrorPage} from './routes/error/ErrorPage';
-import errorPageStyle from './routes/error/ErrorPage.css';
+import App from './components/App';
+import ErrorPage from './routes/error/ErrorPage';
 import UniversalRouter from 'universal-router';
 import PrettyError from 'pretty-error';
 import passport from './core/passport';
@@ -89,20 +89,10 @@ app.get('*', async(req, res, next) => {
     const data     = {
       title: '',
       description: '',
-      styles: [
-        '/AdminLTE/bootstrap/css/bootstrap.min.css',
-        '/assets/plugins/font-awesome/css/font-awesome.min.css',
-        '/assets/plugins/ionicons/dist/css/ionicons.min.css',
-        '/AdminLTE/dist/css/AdminLTE.min.css',
-        '/AdminLTE/dist/css/skins/skin-blue.min.css',
-      ],
-      classes: 'skin-blue sidebar-mini',
-      scripts: [
-        '/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js',
-        '/AdminLTE/bootstrap/js/bootstrap.min.js',
-        '/AdminLTE/dist/js/app.min.js',
-        assets.main.js
-      ],
+      style: '', // Specific css defined for each component
+      styles: [], // List of css to enqueue
+      classes: 'skin-blue sidebar-mini', // Body tag classes
+      scripts: [assets.main.js], // List of js to enqueue
       children: ''
     };
 
@@ -123,6 +113,7 @@ app.get('*', async(req, res, next) => {
         css           = new Set();
         statusCode    = status;
         data.children = ReactDOM.renderToString(component);
+        data.style    = [...css].join('');
         return true;
       },
     });
@@ -150,9 +141,8 @@ app.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
     <Html
       title="Internal Server Error"
       description={err.message}
-      style={errorPageStyle._getCss()} // eslint-disable-line no-underscore-dangle
     >
-    {ReactDOM.renderToString(<ErrorPage content={{error: err}}/>)}
+    <ErrorPage content={{error: err}} isFullWidth={true}/>
     </Html>
   );
   res.status(statusCode);

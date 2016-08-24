@@ -47,9 +47,8 @@ const context = {
   },
   setBodyClasses: value => (document.body.className = value),
   enqueueStyles: args => {
-    console.log(args);
     let setOfStyles = [].concat(args);
-    console.log(setOfStyles);
+
     setOfStyles.map(url => {
       let link  = document.createElement('link');
       link.rel  = 'stylesheet';

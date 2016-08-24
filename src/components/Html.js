@@ -6,7 +6,8 @@ class Html extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    styles: PropTypes.array.isRequired,
+    styles: PropTypes.array,
+    style: PropTypes.string,
     scripts: PropTypes.array,
     children: PropTypes.string,
   };
@@ -22,6 +23,7 @@ class Html extends Component {
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
         <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
         {this.props.styles.map(href => <link rel="stylesheet" href={href}/>)}
+        <style id="css" dangerouslySetInnerHTML={{__html: this.props.style}}/>
       </head>
       <body className={this.props.classes}>
       <div id="app" dangerouslySetInnerHTML={{__html: this.props.children}}/>

@@ -35,10 +35,10 @@ class App extends Component {
   static childContextTypes = {
     insertCss: PropTypes.func.isRequired,
     setTitle: PropTypes.func.isRequired,
-    setMeta: PropTypes.func.isRequired,
+    setMeta: PropTypes.func,
     setBodyClasses: PropTypes.func.isRequired,
-    enqueueStyles: PropTypes.func.isRequired,
-    enqueueScripts: PropTypes.func.isRequired,
+    enqueueStyles: PropTypes.func,
+    enqueueScripts: PropTypes.func,
   };
 
   getChildContext() {
@@ -55,11 +55,31 @@ class App extends Component {
   }
 
   componentWillMount() {
-    const {insertCss} = this.props.context;
-    this.removeCss    = insertCss(s);
+    const {insertCss, enqueueStyles, enqueueScripts} = this.props.context;
+
+    this.removeCss = insertCss(s);
+
+    if (enqueueStyles) {
+      enqueueStyles([
+        '/AdminLTE/bootstrap/css/bootstrap.min.css',
+        '/assets/plugins/font-awesome/css/font-awesome.min.css',
+        '/assets/plugins/ionicons/dist/css/ionicons.min.css',
+        '/AdminLTE/dist/css/AdminLTE.min.css',
+        '/AdminLTE/dist/css/skins/skin-blue.min.css',
+      ]);
+    }
+
+    if (enqueueScripts) {
+      enqueueScripts([
+        '/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js',
+        '/AdminLTE/bootstrap/js/bootstrap.min.js',
+        '/AdminLTE/dist/js/app.min.js',
+      ]);
+    }
   }
 
   componentWillUnmount() {
+    // Dequeue styles/scripts here
     this.removeCss();
   }
 
@@ -84,7 +104,7 @@ class App extends Component {
   }
 
   render() {
-    if (this.props.children.props.isFullWidth !== true) {
+    if (this.props.children.props && this.props.children.props.isFullWidth !== true) {
       return this.renderInnerPage();
     }
 
