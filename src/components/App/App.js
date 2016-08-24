@@ -55,27 +55,8 @@ class App extends Component {
   }
 
   componentWillMount() {
-    const {insertCss, enqueueStyles, enqueueScripts} = this.props.context;
-
-    this.removeCss = insertCss(s);
-
-    if (enqueueStyles) {
-      enqueueStyles([
-        '/AdminLTE/bootstrap/css/bootstrap.min.css',
-        '/assets/plugins/font-awesome/css/font-awesome.min.css',
-        '/assets/plugins/ionicons/dist/css/ionicons.min.css',
-        '/AdminLTE/dist/css/AdminLTE.min.css',
-        '/AdminLTE/dist/css/skins/skin-blue.min.css',
-      ]);
-    }
-
-    if (enqueueScripts) {
-      enqueueScripts([
-        '/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js',
-        '/AdminLTE/bootstrap/js/bootstrap.min.js',
-        '/AdminLTE/dist/js/app.min.js',
-      ]);
-    }
+    const {insertCss} = this.props.context;
+    this.removeCss    = insertCss(s);
   }
 
   componentWillUnmount() {

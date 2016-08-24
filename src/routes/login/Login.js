@@ -9,6 +9,7 @@
 
 import React, {Component, PropTypes} from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import $ from 'jquery';
 import s from './Login.css';
 
 class Login extends Component {
@@ -54,6 +55,14 @@ class Login extends Component {
         '/AdminLTE/plugins/iCheck/icheck.min.js'
       ]);
     }
+  }
+
+  componentDidUpdate() {
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' // optional
+    });
   }
 
   render() {
