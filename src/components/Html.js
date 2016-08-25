@@ -27,7 +27,7 @@ class Html extends Component {
       </head>
       <body className={this.props.classes}>
       <div id="app" dangerouslySetInnerHTML={{__html: this.props.children}}/>
-      {this.props.scripts.map(src => <script src={src}></script>)}
+      {this.props.scripts.map(src => <script src={src} async></script>)}
       {analytics.google.trackingId &&
       <script
         dangerouslySetInnerHTML={{
