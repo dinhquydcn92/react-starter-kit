@@ -70,13 +70,11 @@ const context = {
   },
   dequeueStyles: urls => {
     urls.map(url => {
-      console.log('dequeue style: ', url);
       document.querySelector(`link[href="${url}"]`).remove();
     });
   },
   dequeueScripts: srcs => {
     srcs.map(src => {
-      console.log('dequeue script: ', src);
       document.querySelector(`script[src="${src}"]`).remove();
     });
   }
