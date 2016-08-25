@@ -44,10 +44,6 @@ class Login extends Component {
     if (context.setBodyClasses) {
       context.setBodyClasses('hold-transition login-page');
     }
-  }
-
-  componentWillMount() {
-    const context = this.context;
 
     if (context.enqueueStyles) {
       this._styles = context.enqueueStyles([
