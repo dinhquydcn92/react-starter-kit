@@ -59,13 +59,14 @@ class Login extends Component {
   }
 
   componentDidMount() {
-    $(function () {
-      $(this.refs['checkbox-remember-me'].getDOMNode()).iCheck({
-        checkboxClass: 'icheckbox_square-blue',
-        radioClass: 'iradio_square-blue',
-        increaseArea: '20%' // optional
-      });
-    });
+    console.log(this.refs.rememberMe);
+    //$(function () {
+    //  $(this.refs['checkbox-remember-me'].getDOMNode()).iCheck({
+    //    checkboxClass: 'icheckbox_square-blue',
+    //    radioClass: 'iradio_square-blue',
+    //    increaseArea: '20%' // optional
+    //  });
+    //});
   }
 
   render() {
@@ -90,7 +91,7 @@ class Login extends Component {
               <div className="col-xs-8">
                 <div className="checkbox icheck">
                   <label>
-                    <input type="checkbox" ref="checkbox-remember-me"/> Remember Me
+                    <input type="checkbox" ref="rememberMe"/> Remember Me
                   </label>
                 </div>
               </div>
