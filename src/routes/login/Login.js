@@ -28,10 +28,6 @@ class Login extends Component {
   static contextTypes = {
     setTitle: PropTypes.func.isRequired,
     setBodyClasses: PropTypes.func.isRequired,
-    enqueueStyles: PropTypes.func.isRequired,
-    enqueueScripts: PropTypes.func.isRequired,
-    dequeueStyles: PropTypes.func,
-    dequeueScripts: PropTypes.func,
   };
 
   constructor(props, context) {
@@ -43,42 +39,6 @@ class Login extends Component {
 
     if (context.setBodyClasses) {
       context.setBodyClasses('hold-transition login-page');
-    }
-
-    if (context.enqueueStyles) {
-      this._styles = context.enqueueStyles([
-        '/AdminLTE/plugins/iCheck/square/blue.css'
-      ]);
-    }
-
-    if (context.enqueueScripts) {
-      this._scripts = context.enqueueScripts([
-        '/AdminLTE/plugins/iCheck/icheck.min.js'
-      ]);
-    }
-  }
-
-  componentDidMount() {
-    $(function () {
-      if ($(this._rememberMe).iCheck) {
-        $(this._rememberMe).iCheck({
-          checkboxClass: 'icheckbox_square-blue',
-          radioClass: 'iradio_square-blue',
-          increaseArea: '20%' // optional
-        });
-      }
-    });
-  }
-
-  componentWillUnmount() {
-    const context = this.context;
-
-    if (this._styles && context.dequeueStyles) {
-      context.dequeueStyles(this._styles);
-    }
-
-    if (this._scripts && context.dequeueScripts) {
-      context.dequeueScripts(this._scripts);
     }
   }
 

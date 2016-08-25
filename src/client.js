@@ -28,7 +28,11 @@ const context = {
       removeCss.forEach(f => f());
     };
   },
-  setTitle: value => (document.title = value),
+  setTitle: value => {
+    if (document.title !== value) {
+      document.title = value
+    }
+  },
   setMeta: (name, content) => {
     // Remove and create a new <meta /> tag in order to make it work
     // with bookmarks in Safari
@@ -50,44 +54,6 @@ const context = {
       document.body.className = value;
     }
   },
-  enqueueStyles: args => {
-    let setOfStyles = [].concat(args);
-
-    setOfStyles.map(url => {
-      if (!document.querySelector(`link[href="${url}"]`)) {
-        let link  = document.createElement('link');
-        link.rel  = 'stylesheet';
-        link.href = url;
-        document.head.appendChild(link);
-      }
-    });
-
-    return args;
-  },
-  enqueueScripts: args => {
-    let setOfScripts = [].concat(args);
-
-    setOfScripts.map(src => {
-      if (!document.querySelector(`script[src="${src}"]`)) {
-        let script   = document.createElement("script");
-        script.src   = src;
-        script.async = true;
-        document.body.appendChild(script);
-      }
-    });
-
-    return args;
-  },
-  dequeueStyles: urls => {
-    urls.map(url => {
-      document.querySelector(`link[href="${url}"]`).remove();
-    });
-  },
-  dequeueScripts: srcs => {
-    srcs.map(src => {
-      document.querySelector(`script[src="${src}"]`).remove();
-    });
-  }
 };
 
 // Restore the scroll position if it was saved into the state
