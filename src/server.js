@@ -96,12 +96,32 @@ app.get('*', async(req, res, next) => {
         '/assets/plugins/ionicons/dist/css/ionicons.min.css',
         '/AdminLTE/dist/css/AdminLTE.min.css',
         '/AdminLTE/dist/css/skins/skin-blue.min.css',
+        '/AdminLTE/plugins/iCheck/flat/blue.css',
+        '/AdminLTE/plugins/morris/morris.css',
+        '/AdminLTE/plugins/jvectormap/jquery-jvectormap-1.2.2.css',
+        '/AdminLTE/plugins/datepicker/datepicker3.css',
+        '/AdminLTE/plugins/daterangepicker/daterangepicker.css',
+        '/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css',
       ], // List of css to enqueue
       classes: 'skin-blue sidebar-mini', // Body tag classes
       scripts: [
         '/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js',
         '/AdminLTE/bootstrap/js/bootstrap.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js',
+        '/AdminLTE/plugins/morris/morris.min.js',
+        '/AdminLTE/plugins/sparkline/jquery.sparkline.min.js',
+        '/AdminLTE/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js',
+        '/AdminLTE/plugins/jvectormap/jquery-jvectormap-world-mill-en.js',
+        '/AdminLTE/plugins/knob/jquery.knob.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js',
+        '/AdminLTE/plugins/daterangepicker/daterangepicker.js',
+        '/AdminLTE/plugins/datepicker/bootstrap-datepicker.js',
+        '/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js',
+        '/AdminLTE/plugins/slimScroll/jquery.slimscroll.min.js',
+        '/AdminLTE/plugins/fastclick/fastclick.js',
         '/AdminLTE/dist/js/app.min.js',
+        '/AdminLTE/dist/js/pages/dashboard.js',
+        '/AdminLTE/dist/js/demo.js',
         assets.main.js
       ], // List of js to enqueue
       children: ''
