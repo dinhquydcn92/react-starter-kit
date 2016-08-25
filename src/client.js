@@ -45,15 +45,21 @@ const context = {
       .getElementsByTagName('head')[0]
       .appendChild(meta);
   },
-  setBodyClasses: value => (document.body.className = value),
+  setBodyClasses: value => {
+    if (document.body.className !== value) {
+      document.body.className = value;
+    }
+  },
   enqueueStyles: args => {
     let setOfStyles = [].concat(args);
 
     setOfStyles.map(url => {
-      let link  = document.createElement('link');
-      link.rel  = 'stylesheet';
-      link.href = url;
-      document.head.appendChild(link);
+      if (!document.querySelector(`link[href="${url}"]`)) {
+        let link  = document.createElement('link');
+        link.rel  = 'stylesheet';
+        link.href = url;
+        document.head.appendChild(link);
+      }
     });
 
     return args;
@@ -62,10 +68,12 @@ const context = {
     let setOfScripts = [].concat(args);
 
     setOfScripts.map(src => {
-      let script   = document.createElement("script");
-      script.src   = src;
-      script.async = true;
-      document.body.appendChild(script);
+      if (!document.querySelector(`script[src="${src}"]`)) {
+        let script   = document.createElement("script");
+        script.src   = src;
+        script.async = true;
+        document.body.appendChild(script);
+      }
     });
 
     return args;
