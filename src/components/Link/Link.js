@@ -28,8 +28,6 @@ class Link extends Component { // eslint-disable-line react/prefer-stateless-fun
   handleClick(event) {
     let allowTransition = true;
 
-    console.log(event);
-
     if (this.props.onClick) {
       this.props.onClick(event);
     }
