@@ -60,7 +60,7 @@ class Login extends Component {
 
   componentDidMount() {
     $(function () {
-      $('input').iCheck({
+      $(this.refs['checkbox-remember-me'].getDOMNode()).iCheck({
         checkboxClass: 'icheckbox_square-blue',
         radioClass: 'iradio_square-blue',
         increaseArea: '20%' // optional
@@ -90,7 +90,7 @@ class Login extends Component {
               <div className="col-xs-8">
                 <div className="checkbox icheck">
                   <label>
-                    <input type="checkbox"/> Remember Me
+                    <input type="checkbox" ref="checkbox-remember-me"/> Remember Me
                   </label>
                 </div>
               </div>
