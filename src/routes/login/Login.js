@@ -59,14 +59,14 @@ class Login extends Component {
   }
 
   componentDidMount() {
-    console.log(this.refs.rememberMe);
-    //$(function () {
-    //  $(this.refs['checkbox-remember-me'].getDOMNode()).iCheck({
-    //    checkboxClass: 'icheckbox_square-blue',
-    //    radioClass: 'iradio_square-blue',
-    //    increaseArea: '20%' // optional
-    //  });
-    //});
+    console.log('refs: ', this.refs.rememberMe);
+    $(function () {
+      $(this.refs['checkbox-remember-me'].getDOMNode()).iCheck({
+        checkboxClass: 'icheckbox_square-blue',
+        radioClass: 'iradio_square-blue',
+        increaseArea: '20%' // optional
+      });
+    });
   }
 
   render() {
