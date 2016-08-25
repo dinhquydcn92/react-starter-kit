@@ -61,7 +61,7 @@ class Login extends Component {
   componentDidMount() {
     console.log('refs: ', this.refs.rememberMe);
     $(function () {
-      $(this.refs['checkbox-remember-me'].getDOMNode()).iCheck({
+      $(this.refs.rememberMe.getDOMNode()).iCheck({
         checkboxClass: 'icheckbox_square-blue',
         radioClass: 'iradio_square-blue',
         increaseArea: '20%' // optional
