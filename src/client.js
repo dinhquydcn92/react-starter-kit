@@ -49,25 +49,37 @@ const context = {
   enqueueStyles: args => {
     let setOfStyles = [].concat(args);
 
-    setOfStyles.map(url => {
+    return setOfStyles.map(url => {
       let link  = document.createElement('link');
       link.rel  = 'stylesheet';
       link.href = url;
       document.head.appendChild(link);
-
-      console.log('enqueued url: ' + url);
+      return url;
     })
   },
   enqueueScripts: args => {
     let setOfScripts = [].concat(args);
 
-    setOfScripts.map(url => {
+    return setOfScripts.map(src => {
       let script   = document.createElement("script");
-      script.src   = url;
+      script.src   = src;
       script.async = true;
       document.body.appendChild(script);
+      return src;
     });
   },
+  dequeueStyles: urls => {
+    urls.map(url => {
+      console.log('dequeue style: ', url);
+      document.querySelector(`link[href="${url}"]`).remove();
+    });
+  },
+  dequeueScripts: srcs => {
+    srcs.map(src => {
+      console.log('dequeue script: ', src);
+      document.querySelector(`script[src="${src}"]`).remove();
+    });
+  }
 };
 
 // Restore the scroll position if it was saved into the state

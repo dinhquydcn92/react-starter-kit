@@ -30,6 +30,8 @@ class Login extends Component {
     setBodyClasses: PropTypes.func.isRequired,
     enqueueStyles: PropTypes.func.isRequired,
     enqueueScripts: PropTypes.func.isRequired,
+    dequeueStyles: PropTypes.func,
+    dequeueScripts: PropTypes.func,
   };
 
   constructor(props, context) {
@@ -45,21 +47,43 @@ class Login extends Component {
   }
 
   componentWillMount() {
-    if (this.context.enqueueStyles) {
-      this.context.enqueueStyles([
+    const context = this.context;
+
+    if (context.enqueueStyles) {
+      this._styles = context.enqueueStyles([
         '/AdminLTE/plugins/iCheck/square/blue.css'
       ]);
     }
 
-    if (this.context.enqueueScripts) {
-      this.context.enqueueScripts([
+    if (context.enqueueScripts) {
+      this._scripts = context.enqueueScripts([
         '/AdminLTE/plugins/iCheck/icheck.min.js'
       ]);
     }
   }
 
   componentDidMount() {
+    $(function () {
+      if ($(this._rememberMe).iCheck) {
+        $(this._rememberMe).iCheck({
+          checkboxClass: 'icheckbox_square-blue',
+          radioClass: 'iradio_square-blue',
+          increaseArea: '20%' // optional
+        });
+      }
+    });
+  }
 
+  componentWillUnmount() {
+    const context = this.context;
+
+    if (this._styles && context.dequeueStyles) {
+      context.dequeueStyles(this._styles);
+    }
+
+    if (this._scripts && context.dequeueScripts) {
+      context.dequeueScripts(this._scripts);
+    }
   }
 
   render() {
@@ -84,7 +108,7 @@ class Login extends Component {
               <div className="col-xs-8">
                 <div className="checkbox icheck">
                   <label>
-                    <input type="checkbox" ref="rememberMe"/> Remember Me
+                    <input type="checkbox" ref={c => this._rememberMe = c}/> Remember Me
                   </label>
                 </div>
               </div>
