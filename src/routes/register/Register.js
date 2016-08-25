@@ -9,6 +9,7 @@
 
 import React, {Component, PropTypes} from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import Link from '../../components/Link';
 import s from './Register.css';
 
 class Register extends Component {
@@ -117,7 +118,7 @@ class Register extends Component {
               up using
               Google+</a>
           </div>
-          <a href="/login" className="text-center">I already have a membership</a>
+          <Link to="/login" className="text-center">I already have a membership</Link>
         </div>
         {/* /.form-box */}
       </div>
