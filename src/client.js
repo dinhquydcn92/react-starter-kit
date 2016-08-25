@@ -49,24 +49,26 @@ const context = {
   enqueueStyles: args => {
     let setOfStyles = [].concat(args);
 
-    return setOfStyles.map(url => {
+    setOfStyles.map(url => {
       let link  = document.createElement('link');
       link.rel  = 'stylesheet';
       link.href = url;
       document.head.appendChild(link);
-      return url;
-    })
+    });
+
+    return args;
   },
   enqueueScripts: args => {
     let setOfScripts = [].concat(args);
 
-    return setOfScripts.map(src => {
+    setOfScripts.map(src => {
       let script   = document.createElement("script");
       script.src   = src;
       script.async = true;
       document.body.appendChild(script);
-      return src;
     });
+
+    return args;
   },
   dequeueStyles: urls => {
     urls.map(url => {

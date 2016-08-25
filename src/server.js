@@ -116,9 +116,9 @@ app.get('*', async(req, res, next) => {
         },
         setTitle: value => (data.title = value),
         setMeta: (key, value) => (data[key] = value),
-        setBodyClasses: value => (data.classes = value),
-        enqueueStyles: styles => (data.styles = data.styles.concat(styles)),
-        enqueueScripts: scripts => (data.scripts = data.scripts.concat(scripts))
+        //setBodyClasses: value => (data.classes = value),
+        //enqueueStyles: styles => data.styles = data.styles.concat(styles),
+        //enqueueScripts: scripts => data.scripts = data.scripts.concat(scripts)
       },
       render(component, status = 200) {
         css           = new Set();
