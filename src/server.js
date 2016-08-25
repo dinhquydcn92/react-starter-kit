@@ -122,6 +122,7 @@ app.get('*', async(req, res, next) => {
         '/AdminLTE/dist/js/app.min.js',
         '/AdminLTE/dist/js/pages/dashboard.js',
         '/AdminLTE/dist/js/demo.js',
+        '/AdminLTE/plugins/iCheck/icheck.min.js',
         assets.main.js
       ], // List of js to enqueue
       children: ''

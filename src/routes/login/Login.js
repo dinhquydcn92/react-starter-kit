@@ -42,6 +42,18 @@ class Login extends Component {
     }
   }
 
+  componentDidMount() {
+    $(function () {
+      if ($(this._rememberMe).iCheck) {
+        $(this._rememberMe).iCheck({
+          checkboxClass: 'icheckbox_square-blue',
+          radioClass: 'iradio_square-blue',
+          increaseArea: '20%' // optional
+        });
+      }
+    });
+  }
+
   render() {
     return (
       <div className="login-box">
