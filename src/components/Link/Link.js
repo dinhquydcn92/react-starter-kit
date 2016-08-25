@@ -25,8 +25,10 @@ class Link extends Component { // eslint-disable-line react/prefer-stateless-fun
     onClick: PropTypes.func,
   };
 
-  handleClick = (event) => {
+  handleClick(event) {
     let allowTransition = true;
+
+    console.log(event);
 
     if (this.props.onClick) {
       this.props.onClick(event);
@@ -56,7 +58,7 @@ class Link extends Component { // eslint-disable-line react/prefer-stateless-fun
 
   render() {
     const {to, ...props} = this.props; // eslint-disable-line no-use-before-define
-    return <a href={history.createHref(to)} {...props} onClick={this.handleClick}/>;
+    return <a href={history.createHref(to)} {...props} onClick={event => this.handleClick(event)}/>;
   }
 
 }

@@ -10,6 +10,7 @@
 import React, {Component, PropTypes} from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import $ from 'jquery';
+import Link from '../../components/Link';
 import s from './Login.css';
 
 class Login extends Component {
@@ -107,7 +108,7 @@ class Login extends Component {
           </div>
           {/* /.social-auth-links */}
           <a href="#">I forgot my password</a><br />
-          <a href="register.html" className="text-center">Register a new membership</a>
+          <Link to="/register">Register a new membership</Link>
         </div>
         {/* /.login-box-body */}
       </div>

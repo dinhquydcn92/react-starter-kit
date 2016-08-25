@@ -11,8 +11,6 @@ import React, {Component, PropTypes} from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Register.css';
 
-const title = 'New User Registration';
-
 class Register extends Component {
 
   static propTypes = {
@@ -119,7 +117,7 @@ class Register extends Component {
               up using
               Google+</a>
           </div>
-          <a href="login.html" className="text-center">I already have a membership</a>
+          <a href="/login" className="text-center">I already have a membership</a>
         </div>
         {/* /.form-box */}
       </div>
