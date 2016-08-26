@@ -33,7 +33,7 @@ class Html extends Component {
       <script src="/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js"></script>
       <script src="/AdminLTE/bootstrap/js/bootstrap.min.js" async></script>
       <script src="/AdminLTE/dist/js/app.min.js" async></script>
-      {script && <script src={script}/>}
+      {this.props.script && <script src={this.props.script}/>}
       {analytics.google.trackingId &&
       <script
         dangerouslySetInnerHTML={{
