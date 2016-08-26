@@ -89,21 +89,9 @@ app.get('*', async(req, res, next) => {
     const data     = {
       title: '',
       description: '',
-      style: '', // Specific css defined for each component
-      styles: [
-        '/AdminLTE/bootstrap/css/bootstrap.min.css',
-        '/assets/plugins/font-awesome/css/font-awesome.min.css',
-        '/assets/plugins/ionicons/dist/css/ionicons.min.css',
-        '/AdminLTE/dist/css/AdminLTE.min.css',
-        '/AdminLTE/dist/css/skins/skin-blue.min.css',
-      ], // List of css to enqueue
-      classes: 'skin-blue sidebar-mini', // Body tag classes
-      scripts: [
-        '/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js',
-        '/AdminLTE/bootstrap/js/bootstrap.min.js',
-        '/AdminLTE/dist/js/app.min.js',
-        assets.main.js
-      ], // List of js to enqueue
+      style: '',
+      classes: 'skin-blue sidebar-mini',
+      script: assets.main.js,
       children: ''
     };
 
