@@ -11,7 +11,9 @@ import React, {Component, PropTypes} from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import $ from 'jquery';
 import Link from '../../components/Link';
+
 import s from './Login.css';
+//import s_iCheck from 'admin-lte/plugins/iCheck/square/blue.css';
 
 class Login extends Component {
 
@@ -104,4 +106,4 @@ class Login extends Component {
   }
 }
 
-export default withStyles(s)(Login);
+export default withStyles(s/*, s_iCheck*/)(Login);
