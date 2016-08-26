@@ -86,7 +86,6 @@ const config = {
             minimize: !DEBUG,
           })}`,
           'postcss-loader?pack=default',
-          'style-loader'
         ],
       },
       {
