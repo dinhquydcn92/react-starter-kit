@@ -6,7 +6,8 @@ class Html extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    style: PropTypes.string,
+    style: PropTypes.string.isRequired,
+    script: PropTypes.string,
     children: PropTypes.string,
   };
 
