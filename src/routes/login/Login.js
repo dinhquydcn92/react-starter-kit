@@ -9,11 +9,8 @@
 
 import React, {Component, PropTypes} from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import $ from 'jquery';
 import Link from '../../components/Link';
-
 import s from './Login.css';
-//import s_iCheck from 'admin-lte/plugins/iCheck/square/blue.css';
 
 class Login extends Component {
 
@@ -45,14 +42,12 @@ class Login extends Component {
   }
 
   componentDidMount() {
-    $(function () {
-      if ($(this._rememberMe).iCheck) {
-        $(this._rememberMe).iCheck({
-          checkboxClass: 'icheckbox_square-blue',
-          radioClass: 'iradio_square-blue',
-          increaseArea: '20%' // optional
-        });
-      }
+    require('admin-lte/plugins/iCheck/icheck.min.js');
+
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' // optional
     });
   }
 
@@ -78,7 +73,7 @@ class Login extends Component {
               <div className="col-xs-8">
                 <div className="checkbox icheck">
                   <label>
-                    <input type="checkbox" ref={c => this._rememberMe = c}/> Remember Me
+                    <input type="checkbox"/> Remember Me
                   </label>
                 </div>
               </div>
@@ -106,4 +101,4 @@ class Login extends Component {
   }
 }
 
-export default withStyles(s/*, s_iCheck*/)(Login);
+export default withStyles(s)(Login);

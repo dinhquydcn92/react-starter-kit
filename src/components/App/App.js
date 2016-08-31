@@ -54,7 +54,6 @@ class App extends Component {
   }
 
   componentWillUnmount() {
-    // Dequeue styles/scripts here
     this.removeCss();
   }
 

@@ -52,6 +52,7 @@ const config = {
           path.resolve(__dirname, '../node_modules/react-routing/src'),
           path.resolve(__dirname, '../src'),
         ],
+        exclude: /(node_modules|bower_components)/,
         query: {
           // https://github.com/babel/babel-loader#options
           cacheDirectory: DEBUG,
@@ -74,13 +75,13 @@ const config = {
         },
       },
       {
-        test: /\.css/,
+        test: /\.css$/,
         loaders: [
           'isomorphic-style-loader',
           `css-loader?${JSON.stringify({
             sourceMap: DEBUG,
             // CSS Modules https://github.com/css-modules/css-modules
-            modules: true,
+            modules: false,
             localIdentName: DEBUG ? '[name]_[local]_[hash:base64:3]' : '[hash:base64:4]',
             // CSS Nano http://cssnano.co/options/
             minimize: !DEBUG,
@@ -275,8 +276,7 @@ const serverConfig = extend(true, {}, config, {
   externals: [
     /^\.\/assets$/,
     function filter(context, request, cb) {
-      const isExternal =
-              request.match(/^[@a-z][a-z\/\.\-0-9]*$/i) && !request.match(/^react-routing/) && !context.match(/[\\/]react-routing/);
+      const isExternal = request.match(/^[@a-z][a-z\/\.\-0-9]*$/i) && !request.match(/^react-routing/) && !context.match(/[\\/]react-routing/);
       cb(null, Boolean(isExternal));
     },
   ],
@@ -289,8 +289,7 @@ const serverConfig = extend(true, {}, config, {
 
     // Adds a banner to the top of each generated chunk
     // https://webpack.github.io/docs/list-of-plugins.html#bannerplugin
-    new webpack.BannerPlugin('require("source-map-support").install();',
-      {raw: true, entryOnly: false}),
+    new webpack.BannerPlugin('require("source-map-support").install();', {raw: true, entryOnly: false}),
   ],
 
   node: {
