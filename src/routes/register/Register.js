@@ -41,6 +41,18 @@ class Register extends Component {
     }
   }
 
+  componentDidMount() {
+    require('admin-lte/plugins/iCheck/icheck.min.js');
+
+    $(function () {
+      $('input').iCheck({
+        checkboxClass: 'icheckbox_square-blue',
+        radioClass: 'iradio_square-blue',
+        increaseArea: '20%' // optional
+      });
+    });
+  }
+
   render() {
     return (
       <div className="register-box">
@@ -98,7 +110,7 @@ class Register extends Component {
                         background: 'rgb(255, 255, 255)'
                       }}/>
                     </div>
-                    I agree to the <a href="#">terms</a>
+                    &nbsp;&nbsp;I agree to the&nbsp;<a href="#">terms</a>
                   </label>
                 </div>
               </div>
