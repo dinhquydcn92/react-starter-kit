@@ -57,7 +57,7 @@ class Login extends Component {
     return (
       <div className="login-box">
         <div className="login-logo">
-          <Link to="/index2"><b>Admin</b>LTE</Link>
+          <Link to="/"><b>Admin</b>LTE</Link>
         </div>
         {/* /.login-logo */}
         <div className="login-box-body">
