@@ -82,35 +82,7 @@ class Register extends Component {
               <div className="col-xs-8">
                 <div className="checkbox icheck">
                   <label>
-                    <div className="icheckbox_square-blue" aria-checked="false" aria-disabled="false"
-                         style={{position: 'relative'}}><input type="checkbox" style={{
-                      position: 'absolute',
-                      top: '-20%',
-                      left: '-20%',
-                      display: 'block',
-                      width: '140%',
-                      height: '140%',
-                      margin: 0,
-                      padding: 0,
-                      border: 0,
-                      opacity: 0,
-                      background: 'rgb(255, 255, 255)'
-                    }}/>
-                      <ins className="iCheck-helper" style={{
-                        position: 'absolute',
-                        top: '-20%',
-                        left: '-20%',
-                        display: 'block',
-                        width: '140%',
-                        height: '140%',
-                        margin: 0,
-                        padding: 0,
-                        border: 0,
-                        opacity: 0,
-                        background: 'rgb(255, 255, 255)'
-                      }}/>
-                    </div>
-                    &nbsp;&nbsp;I agree to the&nbsp;<a href="#">terms</a>
+                    <input type="checkbox"/> I agree to the <a href="#">terms</a>
                   </label>
                 </div>
               </div>
@@ -123,14 +95,12 @@ class Register extends Component {
           </form>
           <div className="social-auth-links text-center">
             <p>- OR -</p>
-            <a href="#" className="btn btn-block btn-social btn-facebook btn-flat"><i className="fa fa-facebook"/> Sign
-              up using
-              Facebook</a>
-            <a href="#" className="btn btn-block btn-social btn-google btn-flat"><i className="fa fa-google-plus"/> Sign
-              up using
-              Google+</a>
+            <a href="#" className="btn btn-block btn-social btn-facebook btn-flat"><i
+              className="fa fa-facebook"/> Sign up using Facebook</a>
+            <a href="#" className="btn btn-block btn-social btn-google btn-flat"><i
+              className="fa fa-google-plus"/> Sign up using Google+</a>
           </div>
-          <Link to="/login" className="text-center">I already have a membership</Link>
+          <a href="/login" className="text-center">I already have a membership</a>
         </div>
         {/* /.form-box */}
       </div>
