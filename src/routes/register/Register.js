@@ -57,7 +57,7 @@ class Register extends Component {
     return (
       <div className="register-box">
         <div className="register-logo">
-          <a href="../../index2.html"><b>Admin</b>LTE</a>
+          <Link to="/"><b>Admin</b>LTE</Link>
         </div>
         <div className="register-box-body">
           <p className="login-box-msg">Register a new membership</p>
@@ -82,7 +82,7 @@ class Register extends Component {
               <div className="col-xs-8">
                 <div className="checkbox icheck">
                   <label>
-                    <input type="checkbox"/> I agree to the <a href="#">terms</a>
+                    <input type="checkbox"/> I agree to the <Link to="#">terms</Link>
                   </label>
                 </div>
               </div>
@@ -95,12 +95,12 @@ class Register extends Component {
           </form>
           <div className="social-auth-links text-center">
             <p>- OR -</p>
-            <a href="#" className="btn btn-block btn-social btn-facebook btn-flat"><i
-              className="fa fa-facebook"/> Sign up using Facebook</a>
-            <a href="#" className="btn btn-block btn-social btn-google btn-flat"><i
-              className="fa fa-google-plus"/> Sign up using Google+</a>
+            <Link to="#" className="btn btn-block btn-social btn-facebook btn-flat"><i
+              className="fa fa-facebook"/> Sign up using Facebook</Link>
+            <Link to="#" className="btn btn-block btn-social btn-google btn-flat"><i
+              className="fa fa-google-plus"/> Sign up using Google+</Link>
           </div>
-          <a href="/login" className="text-center">I already have a membership</a>
+          <Link to="/login" className="text-center">I already have a membership</Link>
         </div>
         {/* /.form-box */}
       </div>
