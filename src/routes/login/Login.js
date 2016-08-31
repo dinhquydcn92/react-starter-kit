@@ -75,7 +75,7 @@ class Login extends Component {
               <div className="col-xs-8">
                 <div className="checkbox icheck">
                   <label>
-                    <input type="checkbox"/> Remember Me
+                    <input type="checkbox"/>&nbsp;&nbsp;Remember Me
                   </label>
                 </div>
               </div>
@@ -88,10 +88,10 @@ class Login extends Component {
           </form>
           <div className="social-auth-links text-center">
             <p>- OR -</p>
-            <a href="#" className="btn btn-block btn-social btn-facebook btn-flat"><i className="fa fa-facebook"/> Sign
-              in using Facebook</a>
-            <a href="#" className="btn btn-block btn-social btn-google btn-flat"><i className="fa fa-google-plus"/> Sign
-              in using Google+</a>
+            <a href="#" className="btn btn-block btn-social btn-facebook btn-flat"><i
+              className="fa fa-facebook"/> Sign in using Facebook</a>
+            <a href="#" className="btn btn-block btn-social btn-google btn-flat"><i
+              className="fa fa-google-plus"/> Sign in using Google+</a>
           </div>
           {/* /.social-auth-links */}
           <a href="#">I forgot my password</a><br />
