@@ -75,7 +75,7 @@ class Login extends Component {
               <div className="col-xs-8">
                 <div className="checkbox icheck">
                   <label>
-                    <input type="checkbox"/>&nbsp;&nbsp;Remember Me
+                    <input type="checkbox"/> Remember Me
                   </label>
                 </div>
               </div>
