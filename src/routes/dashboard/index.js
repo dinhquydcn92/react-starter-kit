@@ -8,19 +8,21 @@
  */
 
 import React from 'react';
-import Contact from './Contact';
+import Starter from './Dashboard';
 
 export default {
 
-  path: '/contact',
+  path: '/dashboard',
 
   action() {
 
     let content = {
-      title: 'Contact',
+      title: 'Dashboard - Administration Building Tool',
+      pageTitle: 'Dashboard',
+      pageSubTitle: 'Overview Page',
     };
 
-    return <Contact content={content} />;
+    return <Starter content={content}/>;
   },
 
 };

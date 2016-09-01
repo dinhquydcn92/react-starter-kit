@@ -17,6 +17,8 @@ import login from './login';
 import register from './register';
 import error from './error';
 
+import dashboard from './dashboard';
+
 // AdminLTE starter page
 import starter from './starter';
 
@@ -30,6 +32,8 @@ export default {
     contact,
     login,
     register,
+
+    dashboard,
 
     // AdminLTE
     starter,
