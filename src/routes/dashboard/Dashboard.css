@@ -1,0 +1,15 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+@import '../../components/variables.css';
+@import '../../../node_modules/admin-lte/plugins/iCheck/flat/blue.css?root=../../../.';
+@import '../../../node_modules/admin-lte/plugins/morris/morris.css?root=../../../.';
+@import '../../../node_modules/admin-lte/plugins/jvectormap/jquery-jvectormap-1.2.2.css?root=../../../.';
+@import '../../../node_modules/admin-lte/plugins/datepicker/datepicker3.css?root=../../../.';
+@import '../../../node_modules/admin-lte/plugins/daterangepicker/daterangepicker.css?root=../../../.';
+@import '../../../node_modules/admin-lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css?root=../../../.';
