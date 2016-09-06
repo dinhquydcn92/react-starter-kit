@@ -15,14 +15,13 @@ export default {
   path: '/dashboard',
 
   action() {
-
     let content = {
       title: 'Dashboard - Administration Building Tool',
       pageTitle: 'Dashboard',
       pageSubTitle: 'Overview Page',
     };
 
-    return <Starter content={content}/>;
+    return <Starter content={content} />;
   },
 
 };
