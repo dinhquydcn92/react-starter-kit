@@ -7,7 +7,7 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import React, {Component, PropTypes} from 'react';
+import React, { Component, PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Contact.css';
 
@@ -17,12 +17,12 @@ class Contact extends Component {
     // Wrap all content props to one parent props
     content: PropTypes.shape({
       // Document title
-      title: PropTypes.string.isRequired
+      title: PropTypes.string.isRequired,
     }).isRequired,
   };
 
   static contextTypes = {
-    setTitle: PropTypes.func.isRequired
+    setTitle: PropTypes.func.isRequired,
   };
 
   constructor(props, context) {
@@ -37,11 +37,11 @@ class Contact extends Component {
     return (
       <div className={s.root}>
         <div className={s.container}>
-          <h1>{this.props.title}</h1>
+          <h1>{this.props.content.title}</h1>
           <p>...</p>
         </div>
       </div>
-    );
+      );
   }
 }
 
