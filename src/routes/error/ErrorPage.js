@@ -8,7 +8,6 @@
  */
 
 import React, { Component, PropTypes } from 'react';
-// import s from './ErrorPage.css';
 
 class ErrorPage extends Component {
 

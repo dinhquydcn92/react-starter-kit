@@ -9,25 +9,23 @@
 
 import React from 'react';
 import App from '../../components/App';
-import ErrorPage from './ErrorPage';
+import ErrorPageWithoutStyle from './ErrorPage';
 
 export default {
 
   path: '/error',
 
-  action({render, context, error}) {
-
+  action({ render, context, error }) {
     let content = {
       title: 'Error',
-      error: error
+      error,
     };
 
     return render(
       <App context={context}>
-        <ErrorPage content={content} isFullWidth={true}/>
+        <ErrorPageWithoutStyle content={content} isFullWidth />
       </App>,
       error.status || 500
     );
   },
-
 };
