@@ -9,7 +9,7 @@ class Html extends Component { // eslint-disable-line react/prefer-stateless-fun
     style: PropTypes.string.isRequired,
     script: PropTypes.string,
     children: PropTypes.string,
-    classes: PropTypes.string.isRequired,
+    classes: PropTypes.string,
   };
 
   render() {
@@ -32,7 +32,7 @@ class Html extends Component { // eslint-disable-line react/prefer-stateless-fun
           <link rel="stylesheet" href="/AdminLTE/dist/css/skins/skin-blue.min.css" />
           <style id="css" dangerouslySetInnerHTML={{ __html: this.props.style }} />
         </head>
-        <body className={this.props.classes}>
+        <body className={this.props.classes || 'hold-transition skin-blue sidebar-mini'}>
           <div id="app" dangerouslySetInnerHTML={{ __html: this.props.children }} />
           <script src="/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js"></script>
           <script src="/AdminLTE/bootstrap/js/bootstrap.min.js" async></script>
