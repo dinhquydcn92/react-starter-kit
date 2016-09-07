@@ -9,7 +9,7 @@
 
 import React from 'react';
 import App from '../../components/App';
-import ErrorPageWithoutStyle from './ErrorPage';
+import ErrorPage from './ErrorPage';
 
 export default {
 
@@ -23,7 +23,7 @@ export default {
 
     return render(
       <App context={context}>
-        <ErrorPageWithoutStyle content={content} isFullWidth />
+        <ErrorPage content={content} isFullWidth />
       </App>,
       error.status || 500
     );

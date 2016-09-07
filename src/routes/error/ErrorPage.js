@@ -8,6 +8,8 @@
  */
 
 import React, { Component, PropTypes } from 'react';
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import s from './ErrorPage.css';
 
 class ErrorPage extends Component {
 
@@ -59,4 +61,4 @@ class ErrorPage extends Component {
   }
 }
 
-export { ErrorPage as ErrorPageWithoutStyle }; // eslint-disable-line import/prefer-default-export
+export default withStyles(s)(ErrorPage);
