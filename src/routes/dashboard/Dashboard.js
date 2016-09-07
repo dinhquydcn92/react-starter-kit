@@ -29,21 +29,7 @@ class Dashboard extends Component {
   }
 
   componentDidMount() {
-    require('admin-lte/plugins/jQueryUI/jquery-ui.min.js'); // eslint-disable-line global-require
-    // require('raphael');
-    require('admin-lte/plugins/morris/morris.min.js'); // eslint-disable-line global-require
-    require('admin-lte/plugins/sparkline/jquery.sparkline.min.js'); // eslint-disable-line global-require, max-len
-    require('admin-lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js'); // eslint-disable-line global-require, max-len
-    require('admin-lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js'); // eslint-disable-line global-require, max-len
-    // require('moment');
-    require('admin-lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js'); // eslint-disable-line global-require, max-len
-    require('admin-lte/plugins/daterangepicker/daterangepicker.js'); // eslint-disable-line global-require, max-len
-    require('admin-lte/plugins/datepicker/bootstrap-datepicker.js'); // eslint-disable-line global-require, max-len
-    require('admin-lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js'); // eslint-disable-line global-require, max-len
-    require('admin-lte/plugins/slimScroll/jquery.slimscroll.min.js'); // eslint-disable-line global-require, max-len
-    require('admin-lte/plugins/fastclick/fastclick.js'); // eslint-disable-line global-require, max-len
-    require('admin-lte/dist/js/pages/dashboard.js'); // eslint-disable-line global-require, max-len
-    require('admin-lte/dist/js/demo.js'); // eslint-disable-line global-require, max-len
+    //
   }
 
   render() {
