@@ -15,14 +15,13 @@ export default {
   path: '/starter',
 
   action() {
-
-    let content = {
+    let content = { // eslint-disable-line prefer-const
       title: 'Administration Building Tool',
       pageTitle: 'Starter Page',
       pageSubTitle: 'Optional description',
     };
 
-    return <Starter content={content}/>;
+    return <Starter content={content} />;
   },
 
 };

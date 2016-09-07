@@ -16,33 +16,29 @@ export default {
   path: '/',
 
   async action() {
-
     const resp = await fetch('/graphql', {
       method: 'post',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        query: '{news{title,link,contentSnippet}}',
-      }),
+      body: JSON.stringify({ query: '{news{title,link,contentSnippet}}' }),
       credentials: 'include',
     });
 
-    const {data} = await resp.json();
+    const { data } = await resp.json();
 
     if (!data || !data.news) {
       throw new Error('Failed to load the news feed.');
     }
 
-    let content = {
+    let content = { // eslint-disable-line prefer-const
       title: 'Administration Building Tool',
       pageTitle: 'React.js News',
       pageSubTitle: '',
-      news: data.news
+      news: data.news,
     };
 
-    return <Home content={content}/>;
+    return <Home content={content} />;
   },
-
 };

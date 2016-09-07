@@ -1,4 +1,4 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component, PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Starter.css';
 
@@ -17,7 +17,7 @@ class Starter extends Component {
   };
 
   static contextTypes = {
-    setTitle: PropTypes.func.isRequired
+    setTitle: PropTypes.func.isRequired,
   };
 
   constructor(props, context) {
@@ -31,7 +31,7 @@ class Starter extends Component {
   render() {
     return (
       <p>Here is a starter page for building anything you want.</p>
-    );
+      );
   }
 
 }

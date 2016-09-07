@@ -59,4 +59,4 @@ class ErrorPage extends Component {
   }
 }
 
-export { ErrorPage as ErrorPageWithoutStyle };
+export { ErrorPage as ErrorPageWithoutStyle }; // eslint-disable-line import/prefer-default-export

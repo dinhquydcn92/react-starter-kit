@@ -15,7 +15,7 @@ export default {
   path: '/dashboard',
 
   action() {
-    let content = {
+    let content = { // eslint-disable-line prefer-const
       title: 'Dashboard - Administration Building Tool',
       pageTitle: 'Dashboard',
       pageSubTitle: 'Overview Page',

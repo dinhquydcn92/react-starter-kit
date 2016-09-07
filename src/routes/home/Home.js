@@ -7,7 +7,7 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import React, {Component, PropTypes} from 'react';
+import React, { Component, PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.css';
 
@@ -57,8 +57,9 @@ class Home extends Component {
               <li key={index} className={s.newsItem}>
                 <a href={item.link} className={s.newsTitle}>{item.title}</a>
                 <span
-                  className={s.newsDesc}
-                  dangerouslySetInnerHTML={{__html: item.contentSnippet}}
+                  className={s.newsDesc} dangerouslySetInnerHTML={{
+                    __html: item.contentSnippet,
+                  }}
                 />
               </li>
             ))}

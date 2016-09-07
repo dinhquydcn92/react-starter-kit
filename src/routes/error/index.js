@@ -16,7 +16,7 @@ export default {
   path: '/error',
 
   action({ render, context, error }) {
-    let content = {
+    let content = { // eslint-disable-line prefer-const
       title: 'Error',
       error,
     };

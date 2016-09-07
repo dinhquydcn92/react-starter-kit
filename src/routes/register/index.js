@@ -15,13 +15,12 @@ export default {
   path: '/register',
 
   action() {
-
-    let content = {
+    let content = { // eslint-disable-line prefer-const
       title: 'Register',
     };
 
     return (
-      <Register content={content} isFullWidth={true}/>
+      <Register content={content} isFullWidth />
     );
   },
 

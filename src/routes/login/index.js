@@ -15,13 +15,12 @@ export default {
   path: '/login',
 
   action() {
-
-    let content = {
+    let content = { // eslint-disable-line prefer-const
       title: 'Login',
     };
 
     return (
-      <Login content={content} isFullWidth={true}/>
+      <Login content={content} isFullWidth />
     );
   },
 

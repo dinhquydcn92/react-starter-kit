@@ -47,7 +47,7 @@ class Dashboard extends Component {
               <div className="icon">
                 <i className="ion ion-bag" />
               </div>
-              <a href="#" className="small-box-footer">More info
+              <a href="/empty" className="small-box-footer">More info
                 <i className="fa fa-arrow-circle-right" />
               </a>
             </div>
@@ -65,7 +65,7 @@ class Dashboard extends Component {
               <div className="icon">
                 <i className="ion ion-stats-bars" />
               </div>
-              <a href="#" className="small-box-footer">More info
+              <a href="/empty" className="small-box-footer">More info
                 <i className="fa fa-arrow-circle-right" />
               </a>
             </div>
@@ -81,7 +81,7 @@ class Dashboard extends Component {
               <div className="icon">
                 <i className="ion ion-person-add" />
               </div>
-              <a href="#" className="small-box-footer">More info
+              <a href="/empty" className="small-box-footer">More info
                 <i className="fa fa-arrow-circle-right" />
               </a>
             </div>
@@ -97,7 +97,7 @@ class Dashboard extends Component {
               <div className="icon">
                 <i className="ion ion-pie-graph" />
               </div>
-              <a href="#" className="small-box-footer">More info
+              <a href="/empty" className="small-box-footer">More info
                 <i className="fa fa-arrow-circle-right" />
               </a>
             </div>
@@ -162,7 +162,7 @@ class Dashboard extends Component {
                 <div className="item">
                   <img src="AdminLTE/dist/img/user4-128x128.jpg" alt="user" className="online" />
                   <p className="message">
-                    <a href="#" className="name">
+                    <a href="/empty" className="name">
                       <small className="text-muted pull-right">
                         <i className="fa fa-clock-o" />
                         2:15
@@ -190,7 +190,7 @@ class Dashboard extends Component {
                 <div className="item">
                   <img src="AdminLTE/dist/img/user3-128x128.jpg" alt="user" className="offline" />
                   <p className="message">
-                    <a href="#" className="name">
+                    <a href="/empty" className="name">
                       <small className="text-muted pull-right">
                         <i className="fa fa-clock-o" />5:15
                       </small>
@@ -205,7 +205,7 @@ class Dashboard extends Component {
                 <div className="item">
                   <img src="AdminLTE/dist/img/user2-160x160.jpg" alt="user" className="offline" />
                   <p className="message">
-                    <a href="#" className="name">
+                    <a href="/empty" className="name">
                       <small className="text-muted pull-right">
                         <i className="fa fa-clock-o" />5:30
                       </small>
@@ -238,19 +238,19 @@ class Dashboard extends Component {
                 <div className="box-tools pull-right">
                   <ul className="pagination pagination-sm inline">
                     <li>
-                      <a href="#">«</a>
+                      <a href="/empty">«</a>
                     </li>
                     <li>
-                      <a href="#">1</a>
+                      <a href="/empty">1</a>
                     </li>
                     <li>
-                      <a href="#">2</a>
+                      <a href="/empty">2</a>
                     </li>
                     <li>
-                      <a href="#">3</a>
+                      <a href="/empty">3</a>
                     </li>
                     <li>
-                      <a href="#">»</a>
+                      <a href="/empty">»</a>
                     </li>
                   </ul>
                 </div>
@@ -532,14 +532,14 @@ class Dashboard extends Component {
                     ><i className="fa fa-bars" /></button>
                     <ul className="dropdown-menu pull-right" role="menu">
                       <li>
-                        <a href="#">Add new event</a>
+                        <a href="/empty">Add new event</a>
                       </li>
                       <li>
-                        <a href="#">Clear events</a>
+                        <a href="/empty">Clear events</a>
                       </li>
                       <li className="divider" />
                       <li>
-                        <a href="#">View calendar</a>
+                        <a href="/empty">View calendar</a>
                       </li>
                     </ul>
                   </div>
@@ -605,7 +605,7 @@ class Dashboard extends Component {
         </div>
         {/* /.row (main row) */}
       </div>
-      );
+    );
   }
 
 }

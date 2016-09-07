@@ -7,7 +7,7 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import React, {Component, PropTypes} from 'react';
+import React, { Component, PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import Link from '../../components/Link';
 import s from './Register.css';
@@ -18,7 +18,7 @@ class Register extends Component {
     // Wrap all content props to one parent props
     content: PropTypes.shape({
       // Document title
-      title: PropTypes.string.isRequired
+      title: PropTypes.string.isRequired,
     }).isRequired,
     // Define page layout
     isFullWidth: PropTypes.bool,
@@ -42,13 +42,13 @@ class Register extends Component {
   }
 
   componentDidMount() {
-    require('admin-lte/plugins/iCheck/icheck.min.js');
+    require('admin-lte/plugins/iCheck/icheck.min.js'); // eslint-disable-line react/require-extension, max-len, global-require
 
-    $(function () {
-      $('input').iCheck({
+    $(() => { // eslint-disable-line no-undef, func-names
+      $('input').iCheck({ // eslint-disable-line no-undef
         checkboxClass: 'icheckbox_square-blue',
         radioClass: 'iradio_square-blue',
-        increaseArea: '20%' // optional
+        increaseArea: '20%', // optional
       });
     });
   }
@@ -63,48 +63,52 @@ class Register extends Component {
           <p className="login-box-msg">Register a new membership</p>
           <form action="../../index.html" method="post">
             <div className="form-group has-feedback">
-              <input type="text" className="form-control" placeholder="Full name"/>
-              <span className="glyphicon glyphicon-user form-control-feedback"/>
+              <input type="text" className="form-control" placeholder="Full name" />
+              <span className="glyphicon glyphicon-user form-control-feedback" />
             </div>
             <div className="form-group has-feedback">
-              <input type="email" className="form-control" placeholder="Email"/>
-              <span className="glyphicon glyphicon-envelope form-control-feedback"/>
+              <input type="email" className="form-control" placeholder="Email" />
+              <span className="glyphicon glyphicon-envelope form-control-feedback" />
             </div>
             <div className="form-group has-feedback">
-              <input type="password" className="form-control" placeholder="Password"/>
-              <span className="glyphicon glyphicon-lock form-control-feedback"/>
+              <input type="password" className="form-control" placeholder="Password" />
+              <span className="glyphicon glyphicon-lock form-control-feedback" />
             </div>
             <div className="form-group has-feedback">
-              <input type="password" className="form-control" placeholder="Retype password"/>
-              <span className="glyphicon glyphicon-log-in form-control-feedback"/>
+              <input type="password" className="form-control" placeholder="Retype password" />
+              <span className="glyphicon glyphicon-log-in form-control-feedback" />
             </div>
             <div className="row">
               <div className="col-xs-8">
                 <div className="checkbox icheck">
-                  <label>
-                    <input type="checkbox"/> I agree to the <Link to="#">terms</Link>
+                  <label htmlFor>
+                    <input type="checkbox" /> I agree to the <Link to="#">terms</Link>
                   </label>
                 </div>
               </div>
-              {/* /.col */}
+              { /* /.col */ }
               <div className="col-xs-4">
-                <button type="submit" className="btn btn-primary btn-block btn-flat">Register</button>
+                <button
+                  type="submit" className="btn btn-primary btn-block btn-flat"
+                >Register</button>
               </div>
-              {/* /.col */}
+              { /* /.col */ }
             </div>
           </form>
           <div className="social-auth-links text-center">
             <p>- OR -</p>
             <Link to="#" className="btn btn-block btn-social btn-facebook btn-flat"><i
-              className="fa fa-facebook"/> Sign up using Facebook</Link>
+              className="fa fa-facebook"
+            /> Sign up using Facebook</Link>
             <Link to="#" className="btn btn-block btn-social btn-google btn-flat"><i
-              className="fa fa-google-plus"/> Sign up using Google+</Link>
+              className="fa fa-google-plus"
+            /> Sign up using Google+</Link>
           </div>
           <Link to="/login" className="text-center">I already have a membership</Link>
         </div>
-        {/* /.form-box */}
+        { /* /.form-box */ }
       </div>
-    );
+      );
   }
 }
 
