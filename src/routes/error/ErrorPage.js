@@ -7,9 +7,8 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import React, {Component, PropTypes} from 'react';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './ErrorPage.css';
+import React, { Component, PropTypes } from 'react';
+// import s from './ErrorPage.css';
 
 class ErrorPage extends Component {
 
@@ -19,14 +18,14 @@ class ErrorPage extends Component {
       // Document title
       title: PropTypes.string.isRequired,
       // Error object
-      error: PropTypes.object.isRequired
+      error: PropTypes.object.isRequired,
     }).isRequired,
     // Define page layout
     isFullWidth: PropTypes.bool,
   };
 
   static contextTypes = {
-    setTitle: PropTypes.func.isRequired
+    setTitle: PropTypes.func.isRequired,
   };
 
   constructor(props, context) {
@@ -35,11 +34,11 @@ class ErrorPage extends Component {
     this.state = {
       title: 'Error',
       content: 'Sorry, a critical error occurred on this page.',
-      errorMessage: null
+      errorMessage: null,
     };
 
     if (this.props.content.error.status === 404) {
-      this.state.title   = 'Page Not Found';
+      this.state.title = 'Page Not Found';
       this.state.content = 'Sorry, the page you were trying to access does not exist.';
     } else if (process.env.NODE_ENV !== 'production') {
       this.state.errorMessage = <pre>{this.props.content.error.stack}</pre>;
@@ -61,4 +60,4 @@ class ErrorPage extends Component {
   }
 }
 
-export default withStyles(s)(ErrorPage);
+export { ErrorPage as ErrorPageWithoutStyle };

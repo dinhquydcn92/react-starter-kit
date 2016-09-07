@@ -11,10 +11,14 @@ import 'babel-polyfill';
 import ReactDOM from 'react-dom';
 import FastClick from 'fastclick';
 import UniversalRouter from 'universal-router';
+import { readState, saveState } from 'history/lib/DOMStateStorage';
 import routes from './routes';
 import history from './core/history';
-import { readState, saveState } from 'history/lib/DOMStateStorage';
-import { addEventListener, removeEventListener, windowScrollX, windowScrollY,
+import {
+  addEventListener,
+  removeEventListener,
+  windowScrollX,
+  windowScrollY,
 } from './core/DOMUtils';
 
 const context = {
@@ -53,20 +57,30 @@ const context = {
 };
 
 // Restore the scroll position if it was saved into the state
-function restoreScrollPosition(state) {
+function restoreScrollPosition({ state, hash }) {
   if (state && state.scrollY !== undefined) {
     window.scrollTo(state.scrollX, state.scrollY);
-  } else {
-    window.scrollTo(0, 0);
+    return;
   }
+
+  const targetHash = hash && hash.substr(1);
+  if (targetHash) {
+    const target = document.getElementById(targetHash);
+    if (target) {
+      window.scrollTo(0, windowScrollY() + target.getBoundingClientRect().top);
+      return;
+    }
+  }
+
+  window.scrollTo(0, 0);
 }
 
-let renderComplete = (state, callback) => {
+let renderComplete = (location, callback) => {
   const elem = document.getElementById('css');
   if (elem) elem.parentNode.removeChild(elem);
   callback(true);
-  renderComplete = (s) => {
-    restoreScrollPosition(s);
+  renderComplete = (l) => {
+    restoreScrollPosition(l);
 
     // Google Analytics tracking. Don't send 'pageview' event after
     // the initial rendering, as it was already sent
@@ -78,13 +92,13 @@ let renderComplete = (state, callback) => {
   };
 };
 
-function render(container, state, component) {
+function render(container, location, component) {
   return new Promise((resolve, reject) => {
     try {
       ReactDOM.render(
         component,
         container,
-        renderComplete.bind(undefined, state, resolve)
+        renderComplete.bind(undefined, location, resolve)
       );
     } catch (err) {
       reject(err);
@@ -116,7 +130,7 @@ function run() {
       query: location.query,
       state: location.state,
       context,
-      render: render.bind(undefined, container, location.state), // eslint-disable-line react/jsx-no-bind, max-len
+      render: render.bind(undefined, container, location), // eslint-disable-line react/jsx-no-bind, max-len
     }).catch(err => console.error(err)); // eslint-disable-line no-console
   }
 
