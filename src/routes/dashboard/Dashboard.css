@@ -8,8 +8,3 @@
  */
 @import '../../components/variables.css';
 @import '../../../node_modules/admin-lte/plugins/iCheck/flat/blue.css?root=../../../.';
-@import '../../../node_modules/admin-lte/plugins/morris/morris.css?root=../../../.';
-@import '../../../node_modules/admin-lte/plugins/jvectormap/jquery-jvectormap-1.2.2.css?root=../../../.';
-@import '../../../node_modules/admin-lte/plugins/datepicker/datepicker3.css?root=../../../.';
-@import '../../../node_modules/admin-lte/plugins/daterangepicker/daterangepicker.css?root=../../../.';
-@import '../../../node_modules/admin-lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css?root=../../../.';
