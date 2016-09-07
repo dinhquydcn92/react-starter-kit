@@ -7,19 +7,17 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import React from 'react';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies, max-len
+import withStyles from 'isomorphic-style-loader/lib/withStyles'; // eslint-disable-line import/no-extraneous-dependencies, max-len
 import s from './Footer.css';
 
 function Footer() {
   return (
     <footer className="main-footer">
-      {/*<!-- To the right -->*/}
-      <div className="pull-right hidden-xs">
-        Anything you want
-      </div>
-      {/*<!-- Default to the left -->*/}
-      <strong>Copyright © 2016 <a href="#">Company</a>.</strong> All rights reserved.
+      {/* To the right */}
+      <div className="pull-right hidden-xs">Anything you want</div>
+      {/* Default to the left */}
+      <strong>Copyright © 2016 <a href="/empty">Company</a>.</strong> All rights reserved.
     </footer>
   );
 }

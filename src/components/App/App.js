@@ -7,8 +7,8 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import React, {Component, PropTypes} from 'react';
-import emptyFunction from 'fbjs/lib/emptyFunction';
+import React, { Component, PropTypes } from 'react'; // eslint-disable-line import/no-extraneous-dependencies, max-len
+import emptyFunction from 'fbjs/lib/emptyFunction'; // eslint-disable-line import/no-extraneous-dependencies, max-len
 import s from './App.css';
 import Header from '../Header';
 import AsideLeft from '../AsideLeft';
@@ -49,8 +49,8 @@ class App extends Component {
   }
 
   componentWillMount() {
-    const {insertCss} = this.props.context;
-    this.removeCss    = insertCss(s);
+    const { insertCss } = this.props.context;
+    this.removeCss = insertCss(s);
   }
 
   componentWillUnmount() {

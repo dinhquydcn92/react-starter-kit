@@ -1,5 +1,5 @@
-import React, {Component, PropTypes} from 'react';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import React, { Component, PropTypes } from 'react'; // eslint-disable-line import/no-extraneous-dependencies, max-len
+import withStyles from 'isomorphic-style-loader/lib/withStyles'; // eslint-disable-line import/no-extraneous-dependencies, max-len
 import s from './Content.css';
 
 class Content extends Component {
@@ -10,8 +10,8 @@ class Content extends Component {
 
   render() {
     return (
-      <div className="content-wrapper" style={{minHeight: '1048px'}}>
-        {/*<!-- Content Header (Page header) -->*/}
+      <div className="content-wrapper" style={{ minHeight: '1048px' }}>
+        { /* <!-- Content Header (Page header) --> */ }
         <section className="content-header">
 
           <h1>
@@ -20,18 +20,18 @@ class Content extends Component {
           </h1>
 
           <ol className="breadcrumb">
-            <li><a href="#"><i className="fa fa-dashboard"></i> Level</a></li>
+            <li><a href="/empty"><i className="fa fa-dashboard" /> Level</a></li>
             <li className="active">Here</li>
           </ol>
 
         </section>
-        {/* End of .content-header */}
+        { /* End of .content-header */ }
 
-        {/*<!-- Main content -->*/}
+        { /* <!-- Main content --> */ }
         <section className="content">
           {this.props.children}
         </section>
-        {/*<!-- /.content -->*/}
+        { /* <!-- /.content --> */ }
       </div>
     );
   }
