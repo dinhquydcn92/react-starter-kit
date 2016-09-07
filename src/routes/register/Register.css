@@ -7,4 +7,4 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 @import '../../components/variables.css';
-@import '../../../node_modules/admin-lte/plugins/iCheck/square/blue.css'?root=../../../.;
+@import '~/node_modules/admin-lte/plugins/iCheck/square/blue.css';
