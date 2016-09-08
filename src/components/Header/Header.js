@@ -202,7 +202,7 @@ function Header() {
         </div>
       </nav>
     </header>
-    );
+  );
 }
 
 export default withStyles(s)(Header);

@@ -70,7 +70,7 @@ function Header() {
             <div className="form-group">
               <label className="control-sidebar-subheading" htmlFor>
                 Report panel usage
-                <input type="checkbox" className="pull-right" checked />
+                <input type="checkbox" className="pull-right" defaultChecked />
               </label>
 
               <p>
