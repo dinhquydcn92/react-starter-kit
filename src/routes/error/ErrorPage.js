@@ -38,15 +38,21 @@ class ErrorPage extends Component {
       errorMessage: null,
     };
 
-    if (this.props.content.error.status === 404) {
-      this.state.title = 'Page Not Found';
-      this.state.content = 'Sorry, the page you were trying to access does not exist.';
-    } else if (process.env.NODE_ENV !== 'production') {
-      this.state.errorMessage = <pre>{this.props.content.error.stack}</pre>;
-    }
-
     if (context.setTitle) {
       context.setTitle(this.props.content.title);
+    }
+  }
+
+  componentWillMount() {
+    if (this.props.content.error.status === 404) {
+      setState({
+        title: 'Page Not Found',
+        content: 'Sorry, the page you were trying to access does not exist.',
+      });
+    } else if (process.env.NODE_ENV !== 'production') {
+      setState((previousState, currentProps) => (
+        { errorMessage: <pre>{currentProps.content.error.stack}</pre> }
+      ));
     }
   }
 
@@ -61,4 +67,5 @@ class ErrorPage extends Component {
   }
 }
 
+export { ErrorPage as ErrorPageWithoutStyle };
 export default withStyles(s)(ErrorPage);
