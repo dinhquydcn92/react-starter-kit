@@ -35,7 +35,6 @@ class Content extends Component {
       </div>
     );
   }
-
 }
 
 export default withStyles(s)(Content);

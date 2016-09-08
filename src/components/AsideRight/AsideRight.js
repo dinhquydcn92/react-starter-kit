@@ -73,9 +73,7 @@ function Header() {
                 <input type="checkbox" className="pull-right" defaultChecked />
               </label>
 
-              <p>
-                Some information about this general settings option
-              </p>
+              <p>Some information about this general settings option</p>
             </div>
             { /* <!-- /.form-group --> */ }
           </form>
@@ -83,7 +81,7 @@ function Header() {
         { /* <!-- /.tab-pane --> */ }
       </div>
     </aside>
-    );
+  );
 }
 
 export default withStyles(s)(Header);
