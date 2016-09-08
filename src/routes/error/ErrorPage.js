@@ -45,12 +45,12 @@ class ErrorPage extends Component {
 
   componentWillMount() {
     if (this.props.content.error.status === 404) {
-      setState({
+      this.setState({
         title: 'Page Not Found',
         content: 'Sorry, the page you were trying to access does not exist.',
       });
     } else if (process.env.NODE_ENV !== 'production') {
-      setState((previousState, currentProps) => (
+      this.setState((previousState, currentProps) => (
         { errorMessage: <pre>{currentProps.content.error.stack}</pre> }
       ));
     }
