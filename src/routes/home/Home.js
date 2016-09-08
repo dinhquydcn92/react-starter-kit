@@ -33,7 +33,6 @@ class Home extends Component {
 
   static contextTypes = {
     setTitle: PropTypes.func.isRequired,
-    setBodyClasses: PropTypes.func.isRequired,
   };
 
   constructor(props, context) {
@@ -41,10 +40,6 @@ class Home extends Component {
 
     if (context.setTitle) {
       context.setTitle(this.props.content.title);
-    }
-
-    if (context.setBodyClasses) {
-      context.setBodyClasses('hold-transition skin-blue sidebar-mini');
     }
   }
 
