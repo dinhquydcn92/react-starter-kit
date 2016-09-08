@@ -151,8 +151,8 @@ const config = {
     return {
       default: [
         // Transfer @import rule by inlining content, e.g. @import 'normalize.css'
-        // https://github.com/postcss/postcss-import
-        require('postcss-import')({ addDependencyTo: bundler }), // eslint-disable-line import/no-extraneous-dependencies, max-len
+        // https://github.com/jonathantneal/postcss-partial-import
+        require('postcss-partial-import')({ addDependencyTo: bundler }), // eslint-disable-line import/no-extraneous-dependencies, max-len
         // W3C variables, e.g. :root { --color: red; } div { background: var(--color); }
         // https://github.com/postcss/postcss-custom-properties
         require('postcss-custom-properties')(), // eslint-disable-line import/no-extraneous-dependencies, max-len
