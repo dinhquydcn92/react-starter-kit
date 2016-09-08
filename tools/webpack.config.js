@@ -289,7 +289,7 @@ const serverConfig = extend(true, {}, config, {
     // https://webpack.github.io/docs/list-of-plugins.html#defineplugin
     new webpack.DefinePlugin({
       ...GLOBALS,
-      'process.env.BROWSER': true,
+      'process.env.BROWSER': false,
     }),
 
     // Adds a banner to the top of each generated chunk
