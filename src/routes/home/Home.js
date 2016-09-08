@@ -187,7 +187,7 @@ class Home extends Component {
               <div className="box-body chat" id="chat-box">
                 {/* chat item */}
                 <div className="item">
-                  <img src="dist/img/user4-128x128.jpg" alt="user" className="online" />
+                  <img src="dist/AdminLTE/img/user4-128x128.jpg" alt="user" className="online" />
                   <p className="message">
                     <a href="/empty" className="name">
                       <small className="text-muted pull-right">
@@ -215,7 +215,7 @@ class Home extends Component {
                 {/* /.item */}
                 {/* chat item */}
                 <div className="item">
-                  <img src="dist/img/user3-128x128.jpg" alt="user" className="offline" />
+                  <img src="dist/AdminLTE/img/user3-128x128.jpg" alt="user" className="offline" />
                   <p className="message">
                     <a href="/empty" className="name">
                       <small className="text-muted pull-right">
@@ -231,7 +231,7 @@ class Home extends Component {
                 {/* /.item */}
                 {/* chat item */}
                 <div className="item">
-                  <img src="dist/img/user2-160x160.jpg" alt="user" className="offline" />
+                  <img src="dist/AdminLTE/img/user2-160x160.jpg" alt="user" className="offline" />
                   <p className="message">
                     <a href="/empty" className="name">
                       <small className="text-muted pull-right">
