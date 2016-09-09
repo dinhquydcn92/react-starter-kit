@@ -50,7 +50,11 @@ class Html extends Component { // eslint-disable-line react/prefer-stateless-fun
               }}
             />
           }
-          {analytics.google.trackingId && <script src="https://www.google-analytics.com/analytics.js" async defer />}
+          {
+            analytics.google.trackingId && <script
+              src="https://www.google-analytics.com/analytics.js" async defer
+            />
+          }
         </body>
       </html>
       );
