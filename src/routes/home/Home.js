@@ -178,9 +178,9 @@ class Home extends Component {
       $('#calendar').datepicker();
 
       // SLIMSCROLL FOR CHAT WIDGET
-      $('#chat-box').slimScroll({
-        height: '250px',
-      });
+      // $('#chat-box').slimScroll({
+      //   height: '250px',
+      // });
 
       /* Morris.js Charts */
       // Sales chart
