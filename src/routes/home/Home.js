@@ -9,6 +9,7 @@
 
 import React, { Component, PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import 'moment';
 import s from './Home.css';
 
 class Home extends Component {
