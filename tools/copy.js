@@ -28,6 +28,7 @@ async function copy({watch} = {}) {
       // "/src/public/assets/plugins" must be existed before doing this step
       ncp('node_modules/font-awesome', 'build/public/assets/plugins/font-awesome');
       ncp('node_modules/ionicons', 'build/public/assets/plugins/ionicons');
+      ncp('node_modules/moment', 'build/public/assets/plugins/moment');
     });
 
   await fs.writeFile('./build/package.json', JSON.stringify({
