@@ -709,7 +709,7 @@ class Home2 extends Component {
                         {/* /.direct-chat-img */}
                         <img
                           className="direct-chat-img"
-                          src="dist/img/user1-128x128.jpg"
+                          src="AdminLTE/dist/img/user1-128x128.jpg"
                           alt="message user"
                         />
                         <div className="direct-chat-text">
@@ -730,7 +730,7 @@ class Home2 extends Component {
                         </div>
                         {/* /.direct-chat-info */}
                         <img
-                          className="direct-chat-img" src="dist/img/user3-128x128.jpg"
+                          className="direct-chat-img" src="AdminLTE/dist/img/user3-128x128.jpg"
                           alt="message user"
                         />
                         <div className="direct-chat-text">
@@ -751,7 +751,7 @@ class Home2 extends Component {
                         </div>
                         {/* /.direct-chat-info */}
                         <img
-                          className="direct-chat-img" src="dist/img/user1-128x128.jpg"
+                          className="direct-chat-img" src="AdminLTE/dist/img/user1-128x128.jpg"
                           alt="message user"
                         />
                         <div className="direct-chat-text">
@@ -772,7 +772,7 @@ class Home2 extends Component {
                         </div>
                         {/* /.direct-chat-info */}
                         <img
-                          className="direct-chat-img" src="dist/img/user3-128x128.jpg"
+                          className="direct-chat-img" src="AdminLTE/dist/img/user3-128x128.jpg"
                           alt="message user"
                         />
                         <div className="direct-chat-text">
@@ -789,7 +789,8 @@ class Home2 extends Component {
                         <li>
                           <a href="/empty">
                             <img
-                              className="contacts-list-img" src="dist/img/user1-128x128.jpg"
+                              className="contacts-list-img"
+                              src="AdminLTE/dist/img/user1-128x128.jpg"
                               alt="User"
                             />
                             <div className="contacts-list-info">
@@ -808,7 +809,8 @@ class Home2 extends Component {
                         <li>
                           <a href="/empty">
                             <img
-                              className="contacts-list-img" src="dist/img/user7-128x128.jpg"
+                              className="contacts-list-img"
+                              src="AdminLTE/dist/img/user7-128x128.jpg"
                               alt="User"
                             />
                             <div className="contacts-list-info">
@@ -827,7 +829,8 @@ class Home2 extends Component {
                         <li>
                           <a href="/empty">
                             <img
-                              className="contacts-list-img" src="dist/img/user3-128x128.jpg"
+                              className="contacts-list-img"
+                              src="AdminLTE/dist/img/user3-128x128.jpg"
                               alt="User"
                             />
                             <div className="contacts-list-info">
@@ -846,7 +849,8 @@ class Home2 extends Component {
                         <li>
                           <a href="/empty">
                             <img
-                              className="contacts-list-img" src="dist/img/user5-128x128.jpg"
+                              className="contacts-list-img"
+                              src="AdminLTE/dist/img/user5-128x128.jpg"
                               alt="User"
                             />
                             <div className="contacts-list-info">
@@ -865,7 +869,8 @@ class Home2 extends Component {
                         <li>
                           <a href="/empty">
                             <img
-                              className="contacts-list-img" src="dist/img/user6-128x128.jpg"
+                              className="contacts-list-img"
+                              src="AdminLTE/dist/img/user6-128x128.jpg"
                               alt="User"
                             />
                             <div className="contacts-list-info">
@@ -884,7 +889,8 @@ class Home2 extends Component {
                         <li>
                           <a href="/empty">
                             <img
-                              className="contacts-list-img" src="dist/img/user8-128x128.jpg"
+                              className="contacts-list-img"
+                              src="AdminLTE/dist/img/user8-128x128.jpg"
                               alt="User"
                             />
                             <div className="contacts-list-info">
@@ -947,54 +953,54 @@ class Home2 extends Component {
                   <div className="box-body no-padding">
                     <ul className="users-list clearfix">
                       <li>
-                        <img src="dist/img/user1-128x128.jpg" alt="User" />
+                        <img src="AdminLTE/dist/img/user1-128x128.jpg" alt="User" />
                         <a className="users-list-name" href="/empty">
                           Alexander Pierce
                         </a>
                         <span className="users-list-date">Today</span>
                       </li>
                       <li>
-                        <img src="dist/img/user8-128x128.jpg" alt="User" />
+                        <img src="AdminLTE/dist/img/user8-128x128.jpg" alt="User" />
                         <a className="users-list-name" href="/empty">Norman</a>
                         <span className="users-list-date">Yesterday</span>
                       </li>
                       <li>
-                        <img src="dist/img/user7-128x128.jpg" alt="User" />
+                        <img src="AdminLTE/dist/img/user7-128x128.jpg" alt="User" />
                         <a className="users-list-name" href="/empty">Jane</a>
                         <span className="users-list-date">
                           12 Jan
                         </span>
                       </li>
                       <li>
-                        <img src="dist/img/user6-128x128.jpg" alt="User" />
+                        <img src="AdminLTE/dist/img/user6-128x128.jpg" alt="User" />
                         <a className="users-list-name" href="/empty">John</a>
                         <span className="users-list-date">
                           12 Jan
                         </span>
                       </li>
                       <li>
-                        <img src="dist/img/user2-160x160.jpg" alt="User" />
+                        <img src="AdminLTE/dist/img/user2-160x160.jpg" alt="User" />
                         <a className="users-list-name" href="/empty">Alexander</a>
                         <span className="users-list-date">
                           13 Jan
                         </span>
                       </li>
                       <li>
-                        <img src="dist/img/user5-128x128.jpg" alt="User" />
+                        <img src="AdminLTE/dist/img/user5-128x128.jpg" alt="User" />
                         <a className="users-list-name" href="/empty">Sarah</a>
                         <span className="users-list-date">
                           14 Jan
                         </span>
                       </li>
                       <li>
-                        <img src="dist/img/user4-128x128.jpg" alt="User" />
+                        <img src="AdminLTE/dist/img/user4-128x128.jpg" alt="User" />
                         <a className="users-list-name" href="/empty">Nora</a>
                         <span className="users-list-date">
                           15 Jan
                         </span>
                       </li>
                       <li>
-                        <img src="dist/img/user3-128x128.jpg" alt="User" />
+                        <img src="AdminLTE/dist/img/user3-128x128.jpg" alt="User" />
                         <a className="users-list-name" href="/empty">Nadia</a>
                         <span className="users-list-date">
                           15 Jan
@@ -1361,7 +1367,7 @@ class Home2 extends Component {
                 <ul className="products-list product-list-in-box">
                   <li className="item">
                     <div className="product-img">
-                      <img src="dist/img/default-50x50.gif" alt="Product" />
+                      <img src="AdminLTE/dist/img/default-50x50.gif" alt="Product" />
                     </div>
                     <div className="product-info">
                       <a href="/empty" className="product-title">
@@ -1376,7 +1382,7 @@ class Home2 extends Component {
                   {/* /.item */}
                   <li className="item">
                     <div className="product-img">
-                      <img src="dist/img/default-50x50.gif" alt="Product" />
+                      <img src="AdminLTE/dist/img/default-50x50.gif" alt="Product" />
                     </div>
                     <div className="product-info">
                       <a className="product-title">
@@ -1391,7 +1397,7 @@ class Home2 extends Component {
                   {/* /.item */}
                   <li className="item">
                     <div className="product-img">
-                      <img src="dist/img/default-50x50.gif" alt="Product" />
+                      <img src="AdminLTE/dist/img/default-50x50.gif" alt="Product" />
                     </div>
                     <div className="product-info">
                       <a className="product-title">
@@ -1406,7 +1412,7 @@ class Home2 extends Component {
                   {/* /.item */}
                   <li className="item">
                     <div className="product-img">
-                      <img src="dist/img/default-50x50.gif" alt="Product" />
+                      <img src="AdminLTE/dist/img/default-50x50.gif" alt="Product" />
                     </div>
                     <div className="product-info">
                       <a className="product-title">
