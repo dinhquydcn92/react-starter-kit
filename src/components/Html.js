@@ -28,7 +28,7 @@ class Html extends Component { // eslint-disable-line react/prefer-stateless-fun
           {/* start: all css */}
           <link rel="stylesheet" href="/AdminLTE/bootstrap/css/bootstrap.min.css" />
           <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css" />
-          <link rel="stylesheet" href="/assets/plugins/ionicons/dist/css/ionicons.min.css" />
+          <link rel="stylesheet" href="/assets/plugins/ionicons/css/ionicons.min.css" />
           <link rel="stylesheet" href="/AdminLTE/dist/css/AdminLTE.min.css" />
           <link rel="stylesheet" href="/AdminLTE/dist/css/skins/skin-blue.min.css" />
           <link rel="stylesheet" href="/AdminLTE/plugins/iCheck/flat/blue.css" />
