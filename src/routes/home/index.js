@@ -33,8 +33,8 @@ export default {
     }
 
     let content = { // eslint-disable-line prefer-const
-      title: 'Administration Building Tool',
-      pageTitle: 'React.js News',
+      title: 'Home - Admin Dev Kit',
+      pageTitle: 'Home',
       pageSubTitle: '',
       news: data.news,
     };
