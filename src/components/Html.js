@@ -25,7 +25,6 @@ class Html extends Component { // eslint-disable-line react/prefer-stateless-fun
             name="viewport"
           />
           <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-          {/* start: all css */}
           <link rel="stylesheet" href="/AdminLTE/bootstrap/css/bootstrap.min.css" />
           <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css" />
           <link rel="stylesheet" href="/assets/plugins/ionicons/css/ionicons.min.css" />
@@ -40,12 +39,10 @@ class Html extends Component { // eslint-disable-line react/prefer-stateless-fun
             rel="stylesheet"
             href="/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css"
           />
-          {/* end: all css */}
           <style id="css" dangerouslySetInnerHTML={{ __html: this.props.style }} />
         </head>
         <body className={this.props.classes || 'hold-transition skin-blue sidebar-mini'}>
           <div id="app" dangerouslySetInnerHTML={{ __html: this.props.children }} />
-          {/* start: all js */}
           <script src="/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js" />
           <script src="/AdminLTE/plugins/jQueryUI/jquery-ui.min.js" />
           <script src="/AdminLTE/bootstrap/js/bootstrap.min.js" async />
@@ -56,15 +53,14 @@ class Html extends Component { // eslint-disable-line react/prefer-stateless-fun
           <script src="/AdminLTE/plugins/jvectormap/jquery-jvectormap-world-mill-en.js" async />
           <script src="/AdminLTE/plugins/knob/jquery.knob.js" async />
           <script
-            src="/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"
-            async
+            src="/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js" async
           />
           <script src="/assets/plugins/moment/min/moment.min.js" async />
           <script src="/AdminLTE/plugins/daterangepicker/daterangepicker.js" async />
           <script src="/AdminLTE/plugins/datepicker/bootstrap-datepicker.js" async />
           <script src="/AdminLTE/plugins/fastclick/fastclick.js" async />
+          <script src="/AdminLTE/plugins/chartjs/Chart.min.js" async />
           <script src="/AdminLTE/dist/js/app.min.js" async />
-          {/* end: all js */}
           {this.props.script && <script src={this.props.script} />}
           {
             analytics.google.trackingId && <script
