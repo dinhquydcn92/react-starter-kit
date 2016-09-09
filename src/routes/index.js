@@ -17,6 +17,9 @@ import login from './login';
 import register from './register';
 import error from './error';
 
+// Default page
+import widgets from './pages/Widgets';
+
 // AdminLTE starter page
 import starter from './starter';
 
@@ -31,7 +34,10 @@ export default {
     login,
     register,
 
-    // AdminLTE
+    // Default pages
+    widgets,
+
+    // Starter page
     starter,
 
     // place new routes before...
