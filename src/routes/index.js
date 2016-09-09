@@ -18,7 +18,7 @@ import register from './register';
 import error from './error';
 
 // Default page
-import widgets from './pages/Widgets';
+import widgets from './pages/widgets';
 
 // AdminLTE starter page
 import starter from './starter';
