@@ -39,12 +39,23 @@ class Html extends Component { // eslint-disable-line react/prefer-stateless-fun
           {/* start: all js */}
           <script src="/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js" />
           <script src="/AdminLTE/plugins/jQueryUI/jquery-ui.min.js" />
+          <script>$.widget.bridge('uibutton', $.ui.button)</script>
           <script src="/AdminLTE/bootstrap/js/bootstrap.min.js" async />
+          <script src="/assets/plugins/raphael/raphael.min.js" async />
+          <script src="/AdminLTE/plugins/morris/morris.min.js" async />
+          <script src="/AdminLTE/plugins/sparkline/jquery.sparkline.min.js" async />
+          <script src="/AdminLTE/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js" async />
+          <script src="/AdminLTE/plugins/jvectormap/jquery-jvectormap-world-mill-en.js" async />
+          <script src="/AdminLTE/plugins/knob/jquery.knob.js" async />
           <script
-            src="/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js" async
+            src="/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"
+            async
           />
           <script src="/assets/plugins/moment/min/moment.min.js" async />
           <script src="/AdminLTE/plugins/daterangepicker/daterangepicker.js" async />
+          <script src="/AdminLTE/plugins/datepicker/bootstrap-datepicker.js" async />
+          <script src="/AdminLTE/plugins/slimScroll/jquery.slimscroll.min.js" async />
+          <script src="/AdminLTE/plugins/fastclick/fastclick.js" async />
           <script src="/AdminLTE/dist/js/app.min.js" async />
           {/* end: all js */}
           {this.props.script && <script src={this.props.script} />}
