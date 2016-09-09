@@ -16,7 +16,7 @@ export default {
 
   action() {
     let content = { // eslint-disable-line prefer-const
-      title: 'Admin Dev Kit',
+      title: 'Starter | Admin Dev Kit',
       pageTitle: 'Starter Page',
       pageSubTitle: 'Optional description',
     };

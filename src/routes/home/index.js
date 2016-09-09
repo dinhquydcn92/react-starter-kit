@@ -33,7 +33,7 @@ export default {
     }
 
     let content = { // eslint-disable-line prefer-const
-      title: 'Home - Admin Dev Kit',
+      title: 'Home | Admin Dev Kit',
       pageTitle: 'Home',
       pageSubTitle: '',
       news: data.news,

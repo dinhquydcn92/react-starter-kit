@@ -16,7 +16,7 @@ export default {
 
   action() {
     let content = { // eslint-disable-line prefer-const
-      title: 'Register',
+      title: 'Register | Admin Dev Kit',
     };
 
     return (

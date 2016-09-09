@@ -16,7 +16,7 @@ export default {
 
   action() {
     let content = { // eslint-disable-line prefer-const
-      title: 'Contact',
+      title: 'Contact | Admin Dev Kit',
     };
 
     return <Contact content={content} />;

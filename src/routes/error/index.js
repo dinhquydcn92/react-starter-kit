@@ -17,7 +17,7 @@ export default {
 
   action({ render, context, error }) {
     let content = { // eslint-disable-line prefer-const
-      title: 'Error',
+      title: 'Error | Admin Dev Kit',
       error,
     };
 
