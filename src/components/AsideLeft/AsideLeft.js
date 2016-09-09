@@ -42,10 +42,10 @@ function Header() {
             </a>
             <ul className="treeview-menu">
               <li className="active">
-                <a href="index.html"><i className="fa fa-circle-o" /> Dashboard v1</a>
+                <a href="/"><i className="fa fa-circle-o" /> Dashboard v1</a>
               </li>
               <li>
-                <a href="index2.html"><i className="fa fa-circle-o" /> Dashboard v2</a>
+                <a href="/index2"><i className="fa fa-circle-o" /> Dashboard v2</a>
               </li>
             </ul>
           </li>
