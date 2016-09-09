@@ -53,7 +53,7 @@ function Header() {
                         <div className="pull-left">
                           { /* User Image */ }
                           <img
-                            src="AdminLTE/dist/img/user2-160x160.jpg"
+                            src="/AdminLTE/dist/img/user2-160x160.jpg"
                             className="img-circle" alt="User"
                           />
                         </div>
@@ -150,7 +150,7 @@ function Header() {
               <Link to="/empty" className="dropdown-toggle" data-toggle="dropdown">
                 { /* The user image in the navbar*/ }
                 <img
-                  src="AdminLTE/dist/img/user2-160x160.jpg"
+                  src="/AdminLTE/dist/img/user2-160x160.jpg"
                   className="user-image" alt="User"
                 />
                 <span className="hidden-xs">Alexander Pierce</span>
@@ -159,7 +159,7 @@ function Header() {
                 { /* The user image in the menu */ }
                 <li className="user-header">
                   <img
-                    src="AdminLTE/dist/img/user2-160x160.jpg"
+                    src="/AdminLTE/dist/img/user2-160x160.jpg"
                     className="img-circle" alt="User"
                   />
                   <p>

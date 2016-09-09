@@ -11,7 +11,7 @@ function Header() {
         { /* Sidebar user panel */ }
         <div className="user-panel">
           <div className="pull-left image">
-            <img src="AdminLTE/dist/img/user2-160x160.jpg" className="img-circle" alt="User" />
+            <img src="/AdminLTE/dist/img/user2-160x160.jpg" className="img-circle" alt="User" />
           </div>
           <div className="pull-left info">
             <p>Alexander Pierce</p>
