@@ -62,6 +62,7 @@ class Html extends Component { // eslint-disable-line react/prefer-stateless-fun
           <script src="/assets/plugins/moment/min/moment.min.js" async />
           <script src="/AdminLTE/plugins/daterangepicker/daterangepicker.js" async />
           <script src="/AdminLTE/plugins/datepicker/bootstrap-datepicker.js" async />
+          <script src="/AdminLTE/plugins/slimScroll/jquery.slimscroll.min.js" async />
           <script src="/AdminLTE/dist/js/app.min.js" async />
           {/* end: all js */}
           {this.props.script && <script src={this.props.script} />}
