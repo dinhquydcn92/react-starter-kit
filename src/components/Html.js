@@ -45,7 +45,8 @@ class Html extends Component { // eslint-disable-line react/prefer-stateless-fun
           <div id="app" dangerouslySetInnerHTML={{ __html: this.props.children }} />
           <script src="/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js" />
           <script src="/AdminLTE/plugins/jQueryUI/jquery-ui.min.js" />
-          <script src="/AdminLTE/bootstrap/js/bootstrap.min.js" async />
+          <script src="/AdminLTE/bootstrap/js/bootstrap.min.js" />
+          <script src="/assets/plugins/moment/min/moment.min.js" />
           <script src="/assets/plugins/raphael/raphael.min.js" async />
           <script src="/AdminLTE/plugins/morris/morris.min.js" async />
           <script src="/AdminLTE/plugins/sparkline/jquery.sparkline.min.js" async />
@@ -55,7 +56,6 @@ class Html extends Component { // eslint-disable-line react/prefer-stateless-fun
           <script
             src="/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js" async
           />
-          <script src="/assets/plugins/moment/min/moment.min.js" async />
           <script src="/AdminLTE/plugins/daterangepicker/daterangepicker.js" async />
           <script src="/AdminLTE/plugins/datepicker/bootstrap-datepicker.js" async />
           <script src="/AdminLTE/plugins/fastclick/fastclick.js" async />
