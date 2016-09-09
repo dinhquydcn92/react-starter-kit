@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'; // eslint-disable-line import/no-extraneous-dependencies, max-len
 import withStyles from 'isomorphic-style-loader/lib/withStyles'; // eslint-disable-line import/no-extraneous-dependencies, max-len
+import Link from '../Link';
 import s from './Content.css';
 
 class Content extends Component {
@@ -20,7 +21,7 @@ class Content extends Component {
           </h1>
 
           <ol className="breadcrumb">
-            <li><a href="/empty"><i className="fa fa-dashboard" /> Level</a></li>
+            <li><Link to="/empty"><i className="fa fa-dashboard" /> Level</Link></li>
             <li className="active">Here</li>
           </ol>
 

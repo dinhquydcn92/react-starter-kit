@@ -103,7 +103,7 @@ class Login extends Component {
         </div>
         { /* /.login-box-body */ }
       </div>
-      );
+    );
   }
 }
 

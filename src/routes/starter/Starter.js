@@ -31,7 +31,7 @@ class Starter extends Component {
   render() {
     return (
       <p>Here is a starter page for building anything you want.</p>
-      );
+    );
   }
 
 }

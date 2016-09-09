@@ -9,6 +9,7 @@
 
 import React, { Component, PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import Link from '../../components/Link';
 import s from './Home2.css';
 
 class Home2 extends Component {
@@ -418,23 +419,23 @@ class Home2 extends Component {
                     </button>
                     <ul className="dropdown-menu" role="menu">
                       <li>
-                        <a href="/empty">Action</a>
+                        <Link to="/empty">Action</Link>
                       </li>
                       <li>
-                        <a href="/empty">
+                        <Link to="/empty">
                           Another action
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="/empty">
+                        <Link to="/empty">
                           Something else here
-                        </a>
+                        </Link>
                       </li>
                       <li className="divider" />
                       <li>
-                        <a href="/empty">
+                        <Link to="/empty">
                           Separated link
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -787,7 +788,7 @@ class Home2 extends Component {
                     <div className="direct-chat-contacts">
                       <ul className="contacts-list">
                         <li>
-                          <a href="/empty">
+                          <Link to="/empty">
                             <img
                               className="contacts-list-img"
                               src="AdminLTE/dist/img/user1-128x128.jpg"
@@ -803,11 +804,11 @@ class Home2 extends Component {
                               </span>
                             </div>
                             {/* /.contacts-list-info */}
-                          </a>
+                          </Link>
                         </li>
                         {/* End Contact Item */}
                         <li>
-                          <a href="/empty">
+                          <Link to="/empty">
                             <img
                               className="contacts-list-img"
                               src="AdminLTE/dist/img/user7-128x128.jpg"
@@ -823,11 +824,11 @@ class Home2 extends Component {
                               </span>
                             </div>
                             {/* /.contacts-list-info */}
-                          </a>
+                          </Link>
                         </li>
                         {/* End Contact Item */}
                         <li>
-                          <a href="/empty">
+                          <Link to="/empty">
                             <img
                               className="contacts-list-img"
                               src="AdminLTE/dist/img/user3-128x128.jpg"
@@ -843,11 +844,11 @@ class Home2 extends Component {
                               </span>
                             </div>
                             {/* /.contacts-list-info */}
-                          </a>
+                          </Link>
                         </li>
                         {/* End Contact Item */}
                         <li>
-                          <a href="/empty">
+                          <Link to="/empty">
                             <img
                               className="contacts-list-img"
                               src="AdminLTE/dist/img/user5-128x128.jpg"
@@ -863,11 +864,11 @@ class Home2 extends Component {
                               </span>
                             </div>
                             {/* /.contacts-list-info */}
-                          </a>
+                          </Link>
                         </li>
                         {/* End Contact Item */}
                         <li>
-                          <a href="/empty">
+                          <Link to="/empty">
                             <img
                               className="contacts-list-img"
                               src="AdminLTE/dist/img/user6-128x128.jpg"
@@ -883,11 +884,11 @@ class Home2 extends Component {
                               </span>
                             </div>
                             {/* /.contacts-list-info */}
-                          </a>
+                          </Link>
                         </li>
                         {/* End Contact Item */}
                         <li>
-                          <a href="/empty">
+                          <Link to="/empty">
                             <img
                               className="contacts-list-img"
                               src="AdminLTE/dist/img/user8-128x128.jpg"
@@ -903,7 +904,7 @@ class Home2 extends Component {
                               </span>
                             </div>
                             {/* /.contacts-list-info */}
-                          </a>
+                          </Link>
                         </li>
                         {/* End Contact Item */}
                       </ul>
@@ -954,54 +955,54 @@ class Home2 extends Component {
                     <ul className="users-list clearfix">
                       <li>
                         <img src="AdminLTE/dist/img/user1-128x128.jpg" alt="User" />
-                        <a className="users-list-name" href="/empty">
+                        <Link to="/empty" className="users-list-name">
                           Alexander Pierce
-                        </a>
+                        </Link>
                         <span className="users-list-date">Today</span>
                       </li>
                       <li>
                         <img src="AdminLTE/dist/img/user8-128x128.jpg" alt="User" />
-                        <a className="users-list-name" href="/empty">Norman</a>
+                        <Link to="/empty" className="users-list-name">Norman</Link>
                         <span className="users-list-date">Yesterday</span>
                       </li>
                       <li>
                         <img src="AdminLTE/dist/img/user7-128x128.jpg" alt="User" />
-                        <a className="users-list-name" href="/empty">Jane</a>
+                        <Link to="/empty" className="users-list-name">Jane</Link>
                         <span className="users-list-date">
                           12 Jan
                         </span>
                       </li>
                       <li>
                         <img src="AdminLTE/dist/img/user6-128x128.jpg" alt="User" />
-                        <a className="users-list-name" href="/empty">John</a>
+                        <Link to="/empty" className="users-list-name">John</Link>
                         <span className="users-list-date">
                           12 Jan
                         </span>
                       </li>
                       <li>
                         <img src="AdminLTE/dist/img/user2-160x160.jpg" alt="User" />
-                        <a className="users-list-name" href="/empty">Alexander</a>
+                        <Link to="/empty" className="users-list-name">Alexander</Link>
                         <span className="users-list-date">
                           13 Jan
                         </span>
                       </li>
                       <li>
                         <img src="AdminLTE/dist/img/user5-128x128.jpg" alt="User" />
-                        <a className="users-list-name" href="/empty">Sarah</a>
+                        <Link to="/empty" className="users-list-name">Sarah</Link>
                         <span className="users-list-date">
                           14 Jan
                         </span>
                       </li>
                       <li>
                         <img src="AdminLTE/dist/img/user4-128x128.jpg" alt="User" />
-                        <a className="users-list-name" href="/empty">Nora</a>
+                        <Link to="/empty" className="users-list-name">Nora</Link>
                         <span className="users-list-date">
                           15 Jan
                         </span>
                       </li>
                       <li>
                         <img src="AdminLTE/dist/img/user3-128x128.jpg" alt="User" />
-                        <a className="users-list-name" href="/empty">Nadia</a>
+                        <Link to="/empty" className="users-list-name">Nadia</Link>
                         <span className="users-list-date">
                           15 Jan
                         </span>
@@ -1011,9 +1012,9 @@ class Home2 extends Component {
                   </div>
                   {/* /.box-body */}
                   <div className="box-footer text-center">
-                    <a href="/empty" className="uppercase">
+                    <Link to="/empty" className="uppercase">
                       View All Users
-                    </a>
+                    </Link>
                   </div>
                   {/* /.box-footer */}
                 </div>
@@ -1054,7 +1055,7 @@ class Home2 extends Component {
                     <tbody>
                       <tr>
                         <td>
-                          <a href="pages/examples/invoice.html">OR9842</a>
+                          <Link to="pages/examples/invoice.html">OR9842</Link>
                         </td>
                         <td>
                           Call of Duty IV
@@ -1071,7 +1072,7 @@ class Home2 extends Component {
                       </tr>
                       <tr>
                         <td>
-                          <a href="pages/examples/invoice.html">OR1848</a>
+                          <Link to="pages/examples/invoice.html">OR1848</Link>
                         </td>
                         <td>
                           Samsung Smart TV
@@ -1087,7 +1088,7 @@ class Home2 extends Component {
                       </tr>
                       <tr>
                         <td>
-                          <a href="pages/examples/invoice.html">OR7429</a>
+                          <Link to="pages/examples/invoice.html">OR7429</Link>
                         </td>
                         <td>
                           iPhone 6 Plus
@@ -1103,7 +1104,7 @@ class Home2 extends Component {
                       </tr>
                       <tr>
                         <td>
-                          <a href="pages/examples/invoice.html">OR7429</a>
+                          <Link to="pages/examples/invoice.html">OR7429</Link>
                         </td>
                         <td>
                           Samsung Smart TV
@@ -1119,7 +1120,7 @@ class Home2 extends Component {
                       </tr>
                       <tr>
                         <td>
-                          <a href="pages/examples/invoice.html">OR1848</a>
+                          <Link to="pages/examples/invoice.html">OR1848</Link>
                         </td>
                         <td>
                           Samsung Smart TV
@@ -1135,7 +1136,7 @@ class Home2 extends Component {
                       </tr>
                       <tr>
                         <td>
-                          <a href="pages/examples/invoice.html">OR7429</a>
+                          <Link to="pages/examples/invoice.html">OR7429</Link>
                         </td>
                         <td>
                           iPhone 6 Plus
@@ -1151,7 +1152,7 @@ class Home2 extends Component {
                       </tr>
                       <tr>
                         <td>
-                          <a href="pages/examples/invoice.html">OR9842</a>
+                          <Link to="pages/examples/invoice.html">OR9842</Link>
                         </td>
                         <td>
                           Call of Duty IV
@@ -1172,12 +1173,12 @@ class Home2 extends Component {
               </div>
               {/* /.box-body */}
               <div className="box-footer clearfix">
-                <a href="/empty" className="btn btn-sm btn-info btn-flat pull-left">
+                <Link to="/empty" className="btn btn-sm btn-info btn-flat pull-left">
                   Place New Order
-                </a>
-                <a href="/empty" className="btn btn-sm btn-default btn-flat pull-right">
+                </Link>
+                <Link to="/empty" className="btn btn-sm btn-default btn-flat pull-right">
                   View All Orders
-                </a>
+                </Link>
               </div>
               {/* /.box-footer */}
             </div>
@@ -1316,31 +1317,31 @@ class Home2 extends Component {
               <div className="box-footer no-padding">
                 <ul className="nav nav-pills nav-stacked">
                   <li>
-                    <a href="/empty">
+                    <Link to="/empty">
                       United States of America
                       <span className="pull-right text-red">
                         <i className="fa fa-angle-down" />
                         12%
                       </span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="/empty">
+                    <Link to="/empty">
                       India
                       <span className="pull-right text-green">
                         <i className="fa fa-angle-up" />
                         4%
                       </span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="/empty">
+                    <Link to="/empty">
                       China
                       <span className="pull-right text-yellow">
                         <i className="fa fa-angle-left" />
                         0%
                       </span>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -1370,10 +1371,10 @@ class Home2 extends Component {
                       <img src="AdminLTE/dist/img/default-50x50.gif" alt="Product" />
                     </div>
                     <div className="product-info">
-                      <a href="/empty" className="product-title">
+                      <Link to="/empty" className="product-title">
                         Samsung TV
                         <span className="label label-warning pull-right">$1800</span>
-                      </a>
+                      </Link>
                       <span className="product-description">
                         Samsung 32 inch 1080p 60Hz LED Smart HDTV.
                       </span>
@@ -1385,10 +1386,10 @@ class Home2 extends Component {
                       <img src="AdminLTE/dist/img/default-50x50.gif" alt="Product" />
                     </div>
                     <div className="product-info">
-                      <a className="product-title">
+                      <Link to="/empty" className="product-title">
                         Bicycle
                         <span className="label label-info pull-right">$700</span>
-                      </a>
+                      </Link>
                       <span className="product-description">
                         26 inch Mongoose Dolomite Men's 7-speed, Navy Blue.
                       </span>
@@ -1400,10 +1401,10 @@ class Home2 extends Component {
                       <img src="AdminLTE/dist/img/default-50x50.gif" alt="Product" />
                     </div>
                     <div className="product-info">
-                      <a className="product-title">
+                      <Link to="/empty" className="product-title">
                         Xbox One
                         <span className="label label-danger pull-right">$350</span>
-                      </a>
+                      </Link>
                       <span className="product-description">
                         Xbox One Console Bundle with Halo Master Chief Collection.
                       </span>
@@ -1415,10 +1416,10 @@ class Home2 extends Component {
                       <img src="AdminLTE/dist/img/default-50x50.gif" alt="Product" />
                     </div>
                     <div className="product-info">
-                      <a className="product-title">
+                      <Link to="/empty" className="product-title">
                         PlayStation 4
                         <span className="label label-success pull-right">$399</span>
-                      </a>
+                      </Link>
                       <span className="product-description">
                         PlayStation 4 500GB Console (PS4)
                       </span>
@@ -1429,9 +1430,9 @@ class Home2 extends Component {
               </div>
               {/* /.box-body */}
               <div className="box-footer text-center">
-                <a className="uppercase">
+                <Link to="/empty" className="uppercase">
                   View All Products
-                </a>
+                </Link>
               </div>
               {/* /.box-footer */}
             </div>

@@ -108,7 +108,7 @@ class Register extends Component {
         </div>
         { /* /.form-box */ }
       </div>
-      );
+    );
   }
 }
 

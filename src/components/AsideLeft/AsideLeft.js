@@ -15,7 +15,7 @@ function Header() {
           </div>
           <div className="pull-left info">
             <p>Alexander Pierce</p>
-            <a href="/empty"><i className="fa fa-circle text-success" /> Online</a>
+            <Link to="/empty"><i className="fa fa-circle text-success" /> Online</Link>
           </div>
         </div>
         { /* search form */ }
@@ -34,173 +34,182 @@ function Header() {
         <ul className="sidebar-menu">
           <li className="header">MAIN NAVIGATION</li>
           <li className="active treeview">
-            <a href="/empty">
+            <Link to="/">
               <i className="fa fa-dashboard" /> <span>Dashboard</span>
               <span className="pull-right-container">
                 <i className="fa fa-angle-left pull-right" />
               </span>
-            </a>
+            </Link>
             <ul className="treeview-menu">
               <li className="active">
-                <a href="/"><i className="fa fa-circle-o" /> Dashboard v1</a>
+                <Link to="/"><i className="fa fa-circle-o" /> Dashboard v1</Link>
               </li>
               <li>
-                <a href="/index2"><i className="fa fa-circle-o" /> Dashboard v2</a>
+                <Link to="/index2"><i className="fa fa-circle-o" /> Dashboard v2</Link>
               </li>
             </ul>
           </li>
           <li className="treeview">
-            <a href="/empty">
+            <Link to="/empty">
               <i className="fa fa-files-o" />
               <span>Layout Options</span>
               <span className="pull-right-container">
                 <span className="label label-primary pull-right">4</span>
               </span>
-            </a>
+            </Link>
             <ul className="treeview-menu">
               <li>
-                <a href="pages/layout/top-nav.html">
-                  <i className="fa fa-circle-o" /> Top Navigation</a>
+                <Link to="pages/layout/top-nav.html">
+                  <i className="fa fa-circle-o" /> Top Navigation</Link>
               </li>
-              <li><a href="pages/layout/boxed.html">
-                <i className="fa fa-circle-o" /> Boxed</a>
+              <li><Link to="pages/layout/boxed.html">
+                <i className="fa fa-circle-o" /> Boxed</Link>
               </li>
-              <li><a href="pages/layout/fixed.html">
-                <i className="fa fa-circle-o" /> Fixed</a>
+              <li><Link to="pages/layout/fixed.html">
+                <i className="fa fa-circle-o" /> Fixed</Link>
               </li>
               <li>
-                <a href="pages/layout/collapsed-sidebar.html">
-                  <i className="fa fa-circle-o" /> Collapsed Sidebar</a>
+                <Link to="pages/layout/collapsed-sidebar.html">
+                  <i className="fa fa-circle-o" /> Collapsed Sidebar</Link>
               </li>
             </ul>
           </li>
           <li>
-            <a href="pages/widgets.html">
+            <Link to="pages/widgets.html">
               <i className="fa fa-th" /> <span>Widgets</span>
               <span className="pull-right-container">
                 <small className="label pull-right bg-green">new</small>
               </span>
-            </a>
+            </Link>
           </li>
           <li className="treeview">
-            <a href="/empty">
+            <Link to="/empty">
               <i className="fa fa-pie-chart" />
               <span>Charts</span>
               <span className="pull-right-container">
                 <i className="fa fa-angle-left pull-right" />
               </span>
-            </a>
+            </Link>
             <ul className="treeview-menu">
               <li>
-                <a href="pages/charts/chartjs.html">
-                  <i className="fa fa-circle-o" /> ChartJS</a>
+                <Link to="pages/charts/chartjs.html">
+                  <i className="fa fa-circle-o" /> ChartJS</Link>
               </li>
               <li>
-                <a href="pages/charts/morris.html">
-                  <i className="fa fa-circle-o" /> Morris</a>
+                <Link to="pages/charts/morris.html">
+                  <i className="fa fa-circle-o" /> Morris</Link>
               </li>
               <li>
-                <a href="pages/charts/flot.html">
-                  <i className="fa fa-circle-o" /> Flot</a>
+                <Link to="pages/charts/flot.html">
+                  <i className="fa fa-circle-o" /> Flot</Link>
               </li>
               <li>
-                <a href="pages/charts/inline.html">
-                  <i className="fa fa-circle-o" /> Inline charts</a>
+                <Link to="pages/charts/inline.html">
+                  <i className="fa fa-circle-o" /> Inline charts</Link>
               </li>
             </ul>
           </li>
           <li className="treeview">
-            <a href="/empty">
+            <Link to="/empty">
               <i className="fa fa-laptop" />
               <span>UI Elements</span>
               <span className="pull-right-container">
                 <i className="fa fa-angle-left pull-right" />
               </span>
-            </a>
+            </Link>
             <ul className="treeview-menu">
-              <li><a href="pages/UI/general.html"><i className="fa fa-circle-o" /> General</a></li>
-              <li><a href="pages/UI/icons.html"><i className="fa fa-circle-o" /> Icons</a></li>
-              <li><a href="pages/UI/buttons.html"><i className="fa fa-circle-o" /> Buttons</a></li>
-              <li><a href="pages/UI/sliders.html"><i className="fa fa-circle-o" /> Sliders</a></li>
               <li>
-                <a href="pages/UI/timeline.html"><i className="fa fa-circle-o" /> Timeline</a>
-              </li>
-              <li><a href="pages/UI/modals.html"><i className="fa fa-circle-o" /> Modals</a></li>
+                <Link to="pages/UI/general.html">
+                  <i className="fa fa-circle-o" /> General</Link></li>
+              <li>
+                <Link to="pages/UI/icons.html">
+                  <i className="fa fa-circle-o" /> Icons</Link></li>
+              <li>
+                <Link to="pages/UI/buttons.html">
+                  <i className="fa fa-circle-o" /> Buttons</Link></li>
+              <li>
+                <Link to="pages/UI/sliders.html">
+                  <i className="fa fa-circle-o" /> Sliders</Link></li>
+              <li>
+                <Link to="pages/UI/timeline.html">
+                  <i className="fa fa-circle-o" /> Timeline</Link></li>
+              <li><Link to="pages/UI/modals.html">
+                <i className="fa fa-circle-o" /> Modals</Link></li>
             </ul>
           </li>
           <li className="treeview">
-            <a href="/empty">
+            <Link to="/empty">
               <i className="fa fa-edit" /> <span>Forms</span>
               <span className="pull-right-container">
                 <i className="fa fa-angle-left pull-right" />
               </span>
-            </a>
+            </Link>
             <ul className="treeview-menu">
               <li>
-                <a href="pages/forms/general.html">
-                  <i className="fa fa-circle-o" /> General Elements</a>
+                <Link to="pages/forms/general.html">
+                  <i className="fa fa-circle-o" /> General Elements</Link>
               </li>
               <li>
-                <a href="pages/forms/advanced.html">
-                  <i className="fa fa-circle-o" /> Advanced Elements</a>
+                <Link to="pages/forms/advanced.html">
+                  <i className="fa fa-circle-o" /> Advanced Elements</Link>
               </li>
               <li>
-                <a href="pages/forms/editors.html">
-                  <i className="fa fa-circle-o" /> Editors</a>
+                <Link to="pages/forms/editors.html">
+                  <i className="fa fa-circle-o" /> Editors</Link>
               </li>
             </ul>
           </li>
           <li className="treeview">
-            <a href="/empty">
+            <Link to="/empty">
               <i className="fa fa-table" /> <span>Tables</span>
               <span className="pull-right-container">
                 <i className="fa fa-angle-left pull-right" />
               </span>
-            </a>
+            </Link>
             <ul className="treeview-menu">
               <li>
-                <a href="pages/tables/simple.html">
-                  <i className="fa fa-circle-o" /> Simple tables</a>
+                <Link to="pages/tables/simple.html">
+                  <i className="fa fa-circle-o" /> Simple tables</Link>
               </li>
               <li>
-                <a href="pages/tables/data.html">
-                  <i className="fa fa-circle-o" /> Data tables</a>
+                <Link to="pages/tables/data.html">
+                  <i className="fa fa-circle-o" /> Data tables</Link>
               </li>
             </ul>
           </li>
           <li>
-            <a href="pages/calendar.html">
+            <Link to="pages/calendar.html">
               <i className="fa fa-calendar" /> <span>Calendar</span>
               <span className="pull-right-container">
                 <small className="label pull-right bg-red">3</small>
                 <small className="label pull-right bg-blue">17</small>
               </span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="pages/mailbox/mailbox.html">
+            <Link to="pages/mailbox/mailbox.html">
               <i className="fa fa-envelope" /> <span>Mailbox</span>
               <span className="pull-right-container">
                 <small className="label pull-right bg-yellow">12</small>
                 <small className="label pull-right bg-green">16</small>
                 <small className="label pull-right bg-red">5</small>
               </span>
-            </a>
+            </Link>
           </li>
           <li className="treeview">
-            <a href="/empty">
+            <Link to="/empty">
               <i className="fa fa-folder" /> <span>Examples</span>
               <span className="pull-right-container">
                 <i className="fa fa-angle-left pull-right" />
               </span>
-            </a>
+            </Link>
             <ul className="treeview-menu">
               <li>
-                <a href="pages/examples/invoice.html">
-                  <i className="fa fa-circle-o" /> Invoice</a></li>
+                <Link to="pages/examples/invoice.html">
+                  <i className="fa fa-circle-o" /> Invoice</Link></li>
               <li>
-                <a href="pages/examples/profile.html">
-                  <i className="fa fa-circle-o" /> Profile</a></li>
+                <Link to="pages/examples/profile.html">
+                  <i className="fa fa-circle-o" /> Profile</Link></li>
               <li>
                 <Link to="/login">
                   <i className="fa fa-circle-o" /> Login</Link></li>
@@ -208,68 +217,68 @@ function Header() {
                 <Link to="/register">
                   <i className="fa fa-circle-o" /> Register</Link></li>
               <li>
-                <a href="pages/examples/lockscreen.html">
-                  <i className="fa fa-circle-o" /> Lockscreen</a></li>
+                <Link to="pages/examples/lockscreen.html">
+                  <i className="fa fa-circle-o" /> Lockscreen</Link></li>
               <li>
-                <a href="pages/examples/404.html">
-                  <i className="fa fa-circle-o" /> 404 Error</a></li>
+                <Link to="pages/examples/404.html">
+                  <i className="fa fa-circle-o" /> 404 Error</Link></li>
               <li>
-                <a href="pages/examples/500.html">
-                  <i className="fa fa-circle-o" /> 500 Error</a></li>
+                <Link to="pages/examples/500.html">
+                  <i className="fa fa-circle-o" /> 500 Error</Link></li>
               <li>
-                <a href="pages/examples/blank.html">
-                  <i className="fa fa-circle-o" /> Blank Page</a></li>
+                <Link to="pages/examples/blank.html">
+                  <i className="fa fa-circle-o" /> Blank Page</Link></li>
               <li>
-                <a href="pages/examples/pace.html">
-                  <i className="fa fa-circle-o" /> Pace Page</a></li>
+                <Link to="pages/examples/pace.html">
+                  <i className="fa fa-circle-o" /> Pace Page</Link></li>
             </ul>
           </li>
           <li className="treeview">
-            <a href="/empty">
+            <Link to="/empty">
               <i className="fa fa-share" /> <span>Multilevel</span>
               <span className="pull-right-container">
                 <i className="fa fa-angle-left pull-right" />
               </span>
-            </a>
+            </Link>
             <ul className="treeview-menu">
-              <li><a href="/empty"><i className="fa fa-circle-o" /> Level One</a></li>
+              <li><Link to="/empty"><i className="fa fa-circle-o" /> Level One</Link></li>
               <li>
-                <a href="/empty"><i className="fa fa-circle-o" /> Level One
+                <Link to="/empty"><i className="fa fa-circle-o" /> Level One
                   <span className="pull-right-container">
                     <i className="fa fa-angle-left pull-right" />
                   </span>
-                </a>
+                </Link>
                 <ul className="treeview-menu">
-                  <li><a href="/empty"><i className="fa fa-circle-o" /> Level Two</a></li>
+                  <li><Link to="/empty"><i className="fa fa-circle-o" /> Level Two</Link></li>
                   <li>
-                    <a href="/empty"><i className="fa fa-circle-o" /> Level Two
+                    <Link to="/empty"><i className="fa fa-circle-o" /> Level Two
                       <span className="pull-right-container">
                         <i className="fa fa-angle-left pull-right" />
                       </span>
-                    </a>
+                    </Link>
                     <ul className="treeview-menu">
-                      <li><a href="/empty"><i className="fa fa-circle-o" /> Level Three</a></li>
-                      <li><a href="/empty"><i className="fa fa-circle-o" /> Level Three</a></li>
+                      <li><Link to="/empty"><i className="fa fa-circle-o" /> Level Three</Link></li>
+                      <li><Link to="/empty"><i className="fa fa-circle-o" /> Level Three</Link></li>
                     </ul>
                   </li>
                 </ul>
               </li>
-              <li><a href="/empty"><i className="fa fa-circle-o" /> Level One</a></li>
+              <li><Link to="/empty"><i className="fa fa-circle-o" /> Level One</Link></li>
             </ul>
           </li>
           <li>
-            <a href="documentation/index.html">
-              <i className="fa fa-book" /> <span>Documentation</span></a></li>
+            <Link to="documentation/index.html">
+              <i className="fa fa-book" /> <span>Documentation</span></Link></li>
           <li className="header">LABELS</li>
           <li>
-            <a href="/empty">
-              <i className="fa fa-circle-o text-red" /> <span>Important</span></a></li>
+            <Link to="/empty">
+              <i className="fa fa-circle-o text-red" /> <span>Important</span></Link></li>
           <li>
-            <a href="/empty">
-              <i className="fa fa-circle-o text-yellow" /> <span>Warning</span></a></li>
+            <Link to="/empty">
+              <i className="fa fa-circle-o text-yellow" /> <span>Warning</span></Link></li>
           <li>
-            <a href="/empty">
-              <i className="fa fa-circle-o text-aqua" /> <span>Information</span></a></li>
+            <Link to="/empty">
+              <i className="fa fa-circle-o text-aqua" /> <span>Information</span></Link></li>
         </ul>
       </section>
       { /* /.sidebar */ }

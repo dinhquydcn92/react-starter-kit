@@ -1,5 +1,6 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies, max-len
 import withStyles from 'isomorphic-style-loader/lib/withStyles'; // eslint-disable-line import/no-extraneous-dependencies, max-len
+import Link from '../Link';
 import s from './AsideRight.css';
 
 function Header() {
@@ -8,11 +9,11 @@ function Header() {
       { /* <!-- Create the tabs --> */ }
       <ul className="nav nav-tabs nav-justified control-sidebar-tabs">
         <li className="active">
-          <a href="#control-sidebar-home-tab" data-toggle="tab">
-            <i className="fa fa-home" /></a></li>
+          <Link to="#control-sidebar-home-tab" data-toggle="tab">
+            <i className="fa fa-home" /></Link></li>
         <li>
-          <a href="#control-sidebar-settings-tab" data-toggle="tab">
-            <i className="fa fa-gears" /></a></li>
+          <Link to="#control-sidebar-settings-tab" data-toggle="tab">
+            <i className="fa fa-gears" /></Link></li>
       </ul>
       { /* <!-- Tab panes --> */ }
       <div className="tab-content">
@@ -21,7 +22,7 @@ function Header() {
           <h3 className="control-sidebar-heading">Recent Activity</h3>
           <ul className="control-sidebar-menu">
             <li>
-              <a href="/empty">
+              <Link to="/empty">
                 <i className="menu-icon fa fa-birthday-cake bg-red" />
 
                 <div className="menu-info">
@@ -29,7 +30,7 @@ function Header() {
 
                   <p>Will be 23 on April 24th</p>
                 </div>
-              </a>
+              </Link>
             </li>
           </ul>
           { /* <!-- /.control-sidebar-menu --> */ }
@@ -37,7 +38,7 @@ function Header() {
           <h3 className="control-sidebar-heading">Tasks Progress</h3>
           <ul className="control-sidebar-menu">
             <li>
-              <a href="/empty">
+              <Link to="/empty">
                 <h4 className="control-sidebar-subheading">
                   Custom Template Design
                   <span className="pull-right-container">
@@ -52,7 +53,7 @@ function Header() {
                     }}
                   />
                 </div>
-              </a>
+              </Link>
             </li>
           </ul>
           { /* <!-- /.control-sidebar-menu --> */ }

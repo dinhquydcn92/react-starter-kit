@@ -9,38 +9,39 @@
 
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies, max-len
 import withStyles from 'isomorphic-style-loader/lib/withStyles'; // eslint-disable-line import/no-extraneous-dependencies, max-len
+import Link from '../Link';
 import s from './Header.css';
 
 function Header() {
   return (
     <header className="main-header">
       { /* Logo */ }
-      <a href="/" className="logo">
+      <Link to="/" className="logo">
         { /* mini logo for sidebar mini 50x50 pixels */ }
         <span className="logo-mini">
           <b>A</b>LT</span>
         { /* logo for regular state and mobile devices */ }
         <span className="logo-lg">
           <b>Admin</b>LTE</span>
-      </a>
+      </Link>
       { /* Header Navbar */ }
       <nav className="navbar navbar-static-top" role="navigation">
         { /* Sidebar toggle button*/ }
-        <a href="/empty" className="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <Link to="/empty" className="sidebar-toggle" data-toggle="offcanvas" role="button">
           <span className="sr-only">Toggle navigation</span>
-        </a>
+        </Link>
         { /* Navbar Right Menu */ }
         <div className="navbar-custom-menu">
           <ul className="nav navbar-nav">
             { /* Messages: style can be found in dropdown.less*/ }
             <li className="dropdown messages-menu">
               { /* Menu toggle button */ }
-              <a
-                href="/empty" className="dropdown-toggle"
+              <Link
+                to="/empty" className="dropdown-toggle"
                 data-toggle="dropdown" aria-expanded="false"
               >
                 <i className="fa fa-envelope-o" /><span className="label label-success">4</span>
-              </a>
+              </Link>
               <ul className="dropdown-menu">
                 <li className="header">You have 4 messages</li>
                 <li>
@@ -48,7 +49,7 @@ function Header() {
                   <ul className="menu">
                     { /* start message */ }
                     <li>
-                      <a href="/empty">
+                      <Link to="/empty">
                         <div className="pull-left">
                           { /* User Image */ }
                           <img
@@ -63,14 +64,14 @@ function Header() {
                         </h4>
                         { /* The message */ }
                         <p>Why not buy a new awesome theme?</p>
-                      </a>
+                      </Link>
                     </li>
                     { /* end message */ }
                   </ul>
                   { /* /.menu */ }
                 </li>
                 <li className="footer">
-                  <a href="/empty">See All Messages</a>
+                  <Link to="/empty">See All Messages</Link>
                 </li>
               </ul>
             </li>
@@ -78,12 +79,12 @@ function Header() {
             { /* Notifications Menu */ }
             <li className="dropdown notifications-menu">
               { /* Menu toggle button */ }
-              <a
-                href="/empty" className="dropdown-toggle"
+              <Link
+                to="/empty" className="dropdown-toggle"
                 data-toggle="dropdown" aria-expanded="false"
               >
                 <i className="fa fa-bell-o" /><span className="label label-warning">10</span>
-              </a>
+              </Link>
               <ul className="dropdown-menu">
                 <li className="header">You have 10 notifications</li>
                 <li>
@@ -91,25 +92,25 @@ function Header() {
                   <ul className="menu">
                     { /* start notification */ }
                     <li>
-                      <a href="/empty">
+                      <Link to="/empty">
                         <i className="fa fa-users text-aqua" />
                         5 new members joined today
-                      </a>
+                      </Link>
                     </li>
                     { /* end notification */ }
                   </ul>
                 </li>
                 <li className="footer">
-                  <a href="/empty">View all</a>
+                  <Link to="/empty">View all</Link>
                 </li>
               </ul>
             </li>
             { /* Tasks Menu */ }
             <li className="dropdown tasks-menu">
               { /* Menu Toggle Button */ }
-              <a href="/empty" className="dropdown-toggle" data-toggle="dropdown">
+              <Link to="/empty" className="dropdown-toggle" data-toggle="dropdown">
                 <i className="fa fa-flag-o" /><span className="label label-danger">9</span>
-              </a>
+              </Link>
               <ul className="dropdown-menu">
                 <li className="header">You have 9 tasks</li>
                 <li>
@@ -117,7 +118,7 @@ function Header() {
                   <ul className="menu">
                     { /* Task item */ }
                     <li>
-                      <a href="/empty">
+                      <Link to="/empty">
                         { /* Task title and progress text */ }
                         <h3>
                           Design some buttons
@@ -133,27 +134,27 @@ function Header() {
                             aria-valuenow={20} aria-valuemin={0} aria-valuemax={100}
                           ><span className="sr-only">20% Complete</span></div>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                     { /* end task item */ }
                   </ul>
                 </li>
                 <li className="footer">
-                  <a href="/empty">View all tasks</a>
+                  <Link to="/empty">View all tasks</Link>
                 </li>
               </ul>
             </li>
             { /* User Account Menu */ }
             <li className="dropdown user user-menu">
               { /* Menu Toggle Button */ }
-              <a href="/empty" className="dropdown-toggle" data-toggle="dropdown">
+              <Link to="/empty" className="dropdown-toggle" data-toggle="dropdown">
                 { /* The user image in the navbar*/ }
                 <img
                   src="AdminLTE/dist/img/user2-160x160.jpg"
                   className="user-image" alt="User"
                 />
                 <span className="hidden-xs">Alexander Pierce</span>
-              </a>
+              </Link>
               <ul className="dropdown-menu">
                 { /* The user image in the menu */ }
                 <li className="user-header">
@@ -170,13 +171,13 @@ function Header() {
                 <li className="user-body">
                   <div className="row">
                     <div className="col-xs-4 text-center">
-                      <a href="/empty">Followers</a>
+                      <Link to="/empty">Followers</Link>
                     </div>
                     <div className="col-xs-4 text-center">
-                      <a href="/empty">Sales</a>
+                      <Link to="/empty">Sales</Link>
                     </div>
                     <div className="col-xs-4 text-center">
-                      <a href="/empty">Friends</a>
+                      <Link to="/empty">Friends</Link>
                     </div>
                   </div>
                   { /* /.row */ }
@@ -184,19 +185,19 @@ function Header() {
                 { /* Menu Footer*/ }
                 <li className="user-footer">
                   <div className="pull-left">
-                    <a href="/empty" className="btn btn-default btn-flat">Profile</a>
+                    <Link to="/empty" className="btn btn-default btn-flat">Profile</Link>
                   </div>
                   <div className="pull-right">
-                    <a href="/empty" className="btn btn-default btn-flat">Sign out</a>
+                    <Link to="/empty" className="btn btn-default btn-flat">Sign out</Link>
                   </div>
                 </li>
               </ul>
             </li>
             { /* Control Sidebar Toggle Button */ }
             <li>
-              <a href="/empty" data-toggle="control-sidebar">
+              <Link to="/empty" data-toggle="control-sidebar">
                 <i className="fa fa-gears" />
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

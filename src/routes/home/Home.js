@@ -9,6 +9,7 @@
 
 import React, { Component, PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import Link from '../../components/Link';
 import s from './Home.css';
 
 class Home extends Component {
@@ -285,9 +286,9 @@ class Home extends Component {
               <div className="icon">
                 <i className="ion ion-bag" />
               </div>
-              <a href="/empty" className="small-box-footer">
+              <Link to="/empty" className="small-box-footer">
                 More info <i className="fa fa-arrow-circle-right" />
-              </a>
+              </Link>
             </div>
           </div>
           {/* ./col */}
@@ -302,9 +303,9 @@ class Home extends Component {
               <div className="icon">
                 <i className="ion ion-stats-bars" />
               </div>
-              <a href="/empty" className="small-box-footer">
+              <Link to="/empty" className="small-box-footer">
                 More info <i className="fa fa-arrow-circle-right" />
-              </a>
+              </Link>
             </div>
           </div>
           {/* ./col */}
@@ -318,9 +319,9 @@ class Home extends Component {
               <div className="icon">
                 <i className="ion ion-person-add" />
               </div>
-              <a href="/empty" className="small-box-footer">
+              <Link to="/empty" className="small-box-footer">
                 More info <i className="fa fa-arrow-circle-right" />
-              </a>
+              </Link>
             </div>
           </div>
           {/* ./col */}
@@ -334,9 +335,9 @@ class Home extends Component {
               <div className="icon">
                 <i className="ion ion-pie-graph" />
               </div>
-              <a href="/empty" className="small-box-footer">
+              <Link to="/empty" className="small-box-footer">
                 More info <i className="fa fa-arrow-circle-right" />
-              </a>
+              </Link>
             </div>
           </div>
           {/* ./col */}
@@ -351,10 +352,10 @@ class Home extends Component {
               {/* Tabs within a box */}
               <ul className="nav nav-tabs pull-right">
                 <li className="active">
-                  <a href="#revenue-chart" data-toggle="tab">Area</a>
+                  <Link to="#revenue-chart" data-toggle="tab">Area</Link>
                 </li>
                 <li>
-                  <a href="#sales-chart" data-toggle="tab">Donut</a>
+                  <Link to="#sales-chart" data-toggle="tab">Donut</Link>
                 </li>
                 <li className="pull-left header">
                   <i className="fa fa-inbox" />
@@ -399,13 +400,13 @@ class Home extends Component {
                 <div className="item">
                   <img src="AdminLTE/dist/img/user4-128x128.jpg" alt="user" className="online" />
                   <p className="message">
-                    <a href="/empty" className="name">
+                    <Link to="/empty" className="name">
                       <small className="text-muted pull-right">
                         <i className="fa fa-clock-o" />
                         2:15
                       </small>
                       Mike Doe
-                    </a>
+                    </Link>
                     I would like to meet you to discuss the latest news about the arrival
                      of the new theme. They say it is going to be one the best themes on the market
                   </p>
@@ -427,13 +428,13 @@ class Home extends Component {
                 <div className="item">
                   <img src="AdminLTE/dist/img/user3-128x128.jpg" alt="user" className="offline" />
                   <p className="message">
-                    <a href="/empty" className="name">
+                    <Link to="/empty" className="name">
                       <small className="text-muted pull-right">
                         <i className="fa fa-clock-o" />
                         5:15
                       </small>
                       Alexander Pierce
-                    </a>
+                    </Link>
                     I would like to meet you to discuss the latest news about the arrival
                      of the new theme. They say it is going to be one the best themes on the market
                   </p>
@@ -443,13 +444,13 @@ class Home extends Component {
                 <div className="item">
                   <img src="AdminLTE/dist/img/user2-160x160.jpg" alt="user" className="offline" />
                   <p className="message">
-                    <a href="/empty" className="name">
+                    <Link to="/empty" className="name">
                       <small className="text-muted pull-right">
                         <i className="fa fa-clock-o" />
                         5:30
                       </small>
                       Susan Doe
-                    </a>
+                    </Link>
                     I would like to meet you to discuss the latest news about the arrival
                      of the new theme. They say it is going to be one the best themes on the market
                   </p>
@@ -479,19 +480,19 @@ class Home extends Component {
                 <div className="box-tools pull-right">
                   <ul className="pagination pagination-sm inline">
                     <li>
-                      <a href="/empty">«</a>
+                      <Link to="/empty">«</Link>
                     </li>
                     <li>
-                      <a href="/empty">1</a>
+                      <Link to="/empty">1</Link>
                     </li>
                     <li>
-                      <a href="/empty">2</a>
+                      <Link to="/empty">2</Link>
                     </li>
                     <li>
-                      <a href="/empty">3</a>
+                      <Link to="/empty">3</Link>
                     </li>
                     <li>
-                      <a href="/empty">»</a>
+                      <Link to="/empty">»</Link>
                     </li>
                   </ul>
                 </div>
@@ -798,20 +799,20 @@ class Home extends Component {
                     </button>
                     <ul className="dropdown-menu pull-right" role="menu">
                       <li>
-                        <a href="/empty">
+                        <Link to="/empty">
                           Add new event
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="/empty">
+                        <Link to="/empty">
                           Clear events
-                        </a>
+                        </Link>
                       </li>
                       <li className="divider" />
                       <li>
-                        <a href="/empty">
+                        <Link to="/empty">
                           View calendar
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>

@@ -9,6 +9,7 @@
 
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies, max-len
 import withStyles from 'isomorphic-style-loader/lib/withStyles'; // eslint-disable-line import/no-extraneous-dependencies, max-len
+import Link from '../Link';
 import s from './Footer.css';
 
 function Footer() {
@@ -17,7 +18,7 @@ function Footer() {
       {/* To the right */}
       <div className="pull-right hidden-xs">Anything you want</div>
       {/* Default to the left */}
-      <strong>Copyright © 2016 <a href="/empty">Company</a>.</strong> All rights reserved.
+      <strong>Copyright © 2016 <Link to="/empty">Company</Link>.</strong> All rights reserved.
     </footer>
   );
 }
