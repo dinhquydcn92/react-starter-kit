@@ -13,7 +13,7 @@ import fetch from '../../core/fetch';
 
 export default {
 
-  path: '/index2.html',
+  path: '/index2',
 
   async action() {
     const resp = await fetch('/graphql', {

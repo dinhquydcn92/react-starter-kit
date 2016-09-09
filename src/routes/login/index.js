@@ -12,7 +12,7 @@ import Login from './Login';
 
 export default {
 
-  path: '/login.html',
+  path: '/login',
 
   action() {
     let content = { // eslint-disable-line prefer-const

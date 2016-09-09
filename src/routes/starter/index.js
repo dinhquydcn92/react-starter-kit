@@ -12,7 +12,7 @@ import Starter from './Starter';
 
 export default {
 
-  path: '/starter.html',
+  path: '/starter',
 
   action() {
     let content = { // eslint-disable-line prefer-const

@@ -12,7 +12,7 @@ import Widgets from './Widgets';
 
 export default {
 
-  path: '/pages/widgets.html',
+  path: '/pages/widgets',
 
   action() {
     let content = { // eslint-disable-line prefer-const

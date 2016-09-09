@@ -45,7 +45,7 @@ function Header() {
                 <Link to="/"><i className="fa fa-circle-o" /> Dashboard v1</Link>
               </li>
               <li>
-                <Link to="/index2.html"><i className="fa fa-circle-o" /> Dashboard v2</Link>
+                <Link to="/index2"><i className="fa fa-circle-o" /> Dashboard v2</Link>
               </li>
             </ul>
           </li>
@@ -59,23 +59,23 @@ function Header() {
             </Link>
             <ul className="treeview-menu">
               <li>
-                <Link to="pages/layout/top-nav.html">
+                <Link to="/pages/layout/top-nav">
                   <i className="fa fa-circle-o" /> Top Navigation</Link>
               </li>
-              <li><Link to="pages/layout/boxed.html">
+              <li><Link to="/pages/layout/boxed">
                 <i className="fa fa-circle-o" /> Boxed</Link>
               </li>
-              <li><Link to="pages/layout/fixed.html">
+              <li><Link to="/pages/layout/fixed">
                 <i className="fa fa-circle-o" /> Fixed</Link>
               </li>
               <li>
-                <Link to="pages/layout/collapsed-sidebar.html">
+                <Link to="/pages/layout/collapsed-sidebar">
                   <i className="fa fa-circle-o" /> Collapsed Sidebar</Link>
               </li>
             </ul>
           </li>
           <li>
-            <Link to="pages/widgets.html">
+            <Link to="/pages/widgets">
               <i className="fa fa-th" /> <span>Widgets</span>
               <span className="pull-right-container">
                 <small className="label pull-right bg-green">new</small>
@@ -92,19 +92,19 @@ function Header() {
             </Link>
             <ul className="treeview-menu">
               <li>
-                <Link to="pages/charts/chartjs.html">
+                <Link to="/pages/charts/chartjs">
                   <i className="fa fa-circle-o" /> ChartJS</Link>
               </li>
               <li>
-                <Link to="pages/charts/morris.html">
+                <Link to="/pages/charts/morris">
                   <i className="fa fa-circle-o" /> Morris</Link>
               </li>
               <li>
-                <Link to="pages/charts/flot.html">
+                <Link to="/pages/charts/flot">
                   <i className="fa fa-circle-o" /> Flot</Link>
               </li>
               <li>
-                <Link to="pages/charts/inline.html">
+                <Link to="/pages/charts/inline">
                   <i className="fa fa-circle-o" /> Inline charts</Link>
               </li>
             </ul>
@@ -119,22 +119,23 @@ function Header() {
             </Link>
             <ul className="treeview-menu">
               <li>
-                <Link to="pages/UI/general.html">
+                <Link to="/pages/UI/general">
                   <i className="fa fa-circle-o" /> General</Link></li>
               <li>
-                <Link to="pages/UI/icons.html">
+                <Link to="/pages/UI/icons">
                   <i className="fa fa-circle-o" /> Icons</Link></li>
               <li>
-                <Link to="pages/UI/buttons.html">
+                <Link to="/pages/UI/buttons">
                   <i className="fa fa-circle-o" /> Buttons</Link></li>
               <li>
-                <Link to="pages/UI/sliders.html">
+                <Link to="/pages/UI/sliders">
                   <i className="fa fa-circle-o" /> Sliders</Link></li>
               <li>
-                <Link to="pages/UI/timeline.html">
+                <Link to="/pages/UI/timeline">
                   <i className="fa fa-circle-o" /> Timeline</Link></li>
-              <li><Link to="pages/UI/modals.html">
-                <i className="fa fa-circle-o" /> Modals</Link></li>
+              <li>
+                <Link to="/pages/UI/modals">
+                  <i className="fa fa-circle-o" /> Modals</Link></li>
             </ul>
           </li>
           <li className="treeview">
@@ -146,15 +147,15 @@ function Header() {
             </Link>
             <ul className="treeview-menu">
               <li>
-                <Link to="pages/forms/general.html">
+                <Link to="/pages/forms/general">
                   <i className="fa fa-circle-o" /> General Elements</Link>
               </li>
               <li>
-                <Link to="pages/forms/advanced.html">
+                <Link to="/pages/forms/advanced">
                   <i className="fa fa-circle-o" /> Advanced Elements</Link>
               </li>
               <li>
-                <Link to="pages/forms/editors.html">
+                <Link to="/pages/forms/editors">
                   <i className="fa fa-circle-o" /> Editors</Link>
               </li>
             </ul>
@@ -168,17 +169,17 @@ function Header() {
             </Link>
             <ul className="treeview-menu">
               <li>
-                <Link to="pages/tables/simple.html">
+                <Link to="/pages/tables/simple">
                   <i className="fa fa-circle-o" /> Simple tables</Link>
               </li>
               <li>
-                <Link to="pages/tables/data.html">
+                <Link to="/pages/tables/data">
                   <i className="fa fa-circle-o" /> Data tables</Link>
               </li>
             </ul>
           </li>
           <li>
-            <Link to="pages/calendar.html">
+            <Link to="/pages/calendar">
               <i className="fa fa-calendar" /> <span>Calendar</span>
               <span className="pull-right-container">
                 <small className="label pull-right bg-red">3</small>
@@ -187,7 +188,7 @@ function Header() {
             </Link>
           </li>
           <li>
-            <Link to="pages/mailbox/mailbox.html">
+            <Link to="/pages/mailbox/mailbox">
               <i className="fa fa-envelope" /> <span>Mailbox</span>
               <span className="pull-right-container">
                 <small className="label pull-right bg-yellow">12</small>
@@ -205,31 +206,31 @@ function Header() {
             </Link>
             <ul className="treeview-menu">
               <li>
-                <Link to="pages/examples/invoice.html">
+                <Link to="/pages/examples/invoice">
                   <i className="fa fa-circle-o" /> Invoice</Link></li>
               <li>
-                <Link to="pages/examples/profile.html">
+                <Link to="/pages/examples/profile">
                   <i className="fa fa-circle-o" /> Profile</Link></li>
               <li>
-                <Link to="/login.html">
+                <Link to="/login">
                   <i className="fa fa-circle-o" /> Login</Link></li>
               <li>
-                <Link to="/register.html">
+                <Link to="/register">
                   <i className="fa fa-circle-o" /> Register</Link></li>
               <li>
-                <Link to="pages/examples/lockscreen.html">
+                <Link to="/pages/examples/lockscreen">
                   <i className="fa fa-circle-o" /> Lockscreen</Link></li>
               <li>
-                <Link to="pages/examples/404.html">
+                <Link to="/pages/examples/404">
                   <i className="fa fa-circle-o" /> 404 Error</Link></li>
               <li>
-                <Link to="pages/examples/500.html">
+                <Link to="/pages/examples/500">
                   <i className="fa fa-circle-o" /> 500 Error</Link></li>
               <li>
-                <Link to="pages/examples/blank.html">
+                <Link to="/pages/examples/blank">
                   <i className="fa fa-circle-o" /> Blank Page</Link></li>
               <li>
-                <Link to="pages/examples/pace.html">
+                <Link to="/pages/examples/pace">
                   <i className="fa fa-circle-o" /> Pace Page</Link></li>
             </ul>
           </li>
@@ -267,7 +268,7 @@ function Header() {
             </ul>
           </li>
           <li>
-            <Link to="documentation/index.html">
+            <Link to="documentation/index">
               <i className="fa fa-book" /> <span>Documentation</span></Link></li>
           <li className="header">LABELS</li>
           <li>

@@ -12,7 +12,7 @@ import Register from './Register';
 
 export default {
 
-  path: '/register.html',
+  path: '/register',
 
   action() {
     let content = { // eslint-disable-line prefer-const
