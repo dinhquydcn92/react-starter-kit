@@ -40,6 +40,9 @@ class Html extends Component { // eslint-disable-line react/prefer-stateless-fun
           <script src="/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js" />
           <script src="/AdminLTE/plugins/jQueryUI/jquery-ui.min.js" />
           <script src="/AdminLTE/bootstrap/js/bootstrap.min.js" async />
+          <script
+            src="/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js" async
+          />
           <script src="/AdminLTE/dist/js/app.min.js" async />
           {/* end: all js */}
           {this.props.script && <script src={this.props.script} />}
