@@ -99,7 +99,7 @@ class Home extends Component {
       $('.knob').knob();
 
       // jvectormap data
-      const visitorsData = {
+      let visitorsData = { // eslint-disable-line prefer-const
         US: 398, // USA
         SA: 400, // Saudi Arabia
         CA: 1000, // Canada
@@ -181,7 +181,7 @@ class Home extends Component {
 
       /* Morris.js Charts */
       // Sales chart
-      const area = new Morris.Area({
+      let area = new Morris.Area({ // eslint-disable-line prefer-const
         element: 'revenue-chart',
         resize: true,
         data: [
@@ -203,7 +203,7 @@ class Home extends Component {
         hideHover: 'auto',
       });
 
-      const line = new Morris.Line({
+      let line = new Morris.Line({ // eslint-disable-line prefer-const
         element: 'line-chart',
         resize: true,
         data: [
@@ -234,7 +234,7 @@ class Home extends Component {
       });
 
       // Donut Chart
-      const donut = new Morris.Donut({
+      let donut = new Morris.Donut({ // eslint-disable-line prefer-const
         element: 'sales-chart',
         resize: true,
         colors: ['#3c8dbc', '#f56954', '#00a65a'],
