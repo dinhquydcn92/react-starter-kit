@@ -38,7 +38,7 @@ class Html extends Component { // eslint-disable-line react/prefer-stateless-fun
           <div id="app" dangerouslySetInnerHTML={{ __html: this.props.children }} />
           {/* start: all js */}
           <script src="/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js" />
-          <script src="/AdminLTE/plugins/jQueryUI/jquery-UI.min.js" />
+          <script src="/AdminLTE/plugins/jQueryUI/jquery-ui.min.js" />
           <script src="/AdminLTE/bootstrap/js/bootstrap.min.js" async />
           <script src="/AdminLTE/dist/js/app.min.js" async />
           {/* end: all js */}
