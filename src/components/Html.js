@@ -39,7 +39,6 @@ class Html extends Component { // eslint-disable-line react/prefer-stateless-fun
           {/* start: all js */}
           <script src="/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js" />
           <script src="/AdminLTE/plugins/jQueryUI/jquery-ui.min.js" />
-          <script>$.widget.bridge('uibutton', $.ui.button)</script>
           <script src="/AdminLTE/bootstrap/js/bootstrap.min.js" async />
           <script src="/assets/plugins/raphael/raphael.min.js" async />
           <script src="/AdminLTE/plugins/morris/morris.min.js" async />

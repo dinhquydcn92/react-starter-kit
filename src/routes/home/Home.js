@@ -49,8 +49,6 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    $.widget.bridge('uibutton', $.ui.button);
-
     $(() => {
       'use strict';
 
