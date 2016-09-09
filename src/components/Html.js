@@ -31,6 +31,15 @@ class Html extends Component { // eslint-disable-line react/prefer-stateless-fun
           <link rel="stylesheet" href="/assets/plugins/ionicons/dist/css/ionicons.min.css" />
           <link rel="stylesheet" href="/AdminLTE/dist/css/AdminLTE.min.css" />
           <link rel="stylesheet" href="/AdminLTE/dist/css/skins/skin-blue.min.css" />
+          <link rel="stylesheet" href="/AdminLTE/plugins/iCheck/flat/blue.css" />
+          <link rel="stylesheet" href="/AdminLTE/plugins/morris/morris.css" />
+          <link rel="stylesheet" href="/AdminLTE/plugins/jvectormap/jquery-jvectormap-1.2.2.css" />
+          <link rel="stylesheet" href="/AdminLTE/plugins/datepicker/datepicker3.css" />
+          <link rel="stylesheet" href="/AdminLTE/plugins/daterangepicker/daterangepicker.css" />
+          <link
+            rel="stylesheet"
+            href="/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css"
+          />
           {/* end: all css */}
           <style id="css" dangerouslySetInnerHTML={{ __html: this.props.style }} />
         </head>
