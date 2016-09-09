@@ -13,12 +13,9 @@ import App from '../components/App';
 // Child routes
 import home from './home';
 import home2 from './home2';
-import contact from './contact';
 import login from './login';
 import register from './register';
 import error from './error';
-
-import dashboard from './dashboard';
 
 // AdminLTE starter page
 import starter from './starter';
@@ -34,8 +31,6 @@ export default {
     contact,
     login,
     register,
-
-    dashboard,
 
     // AdminLTE
     starter,
