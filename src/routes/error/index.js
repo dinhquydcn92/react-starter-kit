@@ -13,7 +13,7 @@ import ErrorPage from './ErrorPage';
 
 export default {
 
-  path: '/error',
+  path: '/error.html',
 
   action({ render, context, error }) {
     let content = { // eslint-disable-line prefer-const

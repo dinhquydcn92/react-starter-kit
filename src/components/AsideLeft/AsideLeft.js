@@ -45,7 +45,7 @@ function Header() {
                 <Link to="/"><i className="fa fa-circle-o" /> Dashboard v1</Link>
               </li>
               <li>
-                <Link to="/index2"><i className="fa fa-circle-o" /> Dashboard v2</Link>
+                <Link to="/index2.html"><i className="fa fa-circle-o" /> Dashboard v2</Link>
               </li>
             </ul>
           </li>
@@ -211,10 +211,10 @@ function Header() {
                 <Link to="pages/examples/profile.html">
                   <i className="fa fa-circle-o" /> Profile</Link></li>
               <li>
-                <Link to="/login">
+                <Link to="/login.html">
                   <i className="fa fa-circle-o" /> Login</Link></li>
               <li>
-                <Link to="/register">
+                <Link to="/register.html">
                   <i className="fa fa-circle-o" /> Register</Link></li>
               <li>
                 <Link to="pages/examples/lockscreen.html">
