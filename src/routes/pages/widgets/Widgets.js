@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import Link from '../../../components/Link';
 import s from './Widgets.css';
 
 class Widgets extends Component {
@@ -30,7 +31,7 @@ class Widgets extends Component {
 
   render() {
     return (
-      <p>Wigets page!</p>
+      <p>Wigets page! <Link to="/">Back</Link></p>
     );
   }
 
