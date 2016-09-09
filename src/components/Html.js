@@ -62,16 +62,16 @@ class Html extends Component { // eslint-disable-line react/prefer-stateless-fun
           <script src="/AdminLTE/plugins/chartjs/Chart.min.js" async />
           <script src="/AdminLTE/dist/js/app.min.js" async />
           {this.props.script && <script src={this.props.script} />}
-          {
-            analytics.google.trackingId && <script
+          {analytics.google.trackingId &&
+            <script
               dangerouslySetInnerHTML={{
                 __html: 'window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;' +
                 `ga('create','${analytics.google.trackingId}','auto');ga('send','pageview')`,
               }}
             />
           }
-          {
-            analytics.google.trackingId && <script
+          {analytics.google.trackingId &&
+            <script
               src="https://www.google-analytics.com/analytics.js" async defer
             />
           }
