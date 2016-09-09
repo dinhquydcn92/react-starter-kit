@@ -25,18 +25,22 @@ class Html extends Component { // eslint-disable-line react/prefer-stateless-fun
             name="viewport"
           />
           <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+          {/* start: all css */}
           <link rel="stylesheet" href="/AdminLTE/bootstrap/css/bootstrap.min.css" />
           <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css" />
           <link rel="stylesheet" href="/assets/plugins/ionicons/dist/css/ionicons.min.css" />
           <link rel="stylesheet" href="/AdminLTE/dist/css/AdminLTE.min.css" />
           <link rel="stylesheet" href="/AdminLTE/dist/css/skins/skin-blue.min.css" />
+          {/* end: all css */}
           <style id="css" dangerouslySetInnerHTML={{ __html: this.props.style }} />
         </head>
         <body className={this.props.classes || 'hold-transition skin-blue sidebar-mini'}>
           <div id="app" dangerouslySetInnerHTML={{ __html: this.props.children }} />
+          {/* start: all js */}
           <script src="/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js" />
           <script src="/AdminLTE/bootstrap/js/bootstrap.min.js" async />
           <script src="/AdminLTE/dist/js/app.min.js" async />
+          {/* end: all js */}
           {this.props.script && <script src={this.props.script} />}
           {
             analytics.google.trackingId && <script
