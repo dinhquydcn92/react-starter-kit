@@ -28,7 +28,6 @@ export default {
   children: [
     home,
     home2,
-    contact,
     login,
     register,
 
