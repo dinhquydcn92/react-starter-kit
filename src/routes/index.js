@@ -20,6 +20,7 @@ import error from './error';
 // Default page
 import widgets from './pages/widgets';
 import chartjs from './pages/charts/chartjs';
+import morris from './pages/charts/morris';
 
 // AdminLTE starter page
 import starter from './starter';
@@ -38,6 +39,7 @@ export default {
     // Default pages
     widgets,
     chartjs,
+    morris,
 
     // Starter page
     starter,

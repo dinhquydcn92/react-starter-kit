@@ -8,20 +8,20 @@
  */
 
 import React from 'react';
-import ChartJS from './ChartJS';
+import Morris from './Morris';
 
 export default {
 
-  path: '/pages/charts/chartjs',
+  path: '/pages/charts/morris',
 
   action() {
     let content = { // eslint-disable-line prefer-const
-      title: 'ChartJS | Admin Dev Kit',
-      pageTitle: 'ChartJS Page',
+      title: 'Morris | Admin Dev Kit',
+      pageTitle: 'Morris Charts',
       pageSubTitle: 'Preview sample',
     };
 
-    return <ChartJS content={content} />;
+    return <Morris content={content} />;
   },
 
 };

@@ -242,7 +242,7 @@ class ChartJS extends Component {
 
   render() {
     return (
-      <section className="content">
+      <div>
         <div className="row">
           <div className="col-md-6">
             { /* AREA CHART */ }
@@ -342,7 +342,7 @@ class ChartJS extends Component {
           { /* /.col (RIGHT) */ }
         </div>
         { /* /.row */ }
-      </section>
+      </div>
     );
   }
 
