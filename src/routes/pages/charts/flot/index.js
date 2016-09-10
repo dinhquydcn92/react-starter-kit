@@ -8,20 +8,20 @@
  */
 
 import React from 'react';
-import Morris from './Morris';
+import Flot from './Flot';
 
 export default {
 
-  path: '/pages/charts/morris',
+  path: '/pages/charts/flot',
 
   action() {
     let content = { // eslint-disable-line prefer-const
-      title: 'Morris.js Charts | Admin Dev Kit',
-      pageTitle: 'Morris Charts',
+      title: 'Flot Charts | Admin Dev Kit',
+      pageTitle: 'Flot Charts',
       pageSubTitle: 'Preview sample',
     };
 
-    return <Morris content={content} />;
+    return <Flot content={content} />;
   },
 
 };

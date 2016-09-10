@@ -8,20 +8,20 @@
  */
 
 import React from 'react';
-import Morris from './Morris';
+import Inline from './Inline';
 
 export default {
 
-  path: '/pages/charts/morris',
+  path: '/pages/charts/inline',
 
   action() {
     let content = { // eslint-disable-line prefer-const
-      title: 'Morris.js Charts | Admin Dev Kit',
-      pageTitle: 'Morris Charts',
+      title: 'Inline Charts | Admin Dev Kit',
+      pageTitle: 'Inline Charts',
       pageSubTitle: 'Preview sample',
     };
 
-    return <Morris content={content} />;
+    return <Inline content={content} />;
   },
 
 };

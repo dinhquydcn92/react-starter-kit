@@ -19,8 +19,11 @@ import error from './error';
 
 // Default page
 import widgets from './pages/widgets';
+
 import chartjs from './pages/charts/chartjs';
 import morris from './pages/charts/morris';
+import flot from './pages/charts/flot';
+import inline from './pages/charts/inline';
 
 // AdminLTE starter page
 import starter from './starter';
@@ -38,8 +41,11 @@ export default {
 
     // Default pages
     widgets,
+
     chartjs,
     morris,
+    flot,
+    inline,
 
     // Starter page
     starter,

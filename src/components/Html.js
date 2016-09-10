@@ -47,20 +47,24 @@ class Html extends Component { // eslint-disable-line react/prefer-stateless-fun
           <script src="/AdminLTE/plugins/jQueryUI/jquery-ui.min.js" />
           <script src="/AdminLTE/bootstrap/js/bootstrap.min.js" />
           <script src="/assets/plugins/moment/min/moment.min.js" />
-          <script src="/assets/plugins/raphael/raphael.min.js" async />
-          <script src="/AdminLTE/plugins/morris/morris.min.js" async />
-          <script src="/AdminLTE/plugins/sparkline/jquery.sparkline.min.js" async />
-          <script src="/AdminLTE/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js" async />
-          <script src="/AdminLTE/plugins/jvectormap/jquery-jvectormap-world-mill-en.js" async />
-          <script src="/AdminLTE/plugins/knob/jquery.knob.js" async />
+          <script src="/assets/plugins/raphael/raphael.min.js" />
+          <script src="/AdminLTE/plugins/morris/morris.min.js" />
+          <script src="/AdminLTE/plugins/sparkline/jquery.sparkline.min.js" />
+          <script src="/AdminLTE/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js" />
+          <script src="/AdminLTE/plugins/jvectormap/jquery-jvectormap-world-mill-en.js" />
+          <script src="/AdminLTE/plugins/knob/jquery.knob.js" />
           <script
-            src="/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js" async
+            src="/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"
           />
-          <script src="/AdminLTE/plugins/daterangepicker/daterangepicker.js" async />
-          <script src="/AdminLTE/plugins/datepicker/bootstrap-datepicker.js" async />
-          <script src="/AdminLTE/plugins/fastclick/fastclick.js" async />
-          <script src="/AdminLTE/plugins/chartjs/Chart.min.js" async />
-          <script src="/AdminLTE/dist/js/app.min.js" async />
+          <script src="/AdminLTE/plugins/daterangepicker/daterangepicker.js" />
+          <script src="/AdminLTE/plugins/datepicker/bootstrap-datepicker.js" />
+          <script src="/AdminLTE/plugins/fastclick/fastclick.js" />
+          <script src="/AdminLTE/plugins/chartjs/Chart.min.js" />
+          <script src="/AdminLTE/dist/js/app.min.js" />
+          <script src="/AdminLTE/plugins/flot/jquery.flot.min.js" />
+          <script src="/AdminLTE/plugins/flot/jquery.flot.resize.min.js" />
+          <script src="/AdminLTE/plugins/flot/jquery.flot.pie.min.js" />
+          <script src="/AdminLTE/plugins/flot/jquery.flot.categories.min.js" />
           {this.props.script && <script src={this.props.script} />}
           {analytics.google.trackingId &&
             <script
@@ -72,7 +76,7 @@ class Html extends Component { // eslint-disable-line react/prefer-stateless-fun
           }
           {analytics.google.trackingId &&
             <script
-              src="https://www.google-analytics.com/analytics.js" async defer
+              src="https://www.google-analytics.com/analytics.js" defer
             />
           }
         </body>
