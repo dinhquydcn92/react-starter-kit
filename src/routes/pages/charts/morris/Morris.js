@@ -33,7 +33,7 @@ class Morris extends Component {
       'use strict';
 
       // AREA CHART
-      const area = new Morris.Area({ // eslint-disable-line no-unused-vars
+      const area = Morris.Area({ // eslint-disable-line no-unused-vars, new-cap
         element: 'revenue-chart',
         resize: true,
         data: [
