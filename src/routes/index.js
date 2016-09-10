@@ -19,6 +19,7 @@ import error from './error';
 
 // Default page
 import widgets from './pages/widgets';
+import chartjs from './pages/charts/chartjs';
 
 // AdminLTE starter page
 import starter from './starter';
@@ -36,6 +37,7 @@ export default {
 
     // Default pages
     widgets,
+    chartjs,
 
     // Starter page
     starter,
