@@ -37,7 +37,7 @@ class Flot extends Component {
       // We use an inline data source in the example, usually data would
       // be fetched from a server
       let data = [];
-      const totalPoints = 100;
+      let totalPoints = 100; // eslint-disable-line prefer-const
 
       function getRandomData() {
         if (data.length > 0) {
@@ -46,7 +46,7 @@ class Flot extends Component {
 
         // Do a random walk
         while (data.length < totalPoints) {
-          const prev = data.length > 0 ? data[data.length - 1] : 50;
+          let prev = data.length > 0 ? data[data.length - 1] : 50;  // eslint-disable-line prefer-const, max-len
           let y = prev + Math.random() * 10 - 5; // eslint-disable-line no-mixed-operators
 
           if (y < 0) {
@@ -59,7 +59,7 @@ class Flot extends Component {
         }
 
         // Zip the generated y values with the x values
-        const res = [];
+        let res = []; // eslint-disable-line prefer-const
         for (let i = 0; i < data.length; ++i) {
           res.push([i, data[i]]);
         }
@@ -67,7 +67,7 @@ class Flot extends Component {
         return res;
       }
 
-      const interactive_plot = $.plot('#interactive', [getRandomData()], { // eslint-disable-line camelcase, max-len
+      let interactive_plot = $.plot('#interactive', [getRandomData()], { // eslint-disable-line camelcase, max-len, prefer-const
         grid: {
           borderColor: '#f3f3f3',
           borderWidth: 1,
@@ -91,7 +91,8 @@ class Flot extends Component {
         },
       });
 
-      const updateInterval = 500; // Fetch data ever x milliseconds
+      // Fetch data ever x milliseconds
+      let updateInterval = 500; // eslint-disable-line prefer-const
       let realtime = 'on'; // If == to on then fetch data every x seconds. else stop fetching
       function update() {
         interactive_plot.setData([getRandomData()]);
@@ -132,11 +133,11 @@ class Flot extends Component {
         sin.push([i, Math.sin(i)]);
         cos.push([i, Math.cos(i)]);
       }
-      let line_data1 = { // eslint-disable-line camelcase, prefer-const
+      let line_data1 = { // eslint-disable-line camelcase, prefer-let, prefer-const
         data: sin,
         color: '#3c8dbc',
       };
-      let line_data2 = { // eslint-disable-line camelcase, prefer-const
+      let line_data2 = { // eslint-disable-line camelcase, prefer-let, prefer-const
         data: cos,
         color: '#00c0ef',
       };
@@ -178,8 +179,8 @@ class Flot extends Component {
       }).appendTo('body');
       $('#line-chart').bind('plothover', (event, pos, item) => {
         if (item) {
-          const x = item.datapoint[0].toFixed(2);
-          const y = item.datapoint[1].toFixed(2);
+          let x = item.datapoint[0].toFixed(2); // eslint-disable-line prefer-const
+          let y = item.datapoint[1].toFixed(2); // eslint-disable-line prefer-const
 
           $('#line-chart-tooltip').html(item.series.label + ' of ' + x + ' = ' + y).css({ // eslint-disable-line prefer-template, max-len
             top: item.pageY + 5,
@@ -195,7 +196,7 @@ class Flot extends Component {
        * FULL WIDTH STATIC AREA CHART
        * -----------------
        */
-      const areaData = [
+      let areaData = [  // eslint-disable-line prefer-const
         [
           2, 88.0,
         ],
@@ -276,7 +277,7 @@ class Flot extends Component {
        * ---------
        */
 
-      const bar_data = { // eslint-disable-line camelcase
+      let bar_data = { // eslint-disable-line camelcase, prefer-const
         data: [
           ['January', 10],
           ['February', 8],
@@ -313,7 +314,7 @@ class Flot extends Component {
        * -----------
        */
 
-      const donutData = [
+      let donutData = [ // eslint-disable-line prefer-const
         {
           label: 'Series2',
           data: 30,

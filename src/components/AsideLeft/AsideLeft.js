@@ -95,10 +95,10 @@ function Header() {
                 <Link to="/pages/charts/chartjs">
                   <i className="fa fa-circle-o" /> ChartJS</Link>
               </li>
-              {/* <li> */}
-                {/* <Link to="/pages/charts/morris"> */}
-                  {/* <i className="fa fa-circle-o" /> Morris</Link> */}
-              {/* </li> */}
+              <li>
+                <Link to="/pages/charts/morris">
+                  <i className="fa fa-circle-o" /> Morris</Link>
+              </li>
               <li>
                 <Link to="/pages/charts/flot">
                   <i className="fa fa-circle-o" /> Flot</Link>

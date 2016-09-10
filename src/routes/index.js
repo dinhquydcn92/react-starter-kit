@@ -21,6 +21,7 @@ import error from './error';
 import widgets from './pages/widgets';
 
 import chartjs from './pages/charts/chartjs';
+import morris from './pages/charts/morris';
 import flot from './pages/charts/flot';
 import inline from './pages/charts/inline';
 
@@ -42,6 +43,7 @@ export default {
     widgets,
 
     chartjs,
+    morris,
     flot,
     inline,
 

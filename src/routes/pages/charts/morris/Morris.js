@@ -33,7 +33,7 @@ class Morris extends Component {
       'use strict';
 
       // AREA CHART
-      const area = Morris.Area({ // eslint-disable-line no-unused-vars, new-cap
+      let area = new Morris.Area({ // eslint-disable-line no-unused-vars, new-cap, prefer-const
         element: 'revenue-chart',
         resize: true,
         data: [
@@ -96,7 +96,7 @@ class Morris extends Component {
       });
 
       // LINE CHART
-      const line = new Morris.Line({ // eslint-disable-line no-unused-vars
+      let line = new Morris.Line({ // eslint-disable-line no-unused-vars, prefer-const
         element: 'line-chart',
         resize: true,
         data: [
@@ -149,7 +149,7 @@ class Morris extends Component {
       });
 
       // DONUT CHART
-      const donut = new Morris.Donut({ // eslint-disable-line no-unused-vars
+      let donut = new Morris.Donut({ // eslint-disable-line no-unused-vars, prefer-const
         element: 'sales-chart',
         resize: true,
         colors: ['#3c8dbc', '#f56954', '#00a65a'],
@@ -171,7 +171,7 @@ class Morris extends Component {
       });
 
       // BAR CHART
-      const bar = new Morris.Bar({ // eslint-disable-line no-unused-vars
+      let bar = new Morris.Bar({ // eslint-disable-line no-unused-vars, prefer-const
         element: 'bar-chart',
         resize: true,
         data: [
