@@ -7,26 +7,28 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import React from 'react';
-import App from '../components/App';
+import React from "react";
+import App from "../components/App";
+import home from "./home";
+import home2 from "./home2";
+import login from "./login";
+import register from "./register";
+import error from "./error";
+import widgets from "./pages/widgets";
+import chartjs from "./pages/charts/chartjs";
+import morris from "./pages/charts/morris";
+import flot from "./pages/charts/flot";
+import inline from "./pages/charts/inline";
+import general from "./pages/forms/general";
+import advanced from "./pages/forms/advanced";
+import editors from "./pages/forms/editors";
+import starter from "./starter";
 
 // Child routes
-import home from './home';
-import home2 from './home2';
-import login from './login';
-import register from './register';
-import error from './error';
 
 // Default page
-import widgets from './pages/widgets';
-
-import chartjs from './pages/charts/chartjs';
-import morris from './pages/charts/morris';
-import flot from './pages/charts/flot';
-import inline from './pages/charts/inline';
 
 // AdminLTE starter page
-import starter from './starter';
 
 export default {
 
@@ -47,6 +49,9 @@ export default {
     flot,
     inline,
 
+    general,
+    advanced,
+    editors,
     // Starter page
     starter,
 
@@ -54,7 +59,7 @@ export default {
     error,
   ],
 
-  async action({ next, render, context }) {
+  async action({next, render, context}) {
     const component = await next();
     if (component === undefined) return component;
     return render(
