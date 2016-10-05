@@ -1,0 +1,22 @@
+{
+  "apps": [
+    {
+      "name": "adserving.manhhailua.com",
+      "script": "./build/server.js",
+      "watch": false,
+      "env": {
+        "NODE_ENV": "development",
+        "PORT": 4020,
+        "WEBSITE_HOSTNAME": "adserving.manhhailua.com",
+        "DATABASE_URL": "mysql://mapranospo:kEH3S4Of5n@localhost:3306/adserving"
+
+      },
+      "env_production": {
+        "NODE_ENV": "production",
+        "PORT": 4020,
+        "WEBSITE_HOSTNAME": "adserving.manhhailua.com",
+        "DATABASE_URL": "mysql://mapranospo:kEH3S4Of5n@localhost:3306/adserving"
+      }
+    }
+  ]
+}
