@@ -12,6 +12,8 @@ import User from './User';
 import UserLogin from './UserLogin';
 import UserClaim from './UserClaim';
 import UserProfile from './UserProfile';
+import Post from './Post';
+import Reader from './Reader';
 
 User.hasMany(UserLogin, {
   foreignKey: 'userId',
@@ -34,9 +36,16 @@ User.hasOne(UserProfile, {
   onDelete: 'cascade',
 });
 
+Post.Readers = Post.hasMany(Reader, {
+  foreignKey: 'postId',
+  as: 'readers',
+  onUpdate: 'cascade',
+  onDelete: 'cascade',
+});
+
 function sync(...args) {
   return sequelize.sync(...args);
 }
 
 export default { sync };
-export { User, UserLogin, UserClaim, UserProfile };
+export { User, UserLogin, UserClaim, UserProfile, Post, Reader };

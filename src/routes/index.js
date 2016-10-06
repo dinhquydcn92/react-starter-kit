@@ -64,6 +64,9 @@ export default {
     require('./pages/examples/profile').default,
     require('./pages/examples/register').default,
 
+    // Test page
+    require('./test').default,
+
     // place new routes before...
     require('./notFound').default,
   ],
