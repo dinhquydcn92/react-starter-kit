@@ -9,7 +9,6 @@
 
 import React from 'react';
 import Test from './Test';
-import fetch from '../../core/fetch';
 
 export default {
 
@@ -22,28 +21,6 @@ export default {
       pageTitle: 'Test page',
       pageSubTitle: 'Just a test page',
     };
-
-    // READ data from Graph API
-    const resp = await fetch('/graphql', {
-      method: 'post',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        query: '{posts{id,author,content}}',
-      }),
-      credentials: 'include',
-    });
-
-    const { data } = await resp.json();
-
-    if (!data || !data.posts) {
-      throw new Error('Failed to load the list of posts.');
-    } else {
-      content.data = data;
-    }
-    // End READ
 
     return {
       title: content.title,

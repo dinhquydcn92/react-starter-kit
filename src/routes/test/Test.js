@@ -1,7 +1,9 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import Layout from '../../components/Layout';
 import Link from '../../components/Link';
+import { getAllPosts, submitPost } from '../../actions/posts';
 import s from './Test.css';
 
 class Test extends Component { // eslint-disable-line react/prefer-stateless-function
@@ -15,14 +17,30 @@ class Test extends Component { // eslint-disable-line react/prefer-stateless-fun
       pageTitle: PropTypes.string.isRequired,
       // Page subtitle
       pageSubTitle: PropTypes.string,
-      // Graph data
-      data: PropTypes.object,
     }).isRequired,
+    posts: PropTypes.object,
+    getAllPosts: PropTypes.func,
+    submitPost: PropTypes.func,
   };
 
-  render() {
-    const { data } = this.props.content;
+  componentWillMount() {
+    this.props.getAllPosts();
+  }
 
+  createPost() {
+    const author = document.getElementById('post-author').value;
+    const content = document.getElementById('post-content').value;
+
+    if (author && content) {
+      this.props.submitPost({ author, content });
+
+      // Reset input
+      document.getElementById('post-author').value = null;
+      document.getElementById('post-content').value = null;
+    }
+  }
+
+  render() {
     return (
       <Layout childrenProps={this.props}>
         <div>
@@ -38,13 +56,13 @@ class Test extends Component { // eslint-disable-line react/prefer-stateless-fun
                       data-widget="collapse" data-toggle="tooltip"
                       title="Collapse"
                     >
-                      <i className="fa fa-minus" />
+                      <i className="fa fa-minus"/>
                     </button>
                     <button
                       type="button" className="btn btn-box-tool"
                       data-widget="remove" data-toggle="tooltip" title="Remove"
                     >
-                      <i className="fa fa-times" />
+                      <i className="fa fa-times"/>
                     </button>
                   </div>
                 </div>
@@ -53,10 +71,10 @@ class Test extends Component { // eslint-disable-line react/prefer-stateless-fun
                   <form role="form">
                     {/* text input */}
                     <div className="form-group">
-                      <label htmlFor="post-title">Post title</label>
+                      <label htmlFor="post-author">Post author</label>
                       <input
-                        id="post-title"
-                        type="text" className="form-control post-title" placeholder="Enter ..."
+                        id="post-author"
+                        type="text" className="form-control post-author" placeholder="Enter ..."
                       />
                     </div>
                     {/* textarea */}
@@ -72,10 +90,11 @@ class Test extends Component { // eslint-disable-line react/prefer-stateless-fun
                       <button
                         id="post-submit"
                         type="button" className="btn btn-block btn-primary"
+                        onClick={event => this.createPost(event)}
                       >Submit
                       </button>
                     </div>
-                    <div className="clearfix" />
+                    <div className="clearfix"/>
                   </form>
                   <p>Or back to the <Link to="/">Home Page</Link></p>
                 </div>
@@ -98,19 +117,19 @@ class Test extends Component { // eslint-disable-line react/prefer-stateless-fun
                       data-widget="collapse" data-toggle="tooltip"
                       title="Collapse"
                     >
-                      <i className="fa fa-minus" />
+                      <i className="fa fa-minus"/>
                     </button>
                     <button
                       type="button" className="btn btn-box-tool"
                       data-widget="remove" data-toggle="tooltip" title="Remove"
                     >
-                      <i className="fa fa-times" />
+                      <i className="fa fa-times"/>
                     </button>
                   </div>
                 </div>
                 <div className="box-body">
                   <ul className="list-group list-group-unbordered">
-                    {data.posts.map(post => (
+                    {this.props.posts.latest && this.props.posts.latest.map(post => (
                       <li className="list-group-item" key={post.id}>
                         <strong>{post.author}</strong>
                         <p>{post.content}</p>
@@ -131,4 +150,13 @@ class Test extends Component { // eslint-disable-line react/prefer-stateless-fun
 
 }
 
-export default withStyles(s)(Test);
+const mapState = (state) => ({
+  posts: state.posts,
+});
+
+const mapDispatch = {
+  getAllPosts,
+  submitPost,
+};
+
+export default withStyles(s)(connect(mapState, mapDispatch)(Test));

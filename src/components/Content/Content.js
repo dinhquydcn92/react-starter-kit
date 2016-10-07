@@ -22,7 +22,7 @@ class Content extends Component {
           </h1>
 
           <ol className="breadcrumb">
-            <li><Link to="#"><i className="fa fa-dashboard"/> Level</Link></li>
+            <li><Link to="#"><i className="fa fa-dashboard" /> Level</Link></li>
             <li className="active">Here</li>
           </ol>
 
