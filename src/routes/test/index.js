@@ -15,16 +15,9 @@ export default {
   path: '/test',
 
   async action() {
-    // Prop:content
-    let content = { // eslint-disable-line prefer-const
-      title: 'Test page | Admin Dev Kit',
-      pageTitle: 'Test page',
-      pageSubTitle: 'Just a test page',
-    };
-
     return {
-      title: content.title,
-      component: <Test content={content} />,
+      title: 'Test page | Admin Dev Kit',
+      component: <Test />,
     };
   },
 

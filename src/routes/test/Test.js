@@ -6,18 +6,12 @@ import Link from '../../components/Link';
 import { getAllPosts, submitPost } from '../../actions/posts';
 import s from './Test.css';
 
-class Test extends Component { // eslint-disable-line react/prefer-stateless-function
+const pageTitle = 'Test page';
+const pageSubTitle = 'Just a test page';
+
+class Test extends Component {
 
   static propTypes = {
-    // Wrap all props to one parent props
-    content: PropTypes.shape({
-      // Document title
-      title: PropTypes.string.isRequired,
-      // Page title
-      pageTitle: PropTypes.string.isRequired,
-      // Page subtitle
-      pageSubTitle: PropTypes.string,
-    }).isRequired,
     posts: PropTypes.object,
     getAllPosts: PropTypes.func,
     submitPost: PropTypes.func,
@@ -42,7 +36,7 @@ class Test extends Component { // eslint-disable-line react/prefer-stateless-fun
 
   render() {
     return (
-      <Layout childrenProps={this.props}>
+      <Layout pageTitle={pageTitle} pageSubTitle={pageSubTitle}>
         <div>
           <div className="row">
             <div className="col-lg-12">
